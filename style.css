@@ -1,0 +1,724 @@
+/* --- Reset & Base Styles --- */
+:root {
+    --primary-color: #007bff; /* Електриково синьо */
+    --primary-dark: #0056b3;
+    --text-color: #e0e0e0;
+    --bg-dark: #121212;
+    --bg-card: #1e1e1e;
+    --bg-header: rgba(18, 18, 18, 0.95);
+    --accent-gray: #2c2c2c;
+    --transition: all 0.3s ease;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    overflow-x: hidden; /* Prevent horizontal scroll */
+}
+
+body {
+    font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    background-color: var(--bg-dark);
+    color: var(--text-color);
+    line-height: 1.6;
+    padding-top: 0;
+    margin: 0;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+    transition: var(--transition);
+}
+
+ul {
+    list-style: none;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* --- Header & Navigation --- */
+header {
+    background-color: var(--bg-header);
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    border-bottom: 1px solid var(--accent-gray);
+    backdrop-filter: blur(10px);
+}
+
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 70px;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo img {
+    height: 50px; /* Уголемено лого */
+    border-radius: 5px;
+}
+
+.brand-name {
+    font-size: 1.2rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    color: #fff;
+    text-transform: uppercase;
+}
+
+.nav-links {
+    display: flex;
+    gap: 30px;
+    align-items: center;
+}
+
+.nav-links a {
+    font-weight: 500;
+    color: #fff;
+    font-size: 0.95rem;
+    text-transform: uppercase;
+}
+
+.nav-links a:hover {
+    color: var(--primary-color);
+}
+
+.btn-contact {
+    background-color: var(--primary-color);
+    padding: 8px 20px;
+    border-radius: 4px;
+    color: #fff !important;
+    font-weight: 600;
+}
+
+.btn-contact:hover {
+    background-color: var(--primary-dark);
+    transform: translateY(-2px);
+}
+
+/* --- Hero Section --- */
+.hero {
+    margin-top: 70px;
+    height: 75vh;
+    min-height: 500px;
+    background: url('assets/logo_header.jpeg');
+    background-size: 100% auto; /* Изпълва ширината, за да не се реже отстрани */
+    background-repeat: no-repeat;
+    background-position: center top; /* Подравнява горе, за да се вижда логото */
+    display: flex;
+    align-items: flex-end; 
+    justify-content: center;
+    text-align: center;
+    padding-bottom: 60px;
+    background-color: var(--bg-dark);
+    position: relative;
+}
+
+/* Сянка под снимката, за да се четат бутоните по-добре */
+.hero::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 150px;
+    background: linear-gradient(to top, var(--bg-dark), transparent);
+    z-index: 1;
+}
+
+.hero-content {
+    max-width: 800px;
+    z-index: 2; /* Бутоните да са над сянката */
+    width: 100%;
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+}
+
+.btn {
+    display: inline-block;
+    padding: 12px 30px;
+    border-radius: 4px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    cursor: pointer;
+    border: none;
+    font-size: 1rem;
+}
+
+.btn-primary {
+    background-color: var(--primary-color);
+    color: #fff;
+    box-shadow: 0 4px 15px rgba(0, 123, 255, 0.4);
+    position: relative;
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+    background-color: var(--primary-dark);
+    transform: translateY(-2px);
+    box-shadow: 0 0 20px rgba(0, 123, 255, 0.6);
+}
+
+/* Shine Animation */
+.btn-primary::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+    transition: 0.5s;
+}
+
+.btn-primary:hover::after {
+    left: 100%;
+}
+
+.btn-secondary {
+    background-color: transparent;
+    border: 2px solid #fff;
+    color: #fff;
+}
+
+.btn-secondary:hover {
+    background-color: #fff;
+    color: #000;
+}
+
+/* --- About Section (New) --- */
+.about-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 60px;
+}
+
+.about-logo {
+    flex: 1; /* По равно място с текста */
+    display: flex;
+    justify-content: center;
+}
+
+.about-logo img {
+    max-width: 500px;
+    width: 100%;
+    /* Преливане на краищата */
+    -webkit-mask-image: radial-gradient(circle, rgba(0,0,0,1) 60%, rgba(0,0,0,0) 100%);
+    mask-image: radial-gradient(circle, rgba(0,0,0,1) 60%, rgba(0,0,0,0) 100%);
+    transition: var(--transition);
+}
+
+.about-logo img:hover {
+    transform: scale(1.02);
+}
+
+.about-text {
+    flex: 1; /* По равно място с логото */
+}
+
+.section-title.left {
+    text-align: left;
+    margin-bottom: 30px;
+}
+
+.section-title.left::after {
+    left: 0;
+    transform: none;
+}
+
+.about-text p {
+    font-size: 1.25rem; /* По-едър шрифт */
+    line-height: 1.8;   /* Повече въздух между редовете */
+    margin-bottom: 25px;
+    color: #e0e0e0;     /* По-светъл цвят за по-добър контраст */
+    font-weight: 400;   /* Плътност */
+}
+
+/* --- Services Section --- */
+.section {
+    padding: 80px 0;
+}
+
+.section-title {
+    text-align: center;
+    font-size: 2.2rem;
+    margin-bottom: 60px;
+    color: #fff;
+    position: relative;
+    padding-bottom: 15px;
+    /* Лек неонов ореол около текста */
+    text-shadow: 0 0 15px rgba(0, 123, 255, 0.3);
+}
+
+.section-title::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 4px;
+    background-color: var(--primary-color);
+    border-radius: 2px;
+    box-shadow: 0 0 10px var(--primary-color); /* Светеща линия */
+}
+
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+}
+
+.service-card {
+    background-color: var(--bg-card);
+    padding: 30px;
+    border-radius: 8px;
+    text-align: center;
+    border: 1px solid var(--accent-gray);
+    transition: var(--transition);
+    position: relative; /* Нужно за ефектите */
+}
+
+.service-card:hover {
+    border-color: var(--primary-color);
+    transform: translateY(-5px);
+    /* Ефект "Underglow" - сияние отдолу */
+    box-shadow: 0 15px 30px rgba(0, 123, 255, 0.15), 0 0 10px rgba(0, 123, 255, 0.1);
+}
+
+.service-card .icon {
+    font-size: 3rem;
+    margin-bottom: 20px;
+}
+
+.service-card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+    color: #fff;
+}
+
+.service-card p {
+    color: #bbb;
+    font-size: 0.95rem;
+}
+
+/* --- Service Lists --- */
+.service-list {
+    text-align: left;
+    margin-top: 15px;
+    padding-left: 10px;
+}
+
+.service-list li {
+    margin-bottom: 10px;
+    color: #d1d1d1;
+    font-size: 0.95rem;
+    line-height: 1.4;
+    border-bottom: 1px solid rgba(255,255,255,0.05);
+    padding-bottom: 5px;
+}
+
+.service-list li:last-child {
+    border-bottom: none;
+}
+
+/* --- Features Section (Darker) --- */
+.dark-section {
+    background-color: #0a0a0a;
+}
+
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 40px;
+    text-align: center;
+}
+
+.feature h4 {
+    color: var(--primary-color);
+    font-size: 1.3rem;
+    margin-bottom: 15px;
+}
+
+/* --- Gallery Section --- */
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 15px;
+}
+
+.gallery-item {
+    position: relative;
+    overflow: hidden;
+    border-radius: 8px;
+    height: 250px; /* Фиксирана височина за всички снимки */
+    cursor: pointer;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Снимката запълва квадратчето без да се деформира */
+    transition: transform 0.4s ease;
+}
+
+.gallery-item:hover img {
+    transform: scale(1.1); /* Лек зуум при посочване */
+}
+
+/* --- Contact Section --- */
+.contact-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    background-color: var(--bg-card);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.contact-info {
+    padding: 40px;
+}
+
+.contact-item {
+    margin-bottom: 25px;
+    font-size: 1.1rem;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 10px;
+}
+
+.contact-item .icon {
+    font-size: 1.5rem;
+    min-width: 30px;
+}
+
+.contact-item strong {
+    color: var(--primary-color);
+}
+
+.sub-text {
+    display: block;
+    width: 100%;
+    margin-left: 40px; /* Подравняване под текста */
+    font-size: 0.9rem;
+    color: #888;
+    margin-top: 5px;
+}
+
+.social-links {
+    display: flex;
+    gap: 15px;
+    margin-top: 30px;
+}
+
+.social-btn {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%; /* Прави ги идеални кръгове */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    transition: transform 0.2s ease, box-shadow 0.3s ease;
+    padding: 0; /* Махаме стария падинг */
+}
+
+.social-btn:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.4);
+}
+
+.social-btn svg {
+    width: 24px;
+    height: 24px;
+}
+
+.social-btn.fb {
+    background-color: #1877f2; /* Facebook Blue */
+}
+
+.social-btn.insta {
+    background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%); /* Instagram Gradient */
+}
+
+.social-btn.tiktok {
+    background-color: #010101; /* TikTok Black */
+    border: 1px solid rgba(255,255,255,0.2); /* Лек бял кант за видимост */
+}
+
+/* --- Header Socials --- */
+.header-socials {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+    border-left: 1px solid rgba(255,255,255,0.2); /* Разделителна линия */
+    padding-left: 20px;
+    margin-right: 10px;
+}
+
+.header-socials a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    transition: all 0.3s ease;
+}
+
+.header-socials a.fb {
+    background-color: #1877f2;
+}
+
+.header-socials a.insta {
+    background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+}
+
+.header-socials a.tiktok {
+    background-color: #010101;
+    border: 1px solid rgba(255,255,255,0.2);
+}
+
+.header-socials a:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.5);
+}
+
+/* --- Mobile Fix for Header Socials --- */
+@media (max-width: 768px) {
+    .header-socials {
+        border-left: none;
+        padding-left: 0;
+        margin-right: 0;
+        justify-content: center;
+        margin-bottom: 20px;
+    }
+}
+
+.map-placeholder {
+    background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.9)), url('assets/logo.jpeg'); /* Логото като фон, затъмнено */
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 300px;
+    position: relative;
+    border-radius: 8px; /* Заобляме ъглите на самата секция */
+    border: 1px solid #333;
+}
+
+.map-mockup {
+    color: #fff;
+    text-align: center;
+    padding: 30px;
+    background: none; /* Махаме черния правоъгълник */
+    backdrop-filter: none;
+}
+
+.map-mockup h3 {
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-shadow: 0 2px 10px rgba(0,0,0,1);
+}
+
+/* Специален пулсиращ бутон за тази секция */
+.map-mockup .btn-primary {
+    background: transparent;
+    border: 2px solid var(--primary-color);
+    box-shadow: 0 0 10px var(--primary-color), inset 0 0 10px var(--primary-color);
+    color: #fff;
+    font-weight: 700;
+    text-shadow: 0 0 5px var(--primary-color);
+    animation: pulse-blue 2s infinite;
+}
+
+@keyframes pulse-blue {
+    0% {
+        box-shadow: 0 0 0 0 rgba(0, 123, 255, 0.7);
+    }
+    70% {
+        box-shadow: 0 0 0 15px rgba(0, 123, 255, 0);
+    }
+    100% {
+        box-shadow: 0 0 0 0 rgba(0, 123, 255, 0);
+    }
+}
+
+/* --- Footer --- */
+footer {
+    background-color: #000;
+    padding: 20px 0;
+    text-align: center;
+    border-top: 1px solid var(--accent-gray);
+}
+
+footer p {
+    color: #666;
+    font-size: 0.9rem;
+}
+
+/* --- Mobile Responsive --- */
+@media (max-width: 768px) {
+    .hero {
+        margin-top: 70px;
+        height: auto;
+        min-height: unset; /* Махаме минималната височина */
+        background: none; /* Махаме фона от тук */
+        display: block; /* Става блокова структура */
+        padding: 0;
+    }
+
+    /* Създаваме нов елемент само за снимката на мобилни */
+    .hero::before {
+        content: '';
+        display: block;
+        width: 100%;
+        aspect-ratio: 16/9; /* Пропорция за мобилни */
+        background: url('assets/logo_header.jpeg');
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+
+    .hero::after {
+        display: none; /* Без сянка на мобилни */
+    }
+
+    .hero-content {
+        padding: 20px;
+        background-color: var(--bg-dark); /* Бутоните са на черен фон под снимката */
+    }
+
+    .hero-buttons {
+        flex-direction: column;
+        padding: 10px 0;
+    }
+
+    .nav-links {
+        position: absolute;
+        right: 0px;
+        height: 92vh;
+        top: 70px;
+        background-color: var(--bg-header);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 50%;
+        transform: translateX(100%);
+        transition: transform 0.5s ease-in;
+        padding-top: 50px;
+        border-left: 1px solid var(--accent-gray);
+    }
+
+    .nav-links.open {
+        transform: translateX(0%);
+    }
+
+    .nav-links li {
+        opacity: 0;
+        margin-bottom: 30px;
+    }
+    
+    .hamburger {
+        display: block;
+        cursor: pointer;
+        z-index: 1001;
+    }
+    
+    .hamburger span {
+        display: block;
+        width: 25px;
+        height: 3px;
+        background-color: #fff;
+        margin: 5px 0;
+        transition: all 0.3s ease;
+    }
+
+    .hamburger.toggle span:nth-child(1) {
+        transform: rotate(-45deg) translate(-5px, 6px);
+    }
+
+    .hamburger.toggle span:nth-child(2) {
+        opacity: 0;
+    }
+
+    .hamburger.toggle span:nth-child(3) {
+        transform: rotate(45deg) translate(-5px, -6px);
+    }
+    
+    .brand-name {
+        font-size: 1rem;
+    }
+
+    .contact-wrapper {
+        grid-template-columns: 1fr;
+    }
+    
+    .btn {
+        width: 100%;
+    }
+
+    /* About section mobile styles */
+    .about-wrapper {
+        flex-direction: column;
+        text-align: center;
+        gap: 30px;
+    }
+
+    .about-logo img {
+        max-width: 200px;
+    }
+
+    .section-title.left {
+        text-align: center;
+    }
+
+    .section-title.left::after {
+        left: 50%;
+        transform: translateX(-50%);
+    }
+}
+
+@keyframes navLinkFade {
+    from {
+        opacity: 0;
+        transform: translateX(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
