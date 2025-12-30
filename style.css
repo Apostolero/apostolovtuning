@@ -483,6 +483,10 @@ header {
     border: 1px solid rgba(255,255,255,0.2); /* Лек бял кант за видимост */
 }
 
+.social-btn.wa {
+    background-color: #25D366; /* WhatsApp Green */
+}
+
 /* --- Header Socials --- */
 .header-socials {
     display: flex;
