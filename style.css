@@ -120,8 +120,8 @@ header {
 /* --- Hero Section --- */
 .hero {
     margin-top: 70px;
-    height: 75vh;
-    min-height: 500px;
+    height: 80vh;
+    min-height: 600px;
     background: url('assets/logo_header.jpeg');
     background-size: 100% auto; /* Изпълва ширината, за да не се реже отстрани */
     background-repeat: no-repeat;
@@ -130,7 +130,7 @@ header {
     align-items: flex-end; 
     justify-content: center;
     text-align: center;
-    padding-bottom: 60px;
+    padding-bottom: 30px;
     background-color: var(--bg-dark);
     position: relative;
 }
