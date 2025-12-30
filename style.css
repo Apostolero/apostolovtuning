@@ -278,6 +278,9 @@ header {
     color: #fff;
     position: relative;
     padding-bottom: 15px;
+    display: inline-block; /* Правим го да заема само колкото текста */
+    left: 50%;
+    transform: translateX(-50%);
     /* Лек неонов ореол около текста */
     text-shadow: 0 0 15px rgba(0, 123, 255, 0.3);
 }
@@ -286,9 +289,8 @@ header {
     content: '';
     position: absolute;
     bottom: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 60px;
+    left: 0;
+    width: 100%; /* Вече е колкото текста */
     height: 4px;
     background-color: var(--primary-color);
     border-radius: 2px;
