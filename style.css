@@ -120,8 +120,8 @@ header {
 /* --- Hero Section --- */
 .hero {
     margin-top: 70px;
-    height: 70vh; /* По-прибрана секция */
-    min-height: 600px; /* Оптимална височина за лаптопи */
+    height: 70vh;
+    min-height: 650px; /* Малко по-висока за място за бутоните */
     background: url('assets/logo_header.jpeg');
     background-size: 100% auto;
     background-repeat: no-repeat;
@@ -130,7 +130,7 @@ header {
     align-items: flex-end; 
     justify-content: center;
     text-align: center;
-    padding-bottom: 30px; /* Леко отстояние за добър вид */
+    padding-bottom: 10px; /* Бутоните слизат максимално надолу */
     background-color: var(--bg-dark);
     position: relative;
 }
