@@ -120,17 +120,17 @@ header {
 /* --- Hero Section --- */
 .hero {
     margin-top: 70px;
-    height: 80vh;
-    min-height: 600px;
+    height: 85vh; /* По-висока секция */
+    min-height: 750px; /* Гарантирана височина за лаптопи */
     background: url('assets/logo_header.jpeg');
-    background-size: 100% auto; /* Изпълва ширината, за да не се реже отстрани */
+    background-size: 100% auto;
     background-repeat: no-repeat;
-    background-position: center top; /* Подравнява горе, за да се вижда логото */
+    background-position: center top;
     display: flex;
     align-items: flex-end; 
     justify-content: center;
     text-align: center;
-    padding-bottom: 30px;
+    padding-bottom: 50px; /* Връщам отстоянието от ръба */
     background-color: var(--bg-dark);
     position: relative;
 }
