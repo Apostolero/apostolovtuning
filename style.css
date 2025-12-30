@@ -487,6 +487,10 @@ header {
     background-color: #25D366; /* WhatsApp Green */
 }
 
+.social-btn.email {
+    background-color: #D44638; /* Gmail Red */
+}
+
 /* --- Header Socials --- */
 .header-socials {
     display: flex;
