@@ -120,8 +120,8 @@ header {
 /* --- Hero Section --- */
 .hero {
     margin-top: 70px;
-    height: 85vh; /* По-висока секция */
-    min-height: 750px; /* Гарантирана височина за лаптопи */
+    height: 70vh; /* Намалена височина */
+    min-height: 600px; /* Оптимална височина за десктоп */
     background: url('assets/logo_header.jpeg');
     background-size: 100% auto;
     background-repeat: no-repeat;
@@ -130,7 +130,7 @@ header {
     align-items: flex-end; 
     justify-content: center;
     text-align: center;
-    padding-bottom: 50px; /* Връщам отстоянието от ръба */
+    padding-bottom: 40px;
     background-color: var(--bg-dark);
     position: relative;
 }
@@ -211,6 +211,11 @@ header {
 .btn-secondary:hover {
     background-color: #fff;
     color: #000;
+}
+
+/* Намаляваме разстоянието над секцията "За нас" */
+#about {
+    padding-top: 40px;
 }
 
 /* --- About Section (New) --- */
