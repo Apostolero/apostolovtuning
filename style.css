@@ -565,206 +565,47 @@ footer p {
 /* --- Floating Chat Button --- */
 .floating-chat {
     position: fixed;
-    bottom: 30px;
-    right: 30px;
+    bottom: 25px;
+    right: 25px;
     background-color: #007bff;
     color: #fff;
-    padding: 12px 25px;
+    padding: 8px 18px; /* По-малки разстояния */
     border-radius: 50px;
     display: flex;
     align-items: center;
-    gap: 10px;
+    gap: 8px;
     font-weight: 600;
-    box-shadow: 0 10px 25px rgba(0, 123, 255, 0.5);
+    font-size: 0.9rem; /* Малко по-малък шрифт */
+    box-shadow: 0 8px 20px rgba(0, 123, 255, 0.4);
     z-index: 9999;
     transition: all 0.3s ease;
     cursor: pointer;
     text-decoration: none;
-    border: 2px solid rgba(255,255,255,0.1);
+    border: 1px solid rgba(255,255,255,0.1);
 }
 
 .floating-chat:hover {
-    transform: translateY(-5px) scale(1.05);
+    transform: translateY(-3px) scale(1.03);
     background-color: #0056b3;
-    box-shadow: 0 15px 30px rgba(0, 123, 255, 0.6);
 }
 
 .floating-chat .chat-icon {
-    width: 24px;
-    height: 24px;
+    width: 20px; /* Малко по-малка икона */
+    height: 20px;
 }
 
 /* --- Mobile Responsive --- */
 @media (max-width: 768px) {
-    .hero {
-        margin-top: 70px;
-        height: auto;
-        min-height: unset; /* Махаме минималната височина */
-        background: none; /* Махаме фона от тук */
-        display: block; /* Става блокова структура */
-        padding: 0;
-    }
-
-    /* Създаваме нов елемент само за снимката на мобилни */
-    .hero::before {
-        content: '';
-        display: block;
-        width: 100%;
-        aspect-ratio: 16/9; /* Пропорция за мобилни */
-        background: url('assets/logo_header.jpeg');
-        background-size: contain;
-        background-repeat: no-repeat;
-        background-position: center;
-    }
-
-    .hero::after {
-        display: none; /* Без сянка на мобилни */
-    }
-
-    .hero-content {
-        padding: 20px;
-        background-color: var(--bg-dark); /* Бутоните са на черен фон под снимката */
-    }
-
-    .hero-buttons {
-        flex-direction: column;
-        gap: 15px; /* Малко повече място между трите бутона */
-        padding: 10px 0;
-    }
-
-    .nav-links {
-        position: absolute;
-        right: 0px;
-        height: 92vh;
-        top: 70px;
-        background-color: var(--bg-header);
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        width: 50%;
-        transform: translateX(100%);
-        transition: transform 0.5s ease-in;
-        padding-top: 50px;
-        border-left: 1px solid var(--accent-gray);
-    }
-
-    .nav-links.open {
-        transform: translateX(0%);
-    }
-
-    .nav-links li {
-        opacity: 0;
-        margin-bottom: 30px;
-    }
-    
-    .hamburger {
-        display: block;
-        cursor: pointer;
-        z-index: 1001;
-    }
-    
-    .hamburger span {
-        display: block;
-        width: 25px;
-        height: 3px;
-        background-color: #fff;
-        margin: 5px 0;
-        transition: all 0.3s ease;
-    }
-
-    .hamburger.toggle span:nth-child(1) {
-        transform: rotate(-45deg) translate(-5px, 6px);
-    }
-
-    .hamburger.toggle span:nth-child(2) {
-        opacity: 0;
-    }
-
-    .hamburger.toggle span:nth-child(3) {
-        transform: rotate(45deg) translate(-5px, -6px);
-    }
-    
-    .brand-name {
-        font-size: 1rem;
-    }
-
-    .contact-wrapper {
-        grid-template-columns: 1fr;
-    }
-    
-    .btn {
-        width: 100%;
-    }
-
-    /* About section mobile styles */
-    .about-wrapper {
-        flex-direction: column;
-        text-align: center;
-        gap: 30px;
-    }
-
-    .about-logo img {
-        max-width: 200px;
-    }
-
-    .section-title.left {
-        text-align: center;
-    }
-
-    .section-title.left::after {
-        left: 50%;
-        transform: translateX(-50%);
-    }
-
     .floating-chat {
-        bottom: 20px;
-        right: 20px;
-        padding: 10px 20px;
-        font-size: 0.9rem;
+        bottom: 15px;
+        right: 15px;
+        padding: 6px 14px;
+        font-size: 0.8rem;
     }
-
-    .map-container {
-        min-height: 300px;
-    }
-
-    /* Респонсив таблица за цени */
-    .price-table-container table, 
-    .price-table-container thead, 
-    .price-table-container tbody, 
-    .price-table-container th, 
-    .price-table-container td, 
-    .price-table-container tr { 
-        display: block; 
-    }
-
-    .price-table-container thead tr { 
-        position: absolute;
-        top: -9999px;
-        left: -9999px;
-    }
-
-    .price-table-container tr { 
-        border: 1px solid #333; 
-        margin-bottom: 10px;
-        background: #1e1e1e;
-        border-radius: 8px;
-        padding: 10px;
-    }
-
-    .price-table-container td { 
-        border: none;
-        position: relative;
-        padding: 8px !important;
-        text-align: center !important;
-        font-size: 0.95rem; /* Малко по-малък шрифт за името */
-        word-wrap: break-word;
-        white-space: normal;
-    }
-
-    .price-table-container td:last-child {
-        font-size: 1.3rem; /* Цената остава голяма */
-        padding-top: 0 !important;
-        margin-top: -5px;
+    
+    .floating-chat .chat-icon {
+        width: 18px;
+        height: 18px;
     }
 }
 
