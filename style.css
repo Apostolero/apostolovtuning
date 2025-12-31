@@ -628,6 +628,7 @@ footer p {
 
     .hero-buttons {
         flex-direction: column;
+        gap: 15px; /* Малко повече място между трите бутона */
         padding: 10px 0;
     }
 
