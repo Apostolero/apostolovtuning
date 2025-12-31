@@ -318,7 +318,8 @@ header {
     position: relative; /* Нужно за ефектите */
 }
 
-.service-card:hover {
+.service-card:hover,
+.service-card:active { /* Добавяме active за мобилни */
     border-color: var(--primary-color);
     transform: translateY(-5px);
     /* Ефект "Underglow" - сияние отдолу */
