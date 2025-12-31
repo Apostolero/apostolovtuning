@@ -687,6 +687,19 @@ footer p {
         grid-template-columns: 1fr;
     }
     
+    .contact-info {
+        text-align: center;
+        padding: 30px 20px;
+    }
+
+    .contact-item {
+        justify-content: center;
+    }
+
+    .social-links {
+        justify-content: center;
+    }
+    
     .btn {
         width: 100%;
     }
