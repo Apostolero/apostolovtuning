@@ -725,6 +725,42 @@ footer p {
     .map-container {
         min-height: 300px;
     }
+
+    /* Респонсив таблица за цени */
+    .price-table-container table, 
+    .price-table-container thead, 
+    .price-table-container tbody, 
+    .price-table-container th, 
+    .price-table-container td, 
+    .price-table-container tr { 
+        display: block; 
+    }
+
+    .price-table-container thead tr { 
+        position: absolute;
+        top: -9999px;
+        left: -9999px;
+    }
+
+    .price-table-container tr { 
+        border: 1px solid #333; 
+        margin-bottom: 10px;
+        background: #1e1e1e;
+        border-radius: 8px;
+        padding: 10px;
+    }
+
+    .price-table-container td { 
+        border: none;
+        position: relative;
+        padding: 10px !important;
+        text-align: center !important;
+    }
+
+    .price-table-container td:last-child {
+        font-size: 1.4rem;
+        padding-top: 0 !important;
+    }
 }
 
 @keyframes navLinkFade {
