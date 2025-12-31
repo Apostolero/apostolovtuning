@@ -753,13 +753,17 @@ footer p {
     .price-table-container td { 
         border: none;
         position: relative;
-        padding: 10px !important;
+        padding: 8px !important;
         text-align: center !important;
+        font-size: 0.95rem; /* Малко по-малък шрифт за името */
+        word-wrap: break-word;
+        white-space: normal;
     }
 
     .price-table-container td:last-child {
-        font-size: 1.4rem;
+        font-size: 1.3rem; /* Цената остава голяма */
         padding-top: 0 !important;
+        margin-top: -5px;
     }
 }
 
