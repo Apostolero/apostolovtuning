@@ -576,6 +576,71 @@ header {
     border: 1px solid var(--accent-gray);
 }
 
+/* --- FAQ Section --- */
+.faq-container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.faq-item {
+    background-color: var(--bg-card);
+    border: 1px solid var(--accent-gray);
+    border-radius: 8px;
+    margin-bottom: 15px;
+    overflow: hidden;
+    transition: var(--transition);
+}
+
+.faq-item:hover {
+    border-color: var(--primary-color);
+}
+
+.faq-question {
+    width: 100%;
+    padding: 20px;
+    background: none;
+    border: none;
+    color: #fff;
+    font-size: 1.1rem;
+    font-weight: 600;
+    text-align: left;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+}
+
+.faq-question::after {
+    content: '+';
+    font-size: 1.5rem;
+    color: var(--primary-color);
+    transition: transform 0.3s ease;
+}
+
+.faq-item.active .faq-question::after {
+    transform: rotate(45deg);
+    content: '+'; /* Keep plus but rotated looks like x, or use - */
+}
+
+.faq-answer {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-out, padding 0.3s ease;
+    background-color: rgba(255,255,255,0.02);
+}
+
+.faq-item.active .faq-answer {
+    max-height: 500px; /* Adjust as needed */
+    padding: 0 20px 20px 20px;
+    border-top: 1px solid rgba(255,255,255,0.05);
+}
+
+.faq-answer p {
+    color: #bbb;
+    font-size: 1rem;
+    margin-top: 15px;
+}
+
 /* --- Footer --- */
 footer {
     background-color: #000;
