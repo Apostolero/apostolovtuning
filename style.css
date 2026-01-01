@@ -305,16 +305,16 @@ header {
 /* Анимация за "Туптене" (Neon Pulse) */
 @keyframes neonPulse {
     0% {
-        box-shadow: 0 0 5px rgba(0, 123, 255, 0.1);
-        border-color: rgba(0, 123, 255, 0.3);
+        box-shadow: 0 0 8px rgba(0, 123, 255, 0.15);
+        border-color: rgba(0, 123, 255, 0.4);
     }
     50% {
-        box-shadow: 0 0 20px rgba(0, 123, 255, 0.4); /* По-силна сянка в средата */
-        border-color: rgba(0, 123, 255, 0.8); /* По-яркa рамка */
+        box-shadow: 0 0 40px rgba(0, 123, 255, 0.7); /* Значително по-силна и ярка сянка */
+        border-color: rgba(0, 123, 255, 1); /* Напълно наситена синя рамка */
     }
     100% {
-        box-shadow: 0 0 5px rgba(0, 123, 255, 0.1);
-        border-color: rgba(0, 123, 255, 0.3);
+        box-shadow: 0 0 8px rgba(0, 123, 255, 0.15);
+        border-color: rgba(0, 123, 255, 0.4);
     }
 }
 
