@@ -712,13 +712,13 @@ footer p {
 @media (max-width: 768px) {
     /* Gallery Optimization for Mobile */
     .gallery-grid {
-        grid-template-columns: 1fr 1fr; /* Две колони принудително */
-        gap: 8px; /* По-малко разстояние */
+        grid-template-columns: repeat(4, 1fr); /* 4 колони принудително */
+        gap: 4px; /* Минимално разстояние */
     }
 
     .gallery-item {
-        height: 140px; /* По-ниски квадратчета, за да се виждат повече */
-        border-radius: 4px; /* По-малко заобляне за по-изчистен вид */
+        height: 80px; /* Много малки квадратчета, за да се съберат */
+        border-radius: 2px;
     }
 
     .hero {

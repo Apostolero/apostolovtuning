@@ -58,26 +58,40 @@ const lightboxImg = document.getElementById('lightbox-img');
 const galleryImages = document.querySelectorAll('.gallery-item img');
 const closeBtn = document.querySelector('.lightbox-close');
 
+// Функция за спиране на скрола
+function disableScroll() {
+    document.body.style.overflow = 'hidden';
+    document.body.style.position = 'fixed';
+    document.body.style.width = '100%';
+}
+
+// Функция за пускане на скрола
+function enableScroll() {
+    document.body.style.overflow = 'auto';
+    document.body.style.position = '';
+    document.body.style.width = '';
+}
+
 // Отваряне
 galleryImages.forEach(img => {
     img.addEventListener('click', () => {
         lightbox.classList.add('active');
-        lightboxImg.src = img.src; // Взимаме източника на кликнатата снимка
-        document.body.style.overflow = 'hidden'; // Спираме скролването на задния фон
+        lightboxImg.src = img.src; 
+        disableScroll();
     });
 });
 
 // Затваряне при клик на X
 closeBtn.addEventListener('click', () => {
     lightbox.classList.remove('active');
-    document.body.style.overflow = 'auto'; // Пускаме скролването
+    enableScroll();
 });
 
 // Затваряне при клик извън снимката
 lightbox.addEventListener('click', (e) => {
     if (e.target !== lightboxImg) {
         lightbox.classList.remove('active');
-        document.body.style.overflow = 'auto';
+        enableScroll();
     }
 });
 
