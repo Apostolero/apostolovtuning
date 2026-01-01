@@ -302,6 +302,22 @@ header {
     box-shadow: 0 0 10px var(--primary-color); /* Светеща линия */
 }
 
+/* Анимация за "Туптене" (Neon Pulse) */
+@keyframes neonPulse {
+    0% {
+        box-shadow: 0 0 5px rgba(0, 123, 255, 0.1);
+        border-color: rgba(0, 123, 255, 0.3);
+    }
+    50% {
+        box-shadow: 0 0 20px rgba(0, 123, 255, 0.4); /* По-силна сянка в средата */
+        border-color: rgba(0, 123, 255, 0.8); /* По-яркa рамка */
+    }
+    100% {
+        box-shadow: 0 0 5px rgba(0, 123, 255, 0.1);
+        border-color: rgba(0, 123, 255, 0.3);
+    }
+}
+
 .services-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -313,20 +329,22 @@ header {
     padding: 30px;
     border-radius: 8px;
     text-align: center;
-    border: 1px solid var(--accent-gray);
+    border: 1px solid rgba(0, 123, 255, 0.3); /* Леко синьо по подразбиране */
     transition: var(--transition);
     position: relative; /* Нужно за ефектите */
     display: block; /* Важно, защото вече е <a> таг */
     text-decoration: none; /* Махаме подчертаването */
     color: inherit; /* Запазваме цветовете */
+    animation: neonPulse 3s infinite ease-in-out; /* Безкрайно туптене */
 }
 
 .service-card:hover,
 .service-card:active { /* Добавяме active за мобилни */
+    animation: none; /* Спираме туптенето при ховър, за да свети постоянно */
     border-color: var(--primary-color);
     transform: translateY(-5px);
     /* Ефект "Underglow" - сияние отдолу */
-    box-shadow: 0 15px 30px rgba(0, 123, 255, 0.15), 0 0 10px rgba(0, 123, 255, 0.1);
+    box-shadow: 0 15px 30px rgba(0, 123, 255, 0.25), 0 0 15px rgba(0, 123, 255, 0.2);
 }
 
 .service-card .icon {
