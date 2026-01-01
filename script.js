@@ -31,35 +31,55 @@ faqItems.forEach(item => {
 });
 
 // Mobile Nav Logic
-    const hamburger = document.querySelector('.hamburger');
-    const navLinks = document.querySelector('.nav-links');
-    const links = document.querySelectorAll('.nav-links li');
+const hamburger = document.querySelector('.hamburger');
+const navLinks = document.querySelector('.nav-links');
+const links = document.querySelectorAll('.nav-links li');
 
-    // Toggle menu
-    hamburger.addEventListener('click', () => {
-        // Animate Links
-        navLinks.classList.toggle('open');
-        hamburger.classList.toggle('toggle');
-        
-        links.forEach((link, index) => {
-            if (link.style.animation) {
-                link.style.animation = '';
-            } else {
-                link.style.animation = `navLinkFade 0.5s ease forwards ${index / 7 + 0.3}s`;
-            }
-        });
-    });
-
-    // Close menu when clicking a link
+hamburger.addEventListener('click', () => {
+    navLinks.classList.toggle('open');
+    hamburger.classList.toggle('toggle');
+    
     links.forEach(link => {
-        link.addEventListener('click', () => {
-            navLinks.classList.remove('open');
-            hamburger.classList.remove('toggle');
-            links.forEach(link => {
-                link.style.animation = '';
-            });
-        });
+        link.classList.toggle('fade');
     });
+});
+
+// Затваряне на менюто при клик на линк
+links.forEach(link => {
+    link.addEventListener('click', () => {
+        navLinks.classList.remove('open');
+        hamburger.classList.remove('toggle');
+    });
+});
+
+// Lightbox Logic (Галерия на цял екран)
+const lightbox = document.getElementById('lightbox');
+const lightboxImg = document.getElementById('lightbox-img');
+const galleryImages = document.querySelectorAll('.gallery-item img');
+const closeBtn = document.querySelector('.lightbox-close');
+
+// Отваряне
+galleryImages.forEach(img => {
+    img.addEventListener('click', () => {
+        lightbox.classList.add('active');
+        lightboxImg.src = img.src; // Взимаме източника на кликнатата снимка
+        document.body.style.overflow = 'hidden'; // Спираме скролването на задния фон
+    });
+});
+
+// Затваряне при клик на X
+closeBtn.addEventListener('click', () => {
+    lightbox.classList.remove('active');
+    document.body.style.overflow = 'auto'; // Пускаме скролването
+});
+
+// Затваряне при клик извън снимката
+lightbox.addEventListener('click', (e) => {
+    if (e.target !== lightboxImg) {
+        lightbox.classList.remove('active');
+        document.body.style.overflow = 'auto';
+    }
+});
 
     // Smooth scrolling for anchor links
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
