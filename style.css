@@ -597,11 +597,11 @@ header {
 
 .faq-question {
     width: 100%;
-    padding: 20px;
+    padding: 22px 25px;
     background: none;
     border: none;
     color: #fff;
-    font-size: 1.1rem;
+    font-size: 1.3rem; /* Увеличен шрифт */
     font-weight: 600;
     text-align: left;
     display: flex;
@@ -612,7 +612,7 @@ header {
 
 .faq-question::after {
     content: '+';
-    font-size: 1.5rem;
+    font-size: 1.6rem;
     color: var(--primary-color);
     transition: transform 0.3s ease;
 }
@@ -631,13 +631,14 @@ header {
 
 .faq-item.active .faq-answer {
     max-height: 500px; /* Adjust as needed */
-    padding: 0 20px 20px 20px;
+    padding: 0 25px 25px 25px;
     border-top: 1px solid rgba(255,255,255,0.05);
 }
 
 .faq-answer p {
-    color: #bbb;
-    font-size: 1rem;
+    color: #e0e0e0; /* По-светъл цвят за по-добър контраст */
+    font-size: 1.2rem; /* Увеличен шрифт за отговорите */
+    line-height: 1.7;
     margin-top: 15px;
 }
 
