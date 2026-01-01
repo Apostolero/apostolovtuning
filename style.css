@@ -316,6 +316,9 @@ header {
     border: 1px solid var(--accent-gray);
     transition: var(--transition);
     position: relative; /* Нужно за ефектите */
+    display: block; /* Важно, защото вече е <a> таг */
+    text-decoration: none; /* Махаме подчертаването */
+    color: inherit; /* Запазваме цветовете */
 }
 
 .service-card:hover,
