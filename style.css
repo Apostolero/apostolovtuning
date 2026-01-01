@@ -825,6 +825,11 @@ footer p {
         opacity: 0;
         margin-bottom: 30px;
     }
+
+    .nav-links li.fade {
+        opacity: 1;
+        animation: navLinkFade 0.5s ease forwards;
+    }
     
     .hamburger {
         display: block;
