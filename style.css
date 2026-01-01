@@ -334,6 +334,28 @@ header {
     margin-bottom: 20px;
 }
 
+.card-cta {
+    margin-top: 20px;
+    font-weight: 700;
+    color: var(--primary-color);
+    text-transform: uppercase;
+    font-size: 0.9rem;
+    letter-spacing: 0.5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    transition: gap 0.3s ease;
+}
+
+.service-card:hover .card-cta {
+    gap: 10px; /* Стрелката се дръпва надясно при ховър */
+}
+
+.service-card:hover .arrow {
+    transform: translateX(3px);
+}
+
 .service-card h3 {
     font-size: 1.5rem;
     margin-bottom: 15px;
