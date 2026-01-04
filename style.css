@@ -856,9 +856,9 @@ footer p {
         content: '';
         display: block;
         width: 100%;
-        aspect-ratio: 16/9; /* Пропорция за мобилни */
+        height: 60vh; /* По-високо (заема 60% от екрана) */
         background: url('assets/logo_header.jpeg');
-        background-size: contain;
+        background-size: cover; /* Запълва всичко (изрязва леко краищата) */
         background-repeat: no-repeat;
         background-position: center;
     }
@@ -969,7 +969,10 @@ footer p {
     }
 
     .about-logo img {
-        max-width: 200px;
+        max-width: 100%; /* Пълна ширина */
+        width: 100%;
+        height: auto;
+        border-radius: 0; /* Без заобляне, за да се слива */
     }
 
     .section-title.left {
