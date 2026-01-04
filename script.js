@@ -1,18 +1,4 @@
-// Force scroll to top on page load (Aggressive fix for Safari)
-if ('scrollRestoration' in history) {
-    history.scrollRestoration = 'manual';
-}
-
-window.onbeforeunload = function () {
-    window.scrollTo(0, 0);
-}
-
 document.addEventListener('DOMContentLoaded', () => {
-    // Double check scroll position
-    setTimeout(() => {
-        window.scrollTo(0, 0);
-    }, 10);
-
 // FAQ Accordion
 const faqItems = document.querySelectorAll('.faq-item');
 
@@ -62,18 +48,20 @@ let scrollPosition = 0;
 
 // Функция за спиране на скрола (със запазване на позицията)
 function disableScroll() {
-    scrollPosition = window.scrollY; // Запомняме къде сме
+    scrollPosition = window.pageYOffset || document.documentElement.scrollTop;
+    document.body.style.overflow = 'hidden'; // Спираме скрола на Desktop
     document.body.style.position = 'fixed';
-    document.body.style.top = `-${scrollPosition}px`; // Фиксираме визуално на същото място
+    document.body.style.top = `-${scrollPosition}px`;
     document.body.style.width = '100%';
 }
 
 // Функция за пускане на скрола (с връщане на позицията)
 function enableScroll() {
+    document.body.style.overflow = ''; // Пускаме скрола на Desktop
     document.body.style.position = '';
     document.body.style.top = '';
     document.body.style.width = '';
-    window.scrollTo(0, scrollPosition); // Връщаме се там, където бяхме
+    window.scrollTo(0, scrollPosition);
 }
 
 // Отваряне
