@@ -776,6 +776,53 @@ footer p {
     transform: scale(1);
 }
 
+.lightbox-nav {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0, 0, 0, 0.5); /* Полупрозрачен фон */
+    color: var(--primary-color); /* Сини стрелки */
+    border: 2px solid var(--primary-color);
+    font-size: 2rem;
+    padding: 10px 15px;
+    cursor: pointer;
+    z-index: 10003;
+    border-radius: 50%;
+    transition: all 0.3s ease;
+    user-select: none;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.lightbox-nav:hover {
+    background-color: var(--primary-color);
+    color: #fff;
+    box-shadow: 0 0 15px rgba(0, 123, 255, 0.6);
+}
+
+.lightbox-nav.prev {
+    left: 20px;
+}
+
+.lightbox-nav.next {
+    right: 20px;
+}
+
+/* На мобилни стрелките да са малко по-малки */
+@media (max-width: 768px) {
+    .lightbox-nav {
+        width: 45px;
+        height: 45px;
+        font-size: 1.5rem;
+        padding: 5px;
+    }
+    .lightbox-nav.prev { left: 10px; }
+    .lightbox-nav.next { right: 10px; }
+}
+
 .lightbox-close {
     position: absolute;
     top: 20px;

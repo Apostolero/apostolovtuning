@@ -41,10 +41,38 @@ links.forEach(link => {
 // Lightbox Logic (Галерия на цял екран)
 const lightbox = document.getElementById('lightbox');
 const lightboxImg = document.getElementById('lightbox-img');
-const galleryImages = document.querySelectorAll('.gallery-item img');
+const galleryImages = document.querySelectorAll('.gallery-item img'); // Всички снимки в масив
 const closeBtn = document.querySelector('.lightbox-close');
+const prevBtn = document.querySelector('.lightbox-nav.prev');
+const nextBtn = document.querySelector('.lightbox-nav.next');
 
+let currentIndex = 0; // Индекс на текущата отворена снимка
 let scrollPosition = 0;
+
+// Функция за отваряне на конкретна снимка по индекс
+function showImage(index) {
+    if (index >= galleryImages.length) {
+        currentIndex = 0; // Завъртаме отначало
+    } else if (index < 0) {
+        currentIndex = galleryImages.length - 1; // Отиваме на последната
+    } else {
+        currentIndex = index;
+    }
+    
+    // Взимаме source на новия индекс
+    lightboxImg.src = galleryImages[currentIndex].src;
+}
+
+// Слушатели за стрелките
+prevBtn.addEventListener('click', (e) => {
+    e.stopPropagation(); // Спира затварянето на лайтбокса
+    showImage(currentIndex - 1);
+});
+
+nextBtn.addEventListener('click', (e) => {
+    e.stopPropagation();
+    showImage(currentIndex + 1);
+});
 
 // Функция за спиране на скрола (със запазване на позицията)
 function disableScroll() {
@@ -64,11 +92,12 @@ function enableScroll() {
     window.scrollTo(0, scrollPosition);
 }
 
-// Отваряне
-galleryImages.forEach(img => {
+// Отваряне (модифицирано да запомни индекса)
+galleryImages.forEach((img, index) => {
     img.addEventListener('click', () => {
         lightbox.classList.add('active');
-        lightboxImg.src = img.src; 
+        currentIndex = index; // Запомняме коя снимка сме цъкнали
+        showImage(currentIndex);
         disableScroll();
     });
 });
@@ -79,9 +108,9 @@ closeBtn.addEventListener('click', () => {
     enableScroll();
 });
 
-// Затваряне при клик извън снимката
+// Затваряне при клик извън снимката (но не и върху стрелките)
 lightbox.addEventListener('click', (e) => {
-    if (e.target !== lightboxImg) {
+    if (e.target !== lightboxImg && e.target !== prevBtn && e.target !== nextBtn) {
         lightbox.classList.remove('active');
         enableScroll();
     }
