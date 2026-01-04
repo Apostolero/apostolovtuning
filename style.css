@@ -856,11 +856,11 @@ footer p {
         content: '';
         display: block;
         width: 100%;
-        height: 45vh; /* Намалена височина, за да не е твърде голямо */
+        height: 80vh; /* Два пъти по-висока */
         background: url('assets/logo_header.jpeg');
-        background-size: 110%; /* Фиен зуум, за да не реже прекалено много */
+        background-size: cover; /* Използваме cover за запълване на голямата височина */
         background-repeat: no-repeat;
-        background-position: center;
+        background-position: 48% center; /* Леко изместване наляво, за да се отреже отдясно */
     }
 
     .hero::after {
