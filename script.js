@@ -58,18 +58,22 @@ const lightboxImg = document.getElementById('lightbox-img');
 const galleryImages = document.querySelectorAll('.gallery-item img');
 const closeBtn = document.querySelector('.lightbox-close');
 
-// Функция за спиране на скрола
+let scrollPosition = 0;
+
+// Функция за спиране на скрола (със запазване на позицията)
 function disableScroll() {
-    document.body.style.overflow = 'hidden';
+    scrollPosition = window.scrollY; // Запомняме къде сме
     document.body.style.position = 'fixed';
+    document.body.style.top = `-${scrollPosition}px`; // Фиксираме визуално на същото място
     document.body.style.width = '100%';
 }
 
-// Функция за пускане на скрола
+// Функция за пускане на скрола (с връщане на позицията)
 function enableScroll() {
-    document.body.style.overflow = 'auto';
     document.body.style.position = '';
+    document.body.style.top = '';
     document.body.style.width = '';
+    window.scrollTo(0, scrollPosition); // Връщаме се там, където бяхме
 }
 
 // Отваряне
