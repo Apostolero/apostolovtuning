@@ -856,9 +856,9 @@ footer p {
         content: '';
         display: block;
         width: 100%;
-        height: 60vh; /* По-високо (заема 60% от екрана) */
+        height: 45vh; /* Намалена височина, за да не е твърде голямо */
         background: url('assets/logo_header.jpeg');
-        background-size: cover; /* Запълва всичко (изрязва леко краищата) */
+        background-size: 110%; /* Фиен зуум, за да не реже прекалено много */
         background-repeat: no-repeat;
         background-position: center;
     }
