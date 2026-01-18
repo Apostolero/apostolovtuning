@@ -1120,3 +1120,18 @@ footer p {
     margin-bottom: 10px;
     color: #ccc;
 }
+
+/* --- MOBILE FIXES --- */
+@media (max-width: 768px) {
+    /* Оправяме снимките без описание да не се режат на мобилен */
+    .gallery-item:not(.project-card) {
+        height: auto !important;
+        min-height: 200px;
+    }
+    
+    .gallery-item:not(.project-card) img {
+        height: auto !important;
+        object-fit: contain !important; /* Показва цялата снимка */
+        width: 100%;
+    }
+}
