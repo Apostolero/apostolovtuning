@@ -1060,3 +1060,60 @@ footer p {
         transform: translateX(0);
     }
 }
+
+/* --- Галерия с описания (Project Cards) --- */
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.project-card {
+    background: #1a1a1a;
+    border-radius: 12px;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 1px solid #333;
+    display: flex;
+    flex-direction: column;
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.5);
+    border-color: var(--primary-color);
+}
+
+.project-card img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    border-bottom: 2px solid var(--primary-color);
+}
+
+.project-info {
+    padding: 20px;
+    color: #eee;
+}
+
+.project-info h3 {
+    color: var(--primary-color);
+    margin-bottom: 15px;
+    font-size: 1.3rem;
+    border-bottom: 1px solid #333;
+    padding-bottom: 10px;
+}
+
+.project-info h4 {
+    color: #fff;
+    margin: 15px 0 8px 0;
+    font-size: 1.1rem;
+}
+
+.project-info p {
+    font-size: 0.95rem;
+    line-height: 1.6;
+    margin-bottom: 10px;
+    color: #ccc;
+}
