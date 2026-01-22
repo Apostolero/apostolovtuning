@@ -223,6 +223,64 @@ header {
     padding-top: 40px;
 }
 
+/* --- Reviews Highlight Section --- */
+.reviews-highlight {
+    padding: 30px 0;
+    background: linear-gradient(180deg, var(--bg-dark) 0%, #1a1a1a 100%);
+    border-bottom: 1px solid #333;
+}
+
+.review-card-centered {
+    background-color: rgba(30, 30, 30, 0.6);
+    border: 1px solid var(--primary-color);
+    border-radius: 12px;
+    padding: 25px;
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto;
+    box-shadow: 0 0 20px rgba(0, 123, 255, 0.1);
+    animation: neonPulse 4s infinite ease-in-out;
+}
+
+.review-card-centered .stars {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+}
+
+.review-card-centered .review-text {
+    font-size: 1.1rem;
+    font-style: italic;
+    color: #fff;
+    margin-bottom: 15px;
+    line-height: 1.5;
+}
+
+.review-footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    font-size: 0.9rem;
+    flex-wrap: wrap;
+}
+
+.review-footer .author {
+    color: #bbb;
+    font-weight: 600;
+}
+
+.review-footer .google-link {
+    color: var(--primary-color);
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.review-footer .google-link:hover .arrow {
+    transform: translateX(3px);
+}
+
 /* --- About Section (New) --- */
 .about-wrapper {
     display: flex;
