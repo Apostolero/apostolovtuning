@@ -223,23 +223,54 @@ header {
     padding-top: 40px;
 }
 
-/* --- Reviews Highlight Section --- */
+/* --- Reviews Highlight Slider Section --- */
 .reviews-highlight {
-    padding: 30px 0;
+    padding: 30px 0 40px 0;
     background: linear-gradient(180deg, var(--bg-dark) 0%, #1a1a1a 100%);
     border-bottom: 1px solid #333;
 }
 
+.reviews-slider-wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+}
+
+.reviews-track-container {
+    overflow: hidden;
+    width: 100%;
+    max-width: 800px; /* Match the card max-width */
+}
+
+.reviews-track {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    width: 100%;
+}
+
+.review-slide {
+    min-width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+/* Styles for the inner card (Reused from previous step) */
 .review-card-centered {
     background-color: rgba(30, 30, 30, 0.6);
     border: 1px solid var(--primary-color);
     border-radius: 12px;
     padding: 25px;
     text-align: center;
-    max-width: 800px;
-    margin: 0 auto;
+    width: 100%;
     box-shadow: 0 0 20px rgba(0, 123, 255, 0.1);
-    animation: neonPulse 4s infinite ease-in-out;
+    /* No animation here to avoid flickering during slide */
+}
+
+.review-card-centered:hover {
+    box-shadow: 0 0 30px rgba(0, 123, 255, 0.2);
+    border-color: #4da3ff;
 }
 
 .review-card-centered .stars {
@@ -280,6 +311,63 @@ header {
 .review-footer .google-link:hover .arrow {
     transform: translateX(3px);
 }
+
+/* Slider Controls */
+.slider-btn {
+    background: transparent;
+    border: none;
+    color: var(--primary-color);
+    font-size: 2rem;
+    cursor: pointer;
+    padding: 10px;
+    transition: transform 0.2s ease, opacity 0.2s;
+    opacity: 0.6;
+    z-index: 10;
+}
+
+.slider-btn:hover {
+    transform: scale(1.2);
+    opacity: 1;
+    color: #fff;
+    text-shadow: 0 0 10px var(--primary-color);
+}
+
+.slider-nav {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 15px;
+}
+
+.slider-dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    border: none;
+    background-color: #444;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.slider-dot.current-dot {
+    background-color: var(--primary-color);
+    box-shadow: 0 0 5px var(--primary-color);
+}
+
+/* Hide arrows on very small screens if needed, or adjust padding */
+@media (max-width: 500px) {
+    .reviews-slider-wrapper {
+        gap: 0;
+    }
+    .slider-btn {
+        font-size: 1.5rem;
+        padding: 5px;
+    }
+    .review-text {
+        font-size: 0.95rem; /* Smaller text on mobile */
+    }
+}
+
 
 /* --- About Section (New) --- */
 .about-wrapper {
