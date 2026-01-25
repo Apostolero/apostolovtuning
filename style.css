@@ -741,7 +741,34 @@ header {
     box-shadow: 0 4px 10px rgba(0,0,0,0.5);
 }
 
-/* --- Floating Chat Button --- */
+/* --- Floating Buttons --- */
+.floating-call {
+    position: fixed;
+    bottom: 25px;
+    left: 25px;
+    background-color: #28a745; /* Зелено за обаждане */
+    color: #fff;
+    padding: 8px 18px;
+    border-radius: 50px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-weight: 600;
+    font-size: 0.9rem;
+    box-shadow: 0 8px 20px rgba(40, 167, 69, 0.4);
+    z-index: 9999;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    text-decoration: none;
+    border: 1px solid rgba(255,255,255,0.1);
+}
+
+.floating-call:hover {
+    transform: translateY(-3px) scale(1.03);
+    background-color: #218838;
+    box-shadow: 0 0 25px rgba(40, 167, 69, 0.8);
+}
+
 .floating-chat {
     position: fixed;
     bottom: 25px;
@@ -1197,6 +1224,13 @@ footer p {
     .floating-chat {
         bottom: 15px;
         right: 15px;
+        padding: 6px 14px;
+        font-size: 0.8rem;
+    }
+
+    .floating-call {
+        bottom: 15px;
+        left: 15px;
         padding: 6px 14px;
         font-size: 0.8rem;
     }
