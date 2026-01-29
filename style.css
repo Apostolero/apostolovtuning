@@ -282,7 +282,7 @@ header {
     text-align: center;
     width: 100%;
     box-shadow: 0 0 20px rgba(0, 123, 255, 0.1);
-    /* No animation here to avoid flickering during slide */
+    animation: neonPulse 3s infinite ease-in-out;
 }
 
 .review-card-centered:hover {
