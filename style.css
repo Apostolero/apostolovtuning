@@ -727,8 +727,8 @@ header {
     background-color: #1877f2;
 }
 
-.header-socials a.insta {
-    background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+.header-socials a.wa {
+    background-color: #25D366;
 }
 
 .header-socials a.tiktok {
@@ -1065,7 +1065,7 @@ footer p {
 
     /* Цветове за мобилните иконки */
     .mobile-socials a.fb { background-color: #1877f2; }
-    .mobile-socials a.insta { background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%); }
+    .mobile-socials a.wa { background-color: #25D366; }
     .mobile-socials a.tiktok { background-color: #010101; border: 1px solid rgba(255,255,255,0.2); }
 
     /* Gallery Optimization for Mobile */
