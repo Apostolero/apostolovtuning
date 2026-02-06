@@ -248,4 +248,53 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // Initialize
     startAutoPlay();
+
+    /* --- Cookie Consent Logic --- */
+    const cookieBanner = document.getElementById('cookie-banner');
+    const acceptBtn = document.getElementById('accept-cookies');
+    const declineBtn = document.getElementById('decline-cookies');
+
+    // Helper to set consent
+    function setConsent(status) {
+        localStorage.setItem('cookieConsent', status);
+        if(cookieBanner) cookieBanner.style.display = 'none';
+        
+        if (status === 'accepted') {
+            // Enable Analytics
+            if (typeof gtag === 'function') {
+                gtag('consent', 'update', {
+                    'analytics_storage': 'granted'
+                });
+            }
+        }
+    }
+
+    // Check if user has already made a choice
+    const userConsent = localStorage.getItem('cookieConsent');
+
+    if (!userConsent) {
+        // Show banner after a short delay
+        setTimeout(() => {
+            if(cookieBanner) cookieBanner.style.display = 'block';
+        }, 1000);
+    } else if (userConsent === 'accepted') {
+        // Ensure analytics are granted if previously accepted
+        if (typeof gtag === 'function') {
+            gtag('consent', 'update', {
+                'analytics_storage': 'granted'
+            });
+        }
+    }
+
+    if (acceptBtn) {
+        acceptBtn.addEventListener('click', () => {
+            setConsent('accepted');
+        });
+    }
+
+    if (declineBtn) {
+        declineBtn.addEventListener('click', () => {
+            setConsent('declined');
+        });
+    }
 });
