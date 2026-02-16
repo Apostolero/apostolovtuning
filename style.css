@@ -1299,10 +1299,24 @@ footer p {
 
 .project-info h3 {
     color: var(--primary-color);
-    margin-bottom: 15px;
+    margin-bottom: 8px; /* Намалено, за да има място за датата */
     font-size: 1.3rem;
     border-bottom: 1px solid #333;
     padding-bottom: 10px;
+}
+
+.project-date {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 0.85rem;
+    color: #888; /* По-дискретно сиво */
+    margin-bottom: 15px;
+    font-weight: 500;
+}
+
+.project-date svg {
+    fill: var(--primary-color); /* Синя иконка */
 }
 
 .project-info h4 {
