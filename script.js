@@ -297,4 +297,38 @@ document.addEventListener("DOMContentLoaded", () => {
             setConsent('declined');
         });
     }
+
+    /* --- PROJECT CARD MINI-SLIDER LOGIC --- */
+    const projectCards = document.querySelectorAll('.project-card');
+
+    projectCards.forEach(card => {
+        const images = card.querySelectorAll('.project-image-container img');
+        const nextBtn = card.querySelector('.project-slider-btn.next');
+        const prevBtn = card.querySelector('.project-slider-btn.prev');
+        
+        if (images.length <= 1) return; // No slider needed if only one image
+
+        let activeIndex = 0;
+
+        const showImage = (index) => {
+            images.forEach(img => img.classList.remove('active'));
+            images[index].classList.add('active');
+        };
+
+        if (nextBtn) {
+            nextBtn.addEventListener('click', (e) => {
+                e.stopPropagation(); // Prevent lightbox from opening
+                activeIndex = (activeIndex + 1) % images.length;
+                showImage(activeIndex);
+            });
+        }
+
+        if (prevBtn) {
+            prevBtn.addEventListener('click', (e) => {
+                e.stopPropagation(); // Prevent lightbox from opening
+                activeIndex = (activeIndex - 1 + images.length) % images.length;
+                showImage(activeIndex);
+            });
+        }
+    });
 });
