@@ -1070,12 +1070,18 @@ footer p {
 
     /* Gallery Optimization for Mobile */
     .gallery-grid {
-        grid-template-columns: repeat(4, 1fr); /* 4 колони принудително */
+        grid-template-columns: repeat(4, 1fr); /* 4 колони принудително за малките снимки */
         gap: 4px; /* Минимално разстояние */
     }
 
-    .gallery-item {
-        height: 80px; /* Много малки квадратчета, за да се съберат */
+    /* Картите на проектите да не се свиват в 4 колони, а да са на цял ред */
+    .project-card {
+        grid-column: span 4;
+        margin-bottom: 10px;
+    }
+
+    .gallery-item:not(.project-card) {
+        height: 80px; /* Много малки квадратчета само за обикновените снимки */
         border-radius: 2px;
     }
 
@@ -1297,23 +1303,24 @@ footer p {
     object-fit: cover;
     opacity: 0;
     transition: opacity 0.5s ease;
-    border-bottom: none; /* Removed from direct img */
+    border-bottom: none;
+    z-index: 1;
 }
 
 .project-image-container img.active {
     opacity: 1;
-    position: relative; /* Only active one takes space if needed, though container is fixed */
+    z-index: 2; /* Always on top when active */
 }
 
 .project-slider-btn {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    background: rgba(0, 0, 0, 0.5);
+    background: rgba(0, 0, 0, 0.6);
     color: #fff;
     border: none;
-    width: 35px;
-    height: 35px;
+    width: 40px;
+    height: 40px;
     border-radius: 50%;
     cursor: pointer;
     display: flex;
@@ -1321,12 +1328,17 @@ footer p {
     justify-content: center;
     font-size: 1.2rem;
     z-index: 10;
-    opacity: 0;
-    transition: opacity 0.3s ease, background 0.3s ease;
+    opacity: 1; /* Make visible on mobile for better UX */
+    transition: background 0.3s ease;
 }
 
-.project-card:hover .project-slider-btn {
-    opacity: 1;
+@media (min-width: 769px) {
+    .project-slider-btn {
+        opacity: 0;
+    }
+    .project-card:hover .project-slider-btn {
+        opacity: 1;
+    }
 }
 
 .project-slider-btn:hover {
