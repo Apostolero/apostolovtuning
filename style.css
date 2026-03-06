@@ -690,9 +690,8 @@ header {
     background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%); /* Instagram Gradient */
 }
 
-.social-btn.tiktok {
-    background-color: #010101; /* TikTok Black */
-    border: 1px solid rgba(255,255,255,0.2); /* Лек бял кант за видимост */
+.social-btn.tg {
+    background-color: #0088cc; /* Telegram Blue */
 }
 
 .social-btn.wa {
@@ -731,9 +730,8 @@ header {
     background-color: #25D366 !important;
 }
 
-.header-socials a.tiktok {
-    background-color: #010101;
-    border: 1px solid rgba(255,255,255,0.2);
+.header-socials a.tg {
+    background-color: #0088cc;
 }
 
 .header-socials a:hover {
@@ -1066,7 +1064,7 @@ footer p {
     /* Цветове за мобилните иконки */
     .mobile-socials a.fb { background-color: #1877f2; }
     .mobile-socials a.wa { background-color: #25D366; }
-    .mobile-socials a.tiktok { background-color: #010101; border: 1px solid rgba(255,255,255,0.2); }
+    .mobile-socials a.tg { background-color: #0088cc; }
 
     /* Gallery Optimization for Mobile */
     .gallery-grid {
