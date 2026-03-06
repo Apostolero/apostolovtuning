@@ -1354,6 +1354,8 @@ footer p {
         height: 35px;
         font-size: 1rem;
     }
+    .project-slider-btn.prev { left: 25px; }
+    .project-slider-btn.next { right: 25px; }
 }
 
 .project-info {
