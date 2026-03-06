@@ -1345,8 +1345,16 @@ footer p {
     background: var(--primary-color);
 }
 
-.project-slider-btn.prev { left: 10px; }
-.project-slider-btn.next { right: 10px; }
+.project-slider-btn.prev { left: 15px; }
+.project-slider-btn.next { right: 15px; }
+
+@media (max-width: 768px) {
+    .project-slider-btn {
+        width: 35px;
+        height: 35px;
+        font-size: 1rem;
+    }
+}
 
 .project-info {
     padding: 20px;
