@@ -79,16 +79,23 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // Event Listeners for Images
     images.forEach((img, index) => {
-        // Find the parent container (to verify it's a gallery item)
-        const parent = img.closest('.gallery-item');
-        if (parent) {
-            parent.addEventListener('click', (e) => {
-                // Prevent default if it's a link (though currently divs)
-                e.preventDefault();
-                openLightbox(index);
-            });
-        }
+        // Prevent lightbox from opening if clicking slider buttons or details
+        img.addEventListener('click', (e) => {
+            e.stopPropagation();
+            openLightbox(index);
+        });
     });
+
+    // Remove the old gallery-item click listener that was causing the issue
+    // images.forEach((img, index) => {
+    //     const parent = img.closest('.gallery-item');
+    //     if (parent) {
+    //         parent.addEventListener('click', (e) => {
+    //             e.preventDefault();
+    //             openLightbox(index);
+    //         });
+    //     }
+    // });
 
     // Close Button
     if (closeBtn) closeBtn.addEventListener('click', closeLightbox);
@@ -302,31 +309,34 @@ document.addEventListener("DOMContentLoaded", () => {
     const projectCards = document.querySelectorAll('.project-card');
 
     projectCards.forEach(card => {
-        const images = card.querySelectorAll('.project-image-container img');
+        const projectImages = Array.from(card.querySelectorAll('.project-image-container img'));
         const nextBtn = card.querySelector('.project-slider-btn.next');
         const prevBtn = card.querySelector('.project-slider-btn.prev');
         
-        if (images.length <= 1) return; // No slider needed if only one image
+        if (projectImages.length <= 1) return; 
 
         let activeIndex = 0;
 
+        // Reset to first image on load
         const showImage = (index) => {
-            images.forEach(img => img.classList.remove('active'));
-            images[index].classList.add('active');
+            projectImages.forEach(img => img.classList.remove('active'));
+            projectImages[index].classList.add('active');
         };
 
         if (nextBtn) {
             nextBtn.addEventListener('click', (e) => {
-                e.stopPropagation(); // Prevent lightbox from opening
-                activeIndex = (activeIndex + 1) % images.length;
+                e.preventDefault();
+                e.stopPropagation(); 
+                activeIndex = (activeIndex + 1) % projectImages.length;
                 showImage(activeIndex);
             });
         }
 
         if (prevBtn) {
             prevBtn.addEventListener('click', (e) => {
-                e.stopPropagation(); // Prevent lightbox from opening
-                activeIndex = (activeIndex - 1 + images.length) % images.length;
+                e.preventDefault();
+                e.stopPropagation(); 
+                activeIndex = (activeIndex - 1 + projectImages.length) % projectImages.length;
                 showImage(activeIndex);
             });
         }
