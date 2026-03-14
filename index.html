@@ -44,6 +44,38 @@
     <link rel="canonical" href="https://apostolovtuning.com/">
 
     <link rel="stylesheet" href="style.css">
+    <style>
+        /* Фикс за разтягането на картите */
+        .gallery-grid { align-items: start !important; }
+        /* Уеднаквяване на всички снимки в проектите */
+        .project-card { height: auto !important; }
+        .project-image-container, .project-card > img { 
+            height: 250px !important; 
+            width: 100% !important; 
+            object-fit: cover !important; 
+            border-bottom: 2px solid var(--primary-color);
+            background-color: #000; /* Черен фон за запълване */
+        }
+        /* Фикс за застъпването на снимките в слайдъра */
+        .project-image-container img { opacity: 0 !important; z-index: 1 !important; position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; }
+        .project-image-container img.active { opacity: 1 !important; z-index: 2 !important; position: relative !important; display: block; }
+        
+        /* Стил за бутона Свий */
+        .btn-collapse {
+            background: none;
+            border: none;
+            color: var(--primary-color);
+            cursor: pointer;
+            font-weight: 600;
+            font-size: 0.9rem;
+            padding: 10px 0 0 0;
+            display: block;
+            width: 100%;
+            text-align: left;
+            transition: var(--transition);
+        }
+        .btn-collapse:hover { text-decoration: underline; opacity: 0.8; }
+    </style>
     
     <!-- Schema.org маркировка за локален бизнес (Local SEO) -->
     <script type="application/ld+json">
@@ -253,6 +285,7 @@
                                     <p>💻 <strong>ECU:</strong> Bosch MD1CS001 (Bench Mode)<br>
                                     📍 <strong>Локация:</strong> Карнобат / Бургас</p>
                                 </div>
+                                <button class="btn-collapse" onclick="this.closest('details').removeAttribute('open')">Свий ↑</button>
                             </details>
                         </div>
                     </div>
@@ -271,240 +304,279 @@
                                 Март 2026
                             </div>
                             <p>✅ <strong>Remap Stage 1</strong></p>
-                            <p>✅ <strong>Софтуерно изолиране на ДПФ</strong></p>
-                            <p>✅ <strong>Механично премахване на ДПФ</strong></p>
-                            <p>✅ <strong>Софтуерно изолиране на ЕГР</strong></p>
+                            <p>✅ <strong>DPF / EGR OFF</strong></p>
                             
-                            <h4>🚀 Резултат:</h4>
-                            <p>Значително повишена мощност и въртящ момент, подобрена динамика и премахнати екологични ограничения.
-                            <br>💻 <strong>ECU:</strong> EDC17CP44</p>
+                            <details class="project-details">
+                                <summary>Прочети всичко...</summary>
+                                <div class="details-content">
+                                    <p>✅ <strong>Механично премахване на ДПФ</strong></p>
+                                    <h4>🚀 Резултат:</h4>
+                                    <p>Значително повишена мощност и въртящ момент, подобрена динамика и премахнати екологични ограничения.
+                                    <br>💻 <strong>ECU:</strong> EDC17CP44</p>
+                                </div>
+                                <button class="btn-collapse" onclick="this.closest('details').removeAttribute('open')">Свий ↑</button>
+                            </details>
                         </div>
                     </div>
                     <div class="gallery-item project-card">
-                        <img src="assets/mercedes-c320cdi-egr-dpf-off-burgas.webp" alt="Mercedes W204 C320 CDI EGR DPF Off EDC17CP01 Tuning Burgas" loading="lazy">
+                        <div class="project-image-container">
+                            <img src="assets/mercedes-c320cdi-egr-dpf-off-burgas.webp" alt="Mercedes W204 C320 CDI EGR DPF Off EDC17CP01 Tuning Burgas" class="active" loading="lazy">
+                        </div>
                         <div class="project-info">
                             <h3>🚗 Mercedes-Benz C320 CDI (224hp)</h3>
                             <div class="project-date">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24"><path d="M20 20h-16v-11h16v11zm-3-12v-1h2+1h-2zm-4 0v-1h2v1h-2zm-4 0v-1h2v1h-2zm11-4v2h-1v-2h-10v2h-1v-2h-3v18h18v-18h-3zm-14 3h14v2h-14v-2z"/></svg>
                                 Март 2026
                             </div>
-                            <p>✅ <strong>Софтуерно изолиране на DPF</strong></p>
-                            <p>✅ <strong>Софтуерно изолиране на EGR</strong></p>
-                            <p>🔍 <strong>Диагностика:</strong> Пълна проверка със Star Diagnosis (Xentry) преди и след намесата.</p>
+                            <p>✅ <strong>Софтуерно изолиране на DPF/EGR</strong></p>
                             
-                            <h4>🚀 Резултат:</h4>
-                            <p>Трайно решение на проблемите с екологичните системи, премахване на аварийния режим и по-добра динамика на двигателя OM642.
-                            <br>💻 <strong>ECU:</strong> Bosch EDC17CP01</p>
+                            <details class="project-details">
+                                <summary>Прочети всичко...</summary>
+                                <div class="details-content">
+                                    <p>🔍 <strong>Диагностика:</strong> Пълна проверка със Star Diagnosis (Xentry) преди и след намесата.</p>
+                                    <h4>🚀 Резултат:</h4>
+                                    <p>Трайно решение на проблемите с екологичните системи, премахване на аварийния режим и по-добра динамика на двигателя OM642.
+                                    <br>💻 <strong>ECU:</strong> Bosch EDC17CP01</p>
+                                </div>
+                                <button class="btn-collapse" onclick="this.closest('details').removeAttribute('open')">Свий ↑</button>
+                            </details>
                         </div>
                     </div>
                     <div class="gallery-item project-card">
-                        <img src="assets/audi-a6-30tdi-stage1-remap-burgas.webp" alt="Audi A6 3.0 TDI Stage 1 Remap P0234 Overboost Fix Diagnosis" loading="lazy">
+                        <div class="project-image-container">
+                            <img src="assets/audi-a6-30tdi-stage1-remap-burgas.webp" alt="Audi A6 3.0 TDI Stage 1 Remap P0234 Overboost Fix Diagnosis" class="active" loading="lazy">
+                        </div>
                         <div class="project-info">
                             <h3>🚗 Audi A6 3.0 TDI (224hp)</h3>
                             <div class="project-date">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24"><path d="M20 20h-16v-11h16v11zm-3-12v-1h2v1h-2zm-4 0v-1h2v1h-2zm-4 0v-1h2v1h-2zm11-4v2h-1v-2h-10v2h-1v-2h-3v18h18v-18h-3zm-14 3h14v2h-14v-2z"/></svg>
                                 Февруари 2026
                             </div>
-                            <p>🔍 <strong>Диагностика:</strong> Колата пристигна в авариен режим (Limp Mode) поради некачествен софтуер от предишна намеса.</p>
-                            <p>✅ <strong>Услуга:</strong> Пълна ревизия на софтуера + Stage 1 Remap.</p>
-                            <p>🛠 <strong>Екстри:</strong> EGR Off, Swirl Flaps Off (Вихрови клапи), Popcorn Limiter.</p>
+                            <p>🛠 <strong>Stage 1 + P0234 Fix</strong></p>
                             
-                            <h4>🚀 Резултат:</h4>
-                            <p>Коригирано пренадуване на турбината, агресивна динамика и чиста работа на мотора без дим. 
-                            <br>💻 <strong>ECU:</strong> Bosch EDC16CP34</p>
+                            <details class="project-details">
+                                <summary>Прочети всичко...</summary>
+                                <div class="details-content">
+                                    <p>🔍 <strong>Диагностика:</strong> Колата пристигна в авариен режим поради некачествен софтуер.</p>
+                                    <p>✅ <strong>Услуга:</strong> Пълна ревизия на софтуера + Stage 1 Remap.</p>
+                                    <p>🛠 <strong>Екстри:</strong> EGR Off, Swirl Flaps Off, Popcorn Limiter.</p>
+                                    <h4>🚀 Резултат:</h4>
+                                    <p>Коригирано пренадуване на турбината и агресивна динамика.
+                                    <br>💻 <strong>ECU:</strong> Bosch EDC16CP34</p>
+                                </div>
+                                <button class="btn-collapse" onclick="this.closest('details').removeAttribute('open')">Свий ↑</button>
+                            </details>
                         </div>
                     </div>
                     <div class="gallery-item project-card">
-                        <img src="assets/skoda-octavia-immo-off-edc16.webp" alt="Skoda Octavia 2 1.9 TDI Immo Off EDC16U34 Bench Mode" loading="lazy">
+                        <div class="project-image-container">
+                            <img src="assets/skoda-octavia-immo-off-edc16.webp" alt="Skoda Octavia 2 1.9 TDI Immo Off EDC16U34 Bench Mode" class="active" loading="lazy">
+                        </div>
                         <div class="project-info">
-                            <h3>🚗 Skoda Octavia 2 1.9 TDI (105hp)</h3>
+                            <h3>🚗 Skoda Octavia 2 1.9 TDI</h3>
                             <div class="project-date">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24"><path d="M20 20h-16v-11h16v11zm-3-12v-1h2v1h-2zm-4 0v-1h2v1h-2zm-4 0v-1h2v1h-2zm11-4v2h-1v-2h-10v2h-1v-2h-3v18h18v-18h-3zm-14 3h14v2h-14v-2z"/></svg>
                                 Февруари 2026
                             </div>
-                            <p>🔑 <strong>Услуга:</strong> Софтуерно изключване на имобилайзер (Immo Off).</p>
-                            <p>💻 <strong>Метод:</strong> Работа в <strong>Bench Mode</strong> (ECU EDC16U34) - без отваряне на компютъра.</p>
+                            <p>🔑 <strong>Immo Off</strong></p>
                             
-                            <h4>🛠 Проблем & Решение:</h4>
-                            <p>Автомобилът не разпознаваше оригиналния ключ. Вместо скъп ремонт на таблото, приложихме прецизен софтуерен подход за трайно решение.</p>
-                            
-                            <h4>✅ Резултат:</h4>
-                            <p>Сигурно запалване и 100% надеждност на електрониката.</p>
+                            <details class="project-details">
+                                <summary>Прочети всичко...</summary>
+                                <div class="details-content">
+                                    <p>💻 <strong>Метод:</strong> Работа в <strong>Bench Mode</strong> (ECU EDC16U34).</p>
+                                    <h4>🛠 Проблем & Решение:</h4>
+                                    <p>Автомобилът не разпознаваше оригиналния ключ. Вместо скъп ремонт на таблото, приложихме софтуерен подход за трайно решение.</p>
+                                </div>
+                                <button class="btn-collapse" onclick="this.closest('details').removeAttribute('open')">Свий ↑</button>
+                            </details>
                         </div>
                     </div>
                     <div class="gallery-item project-card">
-                        <img src="assets/chiptuning-bench-mode-laboratory.webp" alt="Лаборатория за чип тунинг Bench Mode EDC17 ремонт компютри" loading="lazy">
+                        <div class="project-image-container">
+                            <img src="assets/chiptuning-bench-mode-laboratory.webp" alt="Лаборатория за чип тунинг Bench Mode EDC17 ремонт компютри" class="active" loading="lazy">
+                        </div>
                         <div class="project-info">
                             <h3>💻 Лаборатория & Електроника</h3>
                             <div class="project-date">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24"><path d="M20 20h-16v-11h16v11zm-3-12v-1h2v1h-2zm-4 0v-1h2v1h-2zm-4 0v-1h2v1h-2zm11-4v2h-1v-2h-10v2h-1v-2h-3v18h18v-18h-3zm-14 3h14v2h-14v-2z"/></svg>
                                 Февруари 2026
                             </div>
-                            <p>✅ <strong>Bench Mode:</strong> Директна връзка с компютъра за 100% сигурност.</p>
-                            <p>✅ <strong>Нови автомобили:</strong> Поддръжка на защитени компютри (EDC17, MED17, MD1 и др.).</p>
-                            <p>✅ <strong>Пълен архив:</strong> Full Backup на софтуера преди всяка намеса.</p>
+                            <p>✅ <strong>Bench Mode Specialists</strong></p>
                             
-                            <h4>🚀 Специализирани услуги:</h4>
-                            <p>⚙️ Ремап на автоматични скоростни кутии (TCU) - DSG, DQ250, 5g tronic...<br>
-                            💾 Клониране на ECU при повреда</p>
+                            <details class="project-details">
+                                <summary>Прочети всичко...</summary>
+                                <div class="details-content">
+                                    <p>✅ <strong>Bench Mode:</strong> Директна връзка с компютъра за 100% сигурност.</p>
+                                    <p>✅ <strong>Нови автомобили:</strong> Поддръжка на защитени компютри (EDC17, MED17, MD1).</p>
+                                    <h4>🚀 Специализирани услуги:</h4>
+                                    <p>⚙️ Ремап на TCU (DSG, DQ250...)<br>
+                                    💾 Клониране на ECU при повреда</p>
+                                </div>
+                                <button class="btn-collapse" onclick="this.closest('details').removeAttribute('open')">Свий ↑</button>
+                            </details>
                         </div>
                     </div>
                     <div class="gallery-item project-card">
-                        <img src="assets/vw-polo-16tdi-stage1-remap-burgas.webp" alt="Чип тунинг VW Polo 1.6TDI Stage 1 EGR DPF Off" loading="lazy">
+                        <div class="project-image-container">
+                            <img src="assets/vw-polo-16tdi-stage1-remap-burgas.webp" alt="Чип тунинг VW Polo 1.6TDI Stage 1 EGR DPF Off" class="active" loading="lazy">
+                        </div>
                         <div class="project-info">
-                            <h3>🚗 VW Polo 1.6TDI 75кс 2010г.</h3>
+                            <h3>🚗 VW Polo 1.6TDI 2010г.</h3>
                             <div class="project-date">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24"><path d="M20 20h-16v-11h16v11zm-3-12v-1h2v1h-2zm-4 0v-1h2v1h-2zm-4 0v-1h2v1h-2zm11-4v2h-1v-2h-10v2h-1v-2h-3v18h18v-18h-3zm-14 3h14v2h-14v-2z"/></svg>
                                 Февруари 2026
                             </div>
-                            <p>✅ Stage 1 Remap<br>
-                            ✅ Софтуерно изолиране на EGR и DPF<br>
-                            ✅ Механично премахване на ДПФ</p>
+                            <p>🚀 <strong>Stage 1 Remap</strong></p>
                             
-                            <h4>❌ История:</h4>
-                            <p>След дълъг престой в бокса, проблемите по колата бяха установени и отстранени без излишни разходи и вече е в движение.</p>
+                            <details class="project-details">
+                                <summary>Прочети всичко...</summary>
+                                <div class="details-content">
+                                    <p>✅ Софтуерно изолиране на EGR и DPF.</p>
+                                    <h4>❌ История:</h4>
+                                    <p>След дълъг престой в бокса, проблемите бяха отстранени и колата е в движение с подобрена динамика.</p>
+                                </div>
+                                <button class="btn-collapse" onclick="this.closest('details').removeAttribute('open')">Свий ↑</button>
+                            </details>
                         </div>
                     </div>
                     <div class="gallery-item project-card">
-                        <img src="assets/vw-passat-b6-20tdi-remap-burgas.webp" alt="Чип тунинг VW Passat B6 2.0TDI Stage 1 EGR DPF Off" loading="lazy">
+                        <div class="project-image-container">
+                            <img src="assets/vw-passat-b6-20tdi-remap-burgas.webp" alt="Чип тунинг VW Passat B6 2.0TDI Stage 1 EGR DPF Off" class="active" loading="lazy">
+                        </div>
                         <div class="project-info">
                             <h3>🚗 VW Passat B6 2.0TDI</h3>
                             <div class="project-date">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24"><path d="M20 20h-16v-11h16v11zm-3-12v-1h2v1h-2zm-4 0v-1h2v1h-2zm-4 0v-1h2v1h-2zm11-4v2h-1v-2h-10v2h-1v-2h-3v18h18v-18h-3zm-14 3h14v2h-14v-2z"/></svg>
                                 Януари 2026
                             </div>
-                            <p>✅ Ремап Stage 1<br>
-                            ✅ Софтуерно изолиране на EGR и DPF<br>
-                            ✅ Прекъсвач на 4500 оборота</p>
+                            <p>🚀 <strong>Stage 1 Remap</strong></p>
                             
-                            <h4>🚀 След намеса:</h4>
-                            <p>🐢 140кс ↗️ 175кс ✈️<br>
-                            🐢 320нм ↗️ 390нм ✈️<br>
-                            ⛽️ По-нисък разход на гориво<br>
-                            ♻️ Оптимизирана работа на двигателя<br>
-                            ♻️ Без дим и компромиси с надеждността</p>
-                            
-                            <h4>💻 Задълбочена диагностика:</h4>
-                            <p>✅ Пълна проверка за грешки преди намеса<br>
-                            ✅ Анализ на живи данни<br>
-                            ✅ Проверка след намеса за максимална безопасност</p>
+                            <details class="project-details">
+                                <summary>Прочети всичко...</summary>
+                                <div class="details-content">
+                                    <p>🐢 140кс ↗️ 175кс ✈️<br>
+                                    🐢 320нм ↗️ 390нм ✈️<br>
+                                    ⛽️ По-нисък разход на гориво<br>
+                                    ♻️ Без дим и компромиси с надеждността</p>
+                                </div>
+                                <button class="btn-collapse" onclick="this.closest('details').removeAttribute('open')">Свий ↑</button>
+                            </details>
                         </div>
                     </div>
                     <div class="gallery-item project-card">
-                        <img src="assets/audi-a3-20tdi-bkd-remap-burgas.webp" alt="Чип тунинг Audi A3 8P 2.0 TDI BKD Stage 1 VCDS VAGCOM" loading="lazy">
+                        <div class="project-image-container">
+                            <img src="assets/audi-a3-20tdi-bkd-remap-burgas.webp" alt="Чип тунинг Audi A3 8P 2.0 TDI BKD Stage 1 VCDS VAGCOM" class="active" loading="lazy">
+                        </div>
                         <div class="project-info">
                             <h3>🚗 Audi A3 8P 2.0 TDI (BKD)</h3>
                             <div class="project-date">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24"><path d="M20 20h-16v-11h16v11zm-3-12v-1h2v1h-2zm-4 0v-1h2v1h-2zm-4 0v-1h2v1h-2zm11-4v2h-1v-2h-10v2h-1v-2h-3v18h18v-18h-3zm-14 3h14v2h-14v-2z"/></svg>
                                 Декември 2025
                             </div>
-                            <p>✅ Stage 1 Remap<br>
-                            ✅ Изолиране на EGR, Дросел и Дебитомер (MAF)<br>
-                            🍿 Прекъсвач на 4500 оборота</p>
+                            <p>🚀 <strong>Stage 1 Remap</strong></p>
                             
-                            <h4>🚀 Резултати:</h4>
-                            <p>🐢 140кс ↗️ 175кс ✈️<br>
-                            🐢 320нм ↗️ 395нм ✈️<br>
-                            ⚡️ По-директен педал на газта<br>
-                            📉 Оптимизиран разход</p>
-                            
-                            <h4>💻 VAG Диагностика & Лог:</h4>
-                            <p>✅ Проверка с VCDS (VAG-COM) преди и след<br>
-                            ✅ Анализ на дюзи и турбо на живи данни<br>
-                            ✅ Гаранция за липса на грешки</p>
+                            <details class="project-details">
+                                <summary>Прочети всичко...</summary>
+                                <div class="details-content">
+                                    <p>🐢 140кс ↗️ 175кс ✈️<br>
+                                    🐢 320нм ↗️ 395нм ✈️<br>
+                                    ⚡️ По-директен педал на газта<br>
+                                    📉 Оптимизиран разход</p>
+                                </div>
+                                <button class="btn-collapse" onclick="this.closest('details').removeAttribute('open')">Свий ↑</button>
+                            </details>
                         </div>
                     </div>
                     <div class="gallery-item project-card">
-                        <img src="assets/vw-bora-19tdi-ajm-popcorn-burgas.webp" alt="Чип тунинг VW Bora 1.9 TDI AJM PD Stage 1 Popcorn Launch Control" loading="lazy">
+                        <div class="project-image-container">
+                            <img src="assets/vw-bora-19tdi-ajm-popcorn-burgas.webp" alt="Чип тунинг VW Bora 1.9 TDI AJM PD Stage 1 Popcorn Launch Control" class="active" loading="lazy">
+                        </div>
                         <div class="project-info">
                             <h3>🚗 VW Bora 1.9 TDI (AJM)</h3>
                             <div class="project-date">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24"><path d="M20 20h-16v-11h16v11zm-3-12v-1h2v1h-2zm-4 0v-1h2v1h-2zm-4 0v-1h2v1h-2zm11-4v2h-1v-2h-10v2h-1v-2h-3v18h18v-18h-3zm-14 3h14v2h-14v-2z"/></svg>
                                 Декември 2025
                             </div>
-                            <p>✅ Stage 1 Safe Remap<br>
-                            ✅ EGR (ЕГР) и Дебитомер OFF<br>
-                            🍿 Popcorn Прекъсвач на 4500 оборота</p>
+                            <p>🍿 <strong>Stage 1 Popcorn</strong></p>
                             
-                            <h4>🚀 Резултати (PD Power):</h4>
-                            <p>🐢 116кс ↗️ 145кс ✈️<br>
-                            🐢 285нм ↗️ 360нм ✈️<br>
-                            🚀 Брутален старт (Launch Control)<br>
-                            ⛽️ По-нисък разход на гориво</p>
-                            
-                            <h4>💻 VAG EDC15 Диагностика:</h4>
-                            <p>✅ Проверка на дюзи (BIP/Idle)<br>
-                            ✅ Лог на турбо (N75 Duty Cycle)<br>
-                            ✅ 100% Надеждност за всеки ден</p>
+                            <details class="project-details">
+                                <summary>Прочети всичко...</summary>
+                                <div class="details-content">
+                                    <p>🐢 116кс ↗️ 145кс ✈️<br>
+                                    🐢 285нм ↗️ 360нм ✈️<br>
+                                    🚀 Launch Control & Popcorn</p>
+                                </div>
+                                <button class="btn-collapse" onclick="this.closest('details').removeAttribute('open')">Свий ↑</button>
+                            </details>
                         </div>
                     </div>
                     <div class="gallery-item project-card">
-                        <img src="assets/bmw-e39-525d-m57-remap-burgas.webp" alt="Чип тунинг BMW E39 525d M57 Stage 1 EGR MAF Off Popcorn" loading="lazy">
+                        <div class="project-image-container">
+                            <img src="assets/bmw-e39-525d-m57-remap-burgas.webp" alt="Чип тунинг BMW E39 525d M57 Stage 1 EGR MAF Off Popcorn" class="active" loading="lazy">
+                        </div>
                         <div class="project-info">
                             <h3>🚗 BMW 525d E39 (M57)</h3>
                             <div class="project-date">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24"><path d="M20 20h-16v-11h16v11zm-3-12v-1h2v1h-2zm-4 0v-1h2v1h-2zm-4 0v-1h2v1h-2zm11-4v2h-1v-2h-10v2h-1v-2h-3v18h18v-18h-3zm-14 3h14v2h-14v-2z"/></svg>
                                 Декември 2025
                             </div>
-                            <p>✅ Stage 1 Remap (Safe)<br>
-                            ✅ Изолиране на EGR и Дебитомер (MAF)<br>
-                            🍿 Hard Cut прекъсвач на 4500 оборота</p>
+                            <p>🚀 <strong>Stage 1 Remap</strong></p>
                             
-                            <h4>🚀 Резултати:</h4>
-                            <p>🐢 163кс ↗️ 195кс ✈️<br>
-                            🐢 350нм ↗️ 430нм ✈️<br>
-                            🔥 Брутален старт и еластичност<br>
-                            📉 По-нискък разход извънградско</p>
-                            
-                            <h4>💻 BMW Диагностика (DDE):</h4>
+                            <details class="project-details">
+                                <summary>Прочети всичко...</summary>
+                                <div class="details-content">
+                                    <p>🐢 163кс ↗️ 195кс ✈️<br>
+                                    🐢 350нм ↗️ 430нм ✈️<br>
+                                    🍿 Hard Cut прекъсвач</p>
+                                </div>
+                                <button class="btn-collapse" onclick="this.closest('details').removeAttribute('open')">Свий ↑</button>
+                            </details>
                         </div>
                     </div>
                     <div class="gallery-item project-card">
-                        <img src="assets/mercedes-w211-e200cdi-remap-burgas.webp" alt="Чип тунинг Mercedes W211 E200 CDI Stage 1 Xentry DAS Swirl Flaps" loading="lazy">
+                        <div class="project-image-container">
+                            <img src="assets/mercedes-w211-e200cdi-remap-burgas.webp" alt="Чип тунинг Mercedes W211 E200 CDI Stage 1 Xentry DAS Swirl Flaps" class="active" loading="lazy">
+                        </div>
                         <div class="project-info">
                             <h3>🚗 Mercedes W211 E200 CDI</h3>
                             <div class="project-date">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24"><path d="M20 20h-16v-11h16v11zm-3-12v-1h2v1h-2zm-4 0v-1h2v1h-2zm-4 0v-1h2v1h-2zm11-4v2h-1v-2h-10v2h-1v-2h-3v18h18v-18h-3zm-14 3h14v2h-14v-2z"/></svg>
                                 Декември 2025
                             </div>
-                            <p>✅ Remap Stage 1 (Safe)<br>
-                            💨 Софтуерно изключване на вихрови клапи<br>
-                            ⚙️ Оптимизирана работа на мотора</p>
+                            <p>💨 <strong>Swirl Flaps Off</strong></p>
                             
-                            <h4>🚀 Резултати (Unlock):</h4>
-                            <p>🐢 122кс ↗️ 175кс ✈️<br>
-                            🐢 270нм ↗️ 380нм ✈️<br>
-                            🔥 Отключен фабричен потенциал<br>
-                            📉 По-нисък разход на гориво</p>
-                            
-                            <h4>💻 Star Diagnosis (Xentry/DAS):</h4>
-                            <p>✅ Професионална диагностика (Дилърско ниво)<br>
-                            ✅ Проверка на дюзи и турбо<br>
-                            ✅ Пълен репорт преди и след</p>
+                            <details class="project-details">
+                                <summary>Прочети всичко...</summary>
+                                <div class="details-content">
+                                    <p>🐢 122кс ↗️ 175кс ✈️<br>
+                                    🐢 270нм ↗️ 380нм ✈️<br>
+                                    🔥 Отключен фабричен потенциал</p>
+                                </div>
+                                <button class="btn-collapse" onclick="this.closest('details').removeAttribute('open')">Свий ↑</button>
+                            </details>
                         </div>
                     </div>
                     <div class="gallery-item project-card">
-                        <img src="assets/honda-crv-22ictdi-remap-burgas.webp" alt="Чип тунинг Honda CR-V 2.2 i-CTDI N22A Stage 1 EGR OFF HDS iHDS" loading="lazy">
+                        <div class="project-image-container">
+                            <img src="assets/honda-crv-22ictdi-remap-burgas.webp" alt="Чип тунинг Honda CR-V 2.2 i-CTDI N22A Stage 1 EGR OFF HDS iHDS" class="active" loading="lazy">
+                        </div>
                         <div class="project-info">
-                            <h3>🚗 Honda CR-V 2.2 i-CTDI (N22A)</h3>
+                            <h3>🚗 Honda CR-V 2.2 i-CTDI</h3>
                             <div class="project-date">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24"><path d="M20 20h-16v-11h16v11zm-3-12v-1h2v1h-2zm-4 0v-1h2v1h-2zm-4 0v-1h2v1h-2zm11-4v2h-1v-2h-10v2h-1v-2h-3v18h18v-18h-3zm-14 3h14v2h-14v-2z"/></svg>
                                 Декември 2025
                             </div>
-                            <p>✅ Stage 1 Power Upgrade<br>
-                            ✅ Софтуерно премахване на EGR<br>
-                            🍿 Hardcut Limiter (Прекъсвач) на 4500rpm</p>
+                            <p>🚀 <strong>Stage 1 Upgrade</strong></p>
                             
-                            <h4>🚀 Резултати:</h4>
-                            <p>🐢 140кс ↗️ 185кс ✈️<br>
-                            🐢 340нм ↗️ 400нм ✈️<br>
-                            🚀 Осезаема мощност в ниските обороти<br>
-                            ⛽️ Оптимизиран разход на гориво</p>
-                            
-                            <h4>💻 Honda Diagnostic System:</h4>
-                            <p>✅ Професионална диагностика с HDS / iHDS<br>
-                            ✅ Пълна проверка на горивна система и турбо<br>
-                            ✅ Гаранция за коректна работа без грешки</p>
+                            <details class="project-details">
+                                <summary>Прочети всичко...</summary>
+                                <div class="details-content">
+                                    <p>🐢 140кс ↗️ 185кс ✈️<br>
+                                    🐢 340нм ↗️ 400нм ✈️<br>
+                                    ✅ Софтуерно премахване на EGR</p>
+                                </div>
+                                <button class="btn-collapse" onclick="this.closest('details').removeAttribute('open')">Свий ↑</button>
+                            </details>
                         </div>
                     </div>
 
