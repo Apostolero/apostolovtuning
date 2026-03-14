@@ -127,7 +127,7 @@ header {
     margin-top: 70px;
     height: 80vh;
     min-height: 800px; /* Достатъчно място */
-    background: url('assets/logo_header.jpeg');
+    background: url('assets/logo_header.webp');
     background-size: 100% auto;
     background-repeat: no-repeat;
     background-position: center top;
@@ -1104,7 +1104,7 @@ footer p {
         display: block;
         width: 100%;
         height: 250px; /* Фиксирана височина, която пасва на пропорцията */
-        background: url('assets/logo_header.jpeg');
+        background: url('assets/logo_header.webp');
         background-size: 100% 100%; /* Разтяга се, за да запълни всичко */
         background-repeat: no-repeat;
         background-position: top center; /* Залепена за горния ръб */
