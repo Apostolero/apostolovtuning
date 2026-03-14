@@ -1533,3 +1533,50 @@ footer p {
         justify-content: center;
     }
 }
+
+/* --- Read More Styles (Safe Add) --- */
+.project-details {
+    margin-top: 15px;
+    border-top: 1px solid rgba(255,255,255,0.1);
+    padding-top: 10px;
+}
+
+.project-details summary {
+    cursor: pointer;
+    color: var(--primary-color);
+    font-weight: 600;
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.project-details summary::before {
+    content: '▶';
+    font-size: 0.8rem;
+    transition: transform 0.3s ease;
+}
+
+.project-details[open] summary::before {
+    transform: rotate(90deg);
+}
+
+.details-content {
+    padding-top: 15px;
+    animation: fadeIn 0.4s ease-out;
+}
+
+.details-list {
+    margin: 10px 0;
+    padding-left: 20px;
+}
+
+.details-list li {
+    margin-bottom: 5px;
+    font-size: 0.9rem;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-5px); }
+    to { opacity: 1; transform: translateY(0); }
+}
