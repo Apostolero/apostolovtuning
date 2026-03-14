@@ -127,8 +127,8 @@ header {
     margin-top: 70px;
     height: 80vh;
     min-height: 800px; /* Достатъчно място */
-    background: url('assets/logo_header.webp');
-    background-size: 100% auto;
+    background-image: url('assets/logo_header.webp');
+    background-size: contain;
     background-repeat: no-repeat;
     background-position: center top;
     display: flex;
