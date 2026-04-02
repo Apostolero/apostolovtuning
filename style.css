@@ -963,6 +963,57 @@ header {
     to { opacity: 1; transform: translateY(0); }
 }
 
+/* Tech Update Section Styles */
+.tech-update-wrapper {
+    display: flex;
+    gap: 40px;
+    align-items: center;
+    padding: 20px 0;
+}
+
+.tech-update-image {
+    flex: 1;
+}
+
+.tech-update-image img {
+    width: 100%;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+    border: 1px solid rgba(255,255,255,0.1);
+}
+
+.tech-update-text {
+    flex: 1.5;
+}
+
+.tech-features {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    margin: 25px 0;
+}
+
+.tech-feature-item {
+    background: rgba(255,255,255,0.05);
+    padding: 20px;
+    border-radius: 8px;
+    border-left: 4px solid var(--primary-color);
+}
+
+.tech-feature-item h4 {
+    margin-bottom: 10px;
+    color: var(--primary-color);
+}
+
+@media (max-width: 768px) {
+    .tech-update-wrapper {
+        flex-direction: column;
+    }
+    .tech-features {
+        grid-template-columns: 1fr;
+    }
+}
+
 /* --- Footer --- */
 footer {
     background-color: #000;
@@ -1579,4 +1630,55 @@ footer p {
 @keyframes fadeIn {
     from { opacity: 0; transform: translateY(-5px); }
     to { opacity: 1; transform: translateY(0); }
+}
+
+/* Tech Update Section Styles */
+.tech-update-wrapper {
+    display: flex;
+    gap: 40px;
+    align-items: center;
+    padding: 20px 0;
+}
+
+.tech-update-image {
+    flex: 1;
+}
+
+.tech-update-image img {
+    width: 100%;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+    border: 1px solid rgba(255,255,255,0.1);
+}
+
+.tech-update-text {
+    flex: 1.5;
+}
+
+.tech-features {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    margin: 25px 0;
+}
+
+.tech-feature-item {
+    background: rgba(255,255,255,0.05);
+    padding: 20px;
+    border-radius: 8px;
+    border-left: 4px solid var(--primary-color);
+}
+
+.tech-feature-item h4 {
+    margin-bottom: 10px;
+    color: var(--primary-color);
+}
+
+@media (max-width: 768px) {
+    .tech-update-wrapper {
+        flex-direction: column;
+    }
+    .tech-features {
+        grid-template-columns: 1fr;
+    }
 }
