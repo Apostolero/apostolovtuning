@@ -32,95 +32,39 @@
     <meta name="keywords" content="чип тунинг Бургас, ремап Бургас, чип тунинг Карнобат, премахване на DPF, EGR OFF Бургас, AdBlue OFF, ремап, диагностика Бургас, Apostolov Tuning">
     <meta name="author" content="Apostolov Tuning">
     
-    <!-- Open Graph за Facebook (когато споделяш линка) -->
     <meta property="og:title" content="Чип Тунинг Бургас - Ремап и Диагностика | Apostolov Tuning">
     <meta property="og:description" content="Вдигни мощността на автомобила си. Професионални софтуерни решения в област Бургас.">
     <meta property="og:image" content="https://apostolovtuning.com/assets/logo.webp">
-    <meta property="og:image:type" content="image/jpeg">
-    <meta property="og:image:width" content="500">
-    <meta property="og:image:height" content="500">
     <meta property="og:url" content="https://apostolovtuning.com/">
     <meta property="og:type" content="website">
     <link rel="canonical" href="https://apostolovtuning.com/">
 
     <link rel="stylesheet" href="style.css">
     <style>
-        /* Фикс за разтягането на картите */
         .gallery-grid { align-items: start !important; }
-        /* Уеднаквяване на всички снимки в проектите */
         .project-card { height: auto !important; }
-        .project-image-container, .project-card > img { 
+        .project-image-container { 
             height: 250px !important; 
             width: 100% !important; 
             object-fit: cover !important; 
             border-bottom: 2px solid var(--primary-color);
-            background-color: #000; /* Черен фон за запълване */
+            position: relative;
+            background-color: #000;
         }
-        /* Фикс за застъпването на снимките в слайдъра */
-        .project-image-container img { opacity: 0 !important; z-index: 1 !important; position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; }
-        .project-image-container img.active { opacity: 1 !important; z-index: 2 !important; position: relative !important; display: block; }
-        
-        /* Стил за бутона Свий */
-        .btn-collapse {
-            background: none;
-            border: none;
-            color: var(--primary-color);
-            cursor: pointer;
-            font-weight: 600;
-            font-size: 0.9rem;
-            padding: 10px 0 0 0;
-            display: block;
-            width: 100%;
-            text-align: left;
-            transition: var(--transition);
-        }
-        .btn-collapse:hover { text-decoration: underline; opacity: 0.8; }
+        .project-image-container img { opacity: 0; z-index: 1; position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; transition: opacity 0.3s ease; }
+        .project-image-container img.active { opacity: 1; z-index: 2; position: relative !important; display: block; }
+        .btn-collapse { background: none; border: none; color: var(--primary-color); cursor: pointer; font-weight: 600; font-size: 0.9rem; padding: 10px 0 0 0; display: block; width: 100%; text-align: left; }
     </style>
-    
-    <!-- Schema.org маркировка за локален бизнес (Local SEO) -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "AutoRepair",
-      "name": "Apostolov Tuning",
-      "image": "https://apostolovtuning.com/assets/logo.webp",
-      "description": "Професионален чип тунинг, софтуерно премахване на DPF/EGR и диагностика в Карнобат, Бургас, Айтос, Ямбол, Сливен и Шумен.",
-      "url": "https://apostolovtuning.com",
-      "telephone": "+359896084735",
-      "priceRange": "$$",
-      "openingHours": "Mo-Su 08:00-22:00",
-      "address": {
-        "@type": "PostalAddress",
-        "addressLocality": "Karnobat",
-        "addressRegion": "Burgas",
-        "addressCountry": "BG"
-      },
-      "geo": {
-        "@type": "GeoCoordinates",
-        "latitude": 42.6411,
-        "longitude": 26.9833
-      },
-      "aggregateRating": {
-        "@type": "AggregateRating",
-        "ratingValue": "5.0",
-        "reviewCount": "10"
-      },
-      "areaServed": ["Karnobat", "Burgas", "Aitos", "Yambol", "Sliven", "Shumen"]
-    }
-    </script>
 </head>
 <body>
 
-    <!-- Навигация -->
     <header>
         <div class="container header-content">
             <div class="logo">
-                <!-- Увери се, че името на файла е точно logo.webp в папка assets -->
                 <img src="assets/logo.webp" alt="Apostolov Tuning Logo">
                 <span class="brand-name">APOSTOLOV TUNING</span>
             </div>
             
-            <!-- Мобилни социални иконки (скрити на десктоп) -->
             <div class="mobile-socials">
                 <a href="https://www.facebook.com/apostolovtuning" target="_blank" class="fb" aria-label="Facebook"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="white"><path d="M9 8h-3v4h3v12h5v-12h3.642l.358-4h-4v-1.667c0-.955.192-1.333 1.115-1.333h2.885v-5h-3.808c-3.596 0-5.192 1.583-5.192 4.615v3.385z"/></svg></a>
                 <a href="https://wa.me/359896084735" target="_blank" class="wa" aria-label="WhatsApp"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="white"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.588-5.946 0-6.556 5.332-11.891 11.891-11.891 3.181 0 6.167 1.24 8.413 3.488 2.246 2.248 3.484 5.232 3.484 8.403 0 6.556-5.332 11.89-11.891 11.89-2.015 0-3.991-.511-5.741-1.478l-6.255 1.697zm6.514-3.419c1.541.917 3.01 1.39 4.736 1.39 5.232 0 9.491-4.259 9.491-9.49 0-2.535-1-4.917-2.817-6.735s-4.201-2.817-6.735-2.817c-5.232 0-9.49 4.258-9.49 9.491 0 1.834.526 3.535 1.521 5.013l-.995 3.637 3.73-.999zm10.325-6.326c-.285-.143-1.688-.833-1.95-.928-.261-.095-.452-.143-.642.143-.19.285-.736.928-.903 1.118-.166.19-.332.214-.618.071-.285-.143-1.204-.443-2.293-1.415-.847-.756-1.419-1.689-1.586-1.974-.166-.285-.018-.439.124-.581.128-.127.285-.332.428-.499.143-.166.19-.285.285-.476.095-.19.047-.357-.024-.5-.071-.143-.642-1.546-.88-2.118-.231-.557-.465-.482-.642-.491-.166-.008-.356-.01-.547-.01s-.5.071-.761.357c-.261.285-1.001.977-1.001 2.381 0 1.404 1.022 2.76 1.165 2.951.143.19 2.012 3.073 4.874 4.311.68.294 1.212.469 1.625.6.683.218 1.305.187 1.797.114.549-.081 1.688-.69 1.926-1.356.238-.666.238-1.237.166-1.356-.071-.119-.261-.19-.547-.333z"/></svg></a>
@@ -145,7 +89,6 @@
                     </li>
                     <li><a href="eco-off.html">Екология</a></li>
                     
-                    <!-- Социални иконки -->
                     <li class="header-socials">
                         <a href="https://www.facebook.com/apostolovtuning" target="_blank" class="fb" aria-label="Facebook"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="white"><path d="M9 8h-3v4h3v12h5v-12h3.642l.358-4h-4v-1.667c0-.955.192-1.333 1.115-1.333h2.885v-5h-3.808c-3.596 0-5.192 1.583-5.192 4.615v3.385z"/></svg></a>
                         <a href="https://wa.me/359896084735" target="_blank" class="wa" aria-label="WhatsApp"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="white"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.588-5.946 0-6.556 5.332-11.891 11.891-11.891 3.181 0 6.167 1.24 8.413 3.488 2.246 2.248 3.484 5.232 3.484 8.403 0 6.556-5.332 11.89-11.891 11.89-2.015 0-3.991-.511-5.741-1.478l-6.255 1.697zm6.514-3.419c1.541.917 3.01 1.39 4.736 1.39 5.232 0 9.491-4.259 9.491-9.49 0-2.535-1-4.917-2.817-6.735s-4.201-2.817-6.735-2.817c-5.232 0-9.49 4.258-9.49 9.491 0 1.834.526 3.535 1.521 5.013l-.995 3.637 3.73-.999zm10.325-6.326c-.285-.143-1.688-.833-1.95-.928-.261-.095-.452-.143-.642.143-.19.285-.736.928-.903 1.118-.166.19-.332.214-.618.071-.285-.143-1.204-.443-2.293-1.415-.847-.756-1.419-1.689-1.586-1.974-.166-.285-.018-.439.124-.581.128-.127.285-.332.428-.499.143-.166.19-.285.285-.476.095-.19.047-.357-.024-.5-.071-.143-.642-1.546-.88-2.118-.231-.557-.465-.482-.642-.491-.166-.008-.356-.01-.547-.01s-.5.071-.761.357c-.261.285-1.001.977-1.001 2.381 0 1.404 1.022 2.76 1.165 2.951.143.19 2.012 3.073 4.874 4.311.68.294 1.212.469 1.625.6.683.218 1.305.187 1.797.114.549-.081 1.688-.69 1.926-1.356.238-.666.238-1.237.166-1.356-.071-.119-.261-.19-.547-.333z"/></svg></a>
@@ -163,7 +106,6 @@
         </div>
     </header>
 
-    <!-- Hero Секция -->
     <section id="home" class="hero">
         <div class="container hero-content">
             <h1 class="hero-title">Чип тунинг Карнобат, Бургас, Ямбол, Сливен</h1>
@@ -174,7 +116,6 @@
         </div>
     </section>
 
-    <!-- Секция Технологично Обновяване -->
     <section id="tech-update" class="section light-section">
         <div class="container">
             <div class="tech-update-wrapper">
@@ -184,20 +125,16 @@
                 <div class="tech-update-text">
                     <h2 class="section-title left">🚀 Технологично обновяване 2026</h2>
                     <p>‼️‼️ Днес имаме удоволствието да обявим мащабно обновяване на нашия технологичен арсенал в <strong>Apostolov Tuning</strong>. Инвестирахме в най-доброто от световните лидери - <strong>Magic Motorsport</strong> и <strong>Launch</strong>, за да предложим безкомпромисно качество и 100% сигурност.</p>
-                    
                     <div class="tech-features">
                         <div class="tech-feature-item">
                             <h4>🛠 FLEX от Magic Motorsport</h4>
-                            <p>Инвестиция в безопасността на вашия автомобил. Вече покриваме почти 100% възможност за корекции на масово използваните автомобили в България. Всеки протокол е официално тестван, което гарантира безгрешна и прецизна намеса.</p>
+                            <p>Инвестиция в безопасността на вашия автомобил. Вече покриваме почти 100% възможност за корекции на масово използваните автомобили в България.</p>
                         </div>
                         <div class="tech-feature-item">
                             <h4>💻 Launch X431 - Ново поколение</h4>
-                            <p>Дилърско ниво диагностика с поддръжка на <strong>CAN-FD</strong> и <strong>DoIP</strong>. Извършваме пълна системна проверка, логване в реално време, кодиране и адаптации (DPF, EGR, AdBlue Reset, Injector Coding и др.).</p>
+                            <p>Дилърско ниво диагностика с поддръжка на <strong>CAN-FD</strong> и <strong>DoIP</strong>. Пълна системна проверка, логване, кодиране и адаптации.</p>
                         </div>
                     </div>
-                    
-                    <p>✅ В Apostolov Tuning не просто “чипосваме” – ние оптимизираме работата на вашия двигател, като гарантираме, че новият софтуер е в пълен синхрон със състоянието на колата.</p>
-                    
                     <div style="margin-top: 20px;">
                         <a href="#contacts" class="btn btn-primary">Безплатна консултация</a>
                     </div>
@@ -207,747 +144,165 @@
     </section>
 
     <main>
-        <!-- Секция Отзиви (Highlight Slider) -->
         <section class="reviews-highlight">
             <div class="container">
                 <div class="reviews-slider-wrapper">
                     <button class="slider-btn prev" aria-label="Предишен отзив">&#10094;</button>
-                    
                     <div class="reviews-track-container">
                         <ul class="reviews-track">
-                            <!-- Slide 1: Passat B5.5 131hp (Repair) -->
                             <li class="review-slide current-slide">
                                 <div class="review-card-centered">
                                     <div class="stars">⭐⭐⭐⭐⭐</div>
-                                    <p class="review-text">"Много добра работа! Поправиха ми наполовина направен софтуер, в който беше налято само гориво. Колата не вървеше и имаше много висок разход от 14/100. След тяхната намеса колата стана направо различна и намали разхода си на 5.9/100. Става дума за Passat B5.5 1.9 TDI 131 hp."</p>
-                                    <div class="review-footer">
-                                        <span class="author">— Доволен клиент в Google</span>
-                                        <a href="https://www.google.com/maps/search/?api=1&query=Apostolov+Tuning&query_place_id=0xd9ab01742ca3824a" target="_blank" class="google-link">Виж всички отзиви <span class="arrow">→</span></a>
-                                    </div>
-                                </div>
-                            </li>
-                            <!-- Slide 2: Passat B6 Stage 1 -->
-                            <li class="review-slide">
-                                <div class="review-card-centered">
-                                    <div class="stars">⭐⭐⭐⭐⭐</div>
-                                    <p class="review-text">"Професионалист, препоръчвам с 2 ръце! Преди месец на Passat B6 направи remap stage 1, софтуерно изолиране на EGR, DPF и прекъсвач на 4500 оборота. Колата се прероди и в момента смея да твърдя, че е като нова!"</p>
-                                    <div class="review-footer">
-                                        <span class="author">— Доволен клиент в Google</span>
-                                        <a href="https://www.google.com/maps/search/?api=1&query=Apostolov+Tuning&query_place_id=0xd9ab01742ca3824a" target="_blank" class="google-link">Виж всички отзиви <span class="arrow">→</span></a>
-                                    </div>
-                                </div>
-                            </li>
-                            <!-- Slide 3: Passat B5.5 EGR OFF -->
-                            <li class="review-slide">
-                                <div class="review-card-centered">
-                                    <div class="stars">⭐⭐⭐⭐⭐</div>
-                                    <p class="review-text">"Много доволен съм! EGR-ът на Пасат 5.5 беше софтуерно спрян, грешките са изчистени и всичко е наред. Колата върви супер, без проблеми. Препоръчвам с две ръце!"</p>
-                                    <div class="review-footer">
-                                        <span class="author">— Доволен клиент в Google</span>
-                                        <a href="https://www.google.com/maps/search/?api=1&query=Apostolov+Tuning&query_place_id=0xd9ab01742ca3824a" target="_blank" class="google-link">Виж всички отзиви <span class="arrow">→</span></a>
-                                    </div>
-                                </div>
-                            </li>
-                            <!-- Slide 4: Russian Review -->
-                            <li class="review-slide">
-                                <div class="review-card-centered">
-                                    <div class="stars">⭐⭐⭐⭐⭐ 🇷🇺</div>
-                                    <p class="review-text">"Это другая философия! Динамика потрясающая, отзывчивость газа супер, а расход снизился на 1.2л/100км. Я действительно благодарен, ты мастер высшего уровня!"</p>
+                                    <p class="review-text">"Много добра работа! Поправиха ми наполовина направен софтуер. След тяхната намеса колата стана направо различна и намали разхода си на 5.9/100. Става дума за Passat B5.5 1.9 TDI 131 hp."</p>
                                     <div class="review-footer">
                                         <span class="author">— Доволен клиент</span>
                                         <a href="https://www.google.com/maps/search/?api=1&query=Apostolov+Tuning&query_place_id=0xd9ab01742ca3824a" target="_blank" class="google-link">Виж всички отзиви <span class="arrow">→</span></a>
                                     </div>
                                 </div>
                             </li>
-                            <!-- Slide 5: DPF Review -->
                             <li class="review-slide">
                                 <div class="review-card-centered">
                                     <div class="stars">⭐⭐⭐⭐⭐</div>
-                                    <p class="review-text">"Имах проблем с ДПФ-а. Човекът знае точно какво прави. Без излишни приказки, всичко беше честно и професионално. Най-доброто място за софтуерни решения!"</p>
+                                    <p class="review-text">"Професионалист, препоръчвам с 2 ръце! На Passat B6 направи remap stage 1, софтуерно изолиране на EGR, DPF. Колата се прероди!"</p>
                                     <div class="review-footer">
-                                        <span class="author">— Доволен клиент в Google</span>
+                                        <span class="author">— Доволен клиент</span>
                                         <a href="https://www.google.com/maps/search/?api=1&query=Apostolov+Tuning&query_place_id=0xd9ab01742ca3824a" target="_blank" class="google-link">Виж всички отзиви <span class="arrow">→</span></a>
                                     </div>
                                 </div>
                             </li>
                         </ul>
                     </div>
-
                     <button class="slider-btn next" aria-label="Следващ отзив">&#10095;</button>
                 </div>
-                <!-- Индикаторни точки (Dots) -->
                 <div class="slider-nav">
                     <button class="slider-dot current-dot"></button>
                     <button class="slider-dot"></button>
-                    <button class="slider-dot"></button>
-                    <button class="slider-dot"></button>
-                    <button class="slider-dot"></button>
                 </div>
             </div>
         </section>
 
-        <!-- Секция Галерия (Най-горе за Social Proof) -->
         <section id="gallery" class="section">
             <div class="container">
-                <h2 class="section-title">Галерия от Проекти</h2>
+                <h2 class="section-title">Топ Проекти</h2>
                 <div class="gallery-grid">
-                    <div class="gallery-item project-card">
+                    <!-- BMW X3 G01 -->
+                    <div class="gallery-item project-card" style="grid-column: span 2;">
                         <div class="project-image-container">
-                            <button class="project-slider-btn prev" aria-label="Previous Image">&#10094;</button>
-                            <img src="assets/vw-golf-plus-19tdi-remap-burgas.webp" alt="VW Golf Plus 1.9 TDI Stage 1 Remap EGR Off Popcorn Burgas" class="active" loading="lazy">
-                            <img src="assets/vw-golf-plus-19tdi-edc16u34-diagnostics-burgas.webp" alt="VW Golf Plus 1.9 TDI EDC16U34 Diagnostics Launch X431" loading="lazy">
-                            <button class="project-slider-btn next" aria-label="Next Image">&#10095;</button>
-                        </div>
-                        <div class="project-info">
-                            <h3>🚗 VW Golf Plus 1.9 TDI (105hp)</h3>
-                            <div class="project-date">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24"><path d="M20 20h-16v-11h16v11zm-3-12v-1h2v1h-2zm-4 0v-1h2v1h-2zm-4 0v-1h2v1h-2zm11-4v2h-1v-2h-10v2h-1v-2h-3v18h18v-18h-3zm-14 3h14v2h-14v-2z"/></svg>
-                                Април 2026
-                            </div>
-                            <p>✅ <strong>Stage 1 Remap</strong></p>
-                            <p>✅ <strong>EGR Off</strong> | 🍿 <strong>Popcorn</strong></p>
-                            
-                            <details class="project-details">
-                                <summary>Прочети всичко...</summary>
-                                <div class="details-content">
-                                    <p>Оптимизирахме софтуера на <strong>VW Golf Plus 1.9 TDI (105hp)</strong>, оборудван с Bosch EDC16U34. Целта на проекта беше да подобрим работата на двигателя и да премахнем фабричните ограничения, без да компрометираме ресурса на мотора.</p>
-                                    
-                                    <h4>🛠 Извършени услуги:</h4>
-                                    <ul class="details-list">
-                                        <li>🚀 <strong>Stage 1 Ремап:</strong> Увеличение на мощността и въртящия момент за по-сигурно изпреварване и по-нисък разход.</li>
-                                        <li>✅ <strong>Софтуерно премахване на ЕГР:</strong> Трайно решение на проблемите със зацапването на всмукателния колектор.</li>
-                                        <li>🍿 <strong>Popcorn Limiter:</strong> Ограничител на 4500rpm за "твърд" звук.</li>
-                                    </ul>
-                                    
-                                    <h4>🚀 Резултатът:</h4>
-                                    <p>Преди и след софтуерната намеса извършихме <strong>задълбочена диагностика с Launch X431</strong>, за да се уверим в изправността на турбината и дюзите. Колата е в перфектно състояние и готова за път.</p>
-                                    <p>💻 <strong>ECU:</strong> Bosch EDC16U34<br>
-                                    📍 <strong>Локация:</strong> Бургас / Карнобат</p>
-                                </div>
-                                <button class="btn-collapse" onclick="this.closest('details').removeAttribute('open')">Свий ↑</button>
-                            </details>
-                        </div>
-                    </div>
-                    <div class="gallery-item project-card">
-                        <div class="project-image-container">
-                            <img src="assets/chiptuning-bmw-e46-compact-320d-burgas-stage1-egr-off.webp" alt="BMW E46 Compact 320d Stage 1 Remap EGR Off Popcorn Limiter Burgas" class="active" loading="lazy">
-                        </div>
-                        <div class="project-info">
-                            <h3>🚗 BMW E46 320d compact</h3>
-                            <div class="project-date">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24"><path d="M20 20h-16v-11h16v11zm-3-12v-1h2v1h-2zm-4 0v-1h2v1h-2zm-4 0v-1h2v1h-2zm11-4v2h-1v-2h-10v2h-1v-2h-3v18h18v-18h-3zm-14 3h14v2h-14v-2z"/></svg>
-                                Април 2026
-                            </div>
-                            <p>✅ <strong>Remap Stage 1</strong></p>
-                            <p>✅ <strong>EGR OFF</strong> | 🍿 <strong>Прекъсвач</strong></p>
-                            
-                            <details class="project-details">
-                                <summary>Прочети всичко...</summary>
-                                <div class="details-content">
-                                    <p>Това BMW E46 Compact пристигна за цялостна софтуерна оптимизация, двигателят M47 с Bosch EDC16C31 предлага страхотен потенциал за сигурен тунинг.</p>
-                                    
-                                    <h4>🛠 Извършени услуги:</h4>
-                                    <ul class="details-list">
-                                        <li>🚀 <strong>Stage 1 Remap:</strong> Оптимизация на картите за гориво и налягане на турбото.</li>
-                                        <li>✅ <strong>EGR OFF:</strong> Софтуерно изключване за по-дълъг живот на мотора.</li>
-                                        <li>🍿 <strong>Popcorn Limiter:</strong> Твърд прекъсвач на 4500 оборота.</li>
-                                    </ul>
-                                    
-                                    <h4>🚀 Резултатът:</h4>
-                                    <p>Колата вече е с коренно различна динамика, без никакъв дим и с осезаемо по-директен педал на газта.</p>
-                                    <p>💻 <strong>ECU:</strong> Bosch EDC16C31<br>
-                                    📍 <strong>Локация:</strong> Бургас / Карнобат</p>
-                                </div>
-                                <button class="btn-collapse" onclick="this.closest('details').removeAttribute('open')">Свий ↑</button>
-                            </details>
-                        </div>
-                    </div>
-                    <div class="gallery-item project-card">
-                        <!-- Слайдър с 6 снимки -->
-                        <div class="project-image-container">
-                            <button class="project-slider-btn prev" aria-label="Previous Image">&#10094;</button>
-                            <img src="assets/bmw-x3-g01-md1-remap-back.webp" alt="BMW X3 G01 2.0d MD1 Stage 1 Remap AdBlue DPF EGR Swirl Flaps Off" class="active" loading="lazy">
-                            <img src="assets/bmw-x3-g01-md1-remap-front.webp" alt="BMW X3 G01 MD1 2018 Tuning Burgas" loading="lazy">
-                            <img src="assets/bmw-x3-g01-md1-remap-dash.webp" alt="BMW X3 G01 MD1 No DTC AdBlue Fix" loading="lazy">
+                            <button class="project-slider-btn prev">&#10094;</button>
+                            <img src="assets/bmw-x3-g01-md1-remap-back.webp" alt="BMW X3 G01 2.0d MD1 Stage 1" class="active" loading="lazy">
                             <img src="assets/bmw-x3-g01-md1-remap-bench.webp" alt="Bosch MD1CS001 Bench Mode Tuning" loading="lazy">
-                            <img src="assets/bmw-x3-g01-md1-remap-trunk.webp" alt="BMW X3 G01 Project Apostolov Tuning" loading="lazy">
-                            <img src="assets/bmw-x3-g01-md1-remap-under.webp" alt="BMW X3 DPF Removal Mechanical" loading="lazy">
-                            <button class="project-slider-btn next" aria-label="Next Image">&#10095;</button>
+                            <button class="project-slider-btn next">&#10095;</button>
                         </div>
                         <div class="project-info">
                             <h3>🚗 BMW X3 (G01) 2.0d 2018г.</h3>
-                            <div class="project-date">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24"><path d="M20 20h-16v-11h16v11zm-3-12v-1h2v1h-2zm-4 0v-1h2v1h-2zm-4 0v-1h2v1h-2zm11-4v2h-1v-2h-10v2h-1v-2h-3v18h18v-18h-3zm-14 3h14v2h-14v-2z"/></svg>
-                                Март 12, 2026
-                            </div>
-                            
-                            <p>✅ <strong>Remap Stage 1</strong></p>
-                            <p>✅ <strong>AdBlue (SCR) / DPF / EGR OFF</strong></p>
-                            
-                            <details class="project-details">
-                                <summary>Прочети всичко...</summary>
-                                <div class="details-content">
-                                    <p>Това модерно BMW X3 (G01) 2.0d от 2018 година пристигна в Apostolov Tuning със светеща индикация 'Check Engine' и критичен проблем в AdBlue (SCR) системата. Тези автомобили са оборудвани с най-новото поколение контролери Bosch MD1CS001, които изискват изключителна прецизност и специализирана техника за работа.</p>
-                                    <p>Нашият екип извърши цялостна софтуерна оптимизация, като към автомобила бе подходено с внимание към всеки детайл. В сътрудничество с наш партньорски сервиз, беше извършено и механичното премахване на DPF филтъра, за да гарантираме пълната надеждност на двигателя.</p>
-                                    
-                                    <h4>🛠 Извършени услуги:</h4>
-                                    <ul class="details-list">
-                                        <li>🚀 <strong>Ремап Stage 1:</strong> Значително повишаване на мощността.</li>
-                                        <li>✅ <strong>AdBlue (SCR) OFF:</strong> Край на аварийните режими.</li>
-                                        <li>✅ <strong>DPF OFF:</strong> Коректна работа без регенерации.</li>
-                                        <li>✅ <strong>EGR OFF:</strong> По-чиста работа на мотора.</li>
-                                        <li>✅ <strong>Swirl Flaps OFF:</strong> Премахване на вихрови клапи.</li>
-                                    </ul>
-                                    
-                                    <h4>🚀 Резултатът:</h4>
-                                    <p>„Автомобилът е в перфектно техническо състояние, без никакви грешки на таблото и с осезаемо по-добра динамика и еластичност. Собственикът вече се радва на коренно различно поведение и спокойствие.“</p>
-                                    <p>💻 <strong>ECU:</strong> Bosch MD1CS001 (Bench Mode)<br>
-                                    📍 <strong>Локация:</strong> Карнобат / Бургас</p>
-                                    
-                                    <div style="margin-top: 15px;">
-                                        <a href="https://www.google.com/maps/search/?api=1&query=Apostolov+Tuning&query_place_id=0xd9ab01742ca3824a" target="_blank" class="btn btn-review" style="font-size: 0.8rem; padding: 8px 15px;">
-                                            ⭐ Отзив от клиента
-                                        </a>
-                                    </div>
-                                </div>
-                                <button class="btn-collapse" onclick="this.closest('details').removeAttribute('open')">Свий ↑</button>
-                            </details>
+                            <p>✅ <strong>Remap Stage 1</strong> | ✅ <strong>AdBlue / DPF OFF</strong></p>
+                            <div style="margin-top: 15px;"><a href="chiptuning-bmw.html" class="btn-review">Виж още BMW проекти →</a></div>
                         </div>
                     </div>
+
+                    <!-- VW Touareg -->
                     <div class="gallery-item project-card">
-                        <!-- Слайдър с две снимки -->
                         <div class="project-image-container">
-                            <button class="project-slider-btn prev" aria-label="Previous Image">&#10094;</button>
-                            <img src="assets/vw-touareg-30tdi-remap-burgas.webp" alt="VW Touareg 3.0 TDI 2013 Remap Stage 1 DPF EGR Off" class="active" loading="lazy">
-                            <img src="assets/vw-touareg-dpf-removal.webp" alt="VW Touareg 3.0 TDI 2013 Механично премахване на DPF" loading="lazy">
-                            <button class="project-slider-btn next" aria-label="Next Image">&#10095;</button>
+                            <button class="project-slider-btn prev">&#10094;</button>
+                            <img src="assets/vw-touareg-30tdi-remap-burgas.webp" alt="VW Touareg 3.0 TDI 2013 Remap Stage 1" class="active" loading="lazy">
+                            <img src="assets/vw-touareg-dpf-removal.webp" alt="VW Touareg DPF Removal" loading="lazy">
+                            <button class="project-slider-btn next">&#10095;</button>
                         </div>
                         <div class="project-info">
                             <h3>🚗 VW Touareg 3.0 TDI 2013г.</h3>
-                            <div class="project-date">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24"><path d="M20 20h-16v-11h16v11zm-3-12v-1h2v1h-2zm-4 0v-1h2v1h-2zm-4 0v-1h2v1h-2zm11-4v2h-1v-2h-10v2h-1v-2h-3v18h18v-18h-3zm-14 3h14v2h-14v-2z"/></svg>
-                                Март 2026
-                            </div>
-                            <p>✅ <strong>Remap Stage 1</strong></p>
-                            <p>✅ <strong>DPF / EGR OFF</strong></p>
-                            
-                            <details class="project-details">
-                                <summary>Прочети всичко...</summary>
-                                <div class="details-content">
-                                    <p>✅ <strong>Механично премахване на ДПФ</strong></p>
-                                    <h4>🚀 Резултат:</h4>
-                                    <p>Значително повишена мощност и въртящ момент, подобрена динамика и премахнати екологични ограничения.
-                                    <br>💻 <strong>ECU:</strong> EDC17CP44</p>
-
-                                    <div style="margin-top: 15px;">
-                                        <a href="https://www.google.com/maps/search/?api=1&query=Apostolov+Tuning&query_place_id=0xd9ab01742ca3824a" target="_blank" class="btn btn-review" style="font-size: 0.8rem; padding: 8px 15px;">
-                                            ⭐ Отзив от клиента
-                                        </a>
-                                    </div>
-                                </div>
-                                <button class="btn-collapse" onclick="this.closest('details').removeAttribute('open')">Свий ↑</button>
-                            </details>
+                            <p>✅ <strong>Remap Stage 1</strong> | ✅ <strong>DPF / EGR OFF</strong></p>
+                            <div style="margin-top: 15px;"><a href="chiptuning-vag.html" class="btn-review">Виж още VAG проекти →</a></div>
                         </div>
                     </div>
+
+                    <!-- Mercedes C320 CDI -->
                     <div class="gallery-item project-card">
                         <div class="project-image-container">
-                            <img src="assets/mercedes-c320cdi-egr-dpf-off-burgas.webp" alt="Mercedes W204 C320 CDI EGR DPF Off EDC17CP01 Tuning Burgas" class="active" loading="lazy">
+                            <img src="assets/mercedes-c320cdi-egr-dpf-off-burgas.webp" alt="Mercedes C320 CDI EGR DPF Off" class="active" loading="lazy">
                         </div>
                         <div class="project-info">
-                            <h3>🚗 Mercedes-Benz C320 CDI (224hp)</h3>
-                            <div class="project-date">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24"><path d="M20 20h-16v-11h16v11zm-3-12v-1h2+1h-2zm-4 0v-1h2v1h-2zm-4 0v-1h2v1h-2zm11-4v2h-1v-2h-10v2h-1v-2h-3v18h18v-18h-3zm-14 3h14v2h-14v-2z"/></svg>
-                                Март 2026
-                            </div>
+                            <h3>🚗 Mercedes C320 CDI</h3>
                             <p>✅ <strong>Софтуерно изолиране на DPF/EGR</strong></p>
-                            
-                            <details class="project-details">
-                                <summary>Прочети всичко...</summary>
-                                <div class="details-content">
-                                    <p>🔍 <strong>Диагностика:</strong> Пълна проверка със Star Diagnosis (Xentry) преди и след намесата.</p>
-                                    <h4>🚀 Резултат:</h4>
-                                    <p>Трайно решение на проблемите с екологичните системи, премахване на аварийния режим и по-добра динамика на двигателя OM642.
-                                    <br>💻 <strong>ECU:</strong> Bosch EDC17CP01</p>
+                            <div style="margin-top: 15px;"><a href="chiptuning-mercedes.html" class="btn-review">Виж още Mercedes проекти →</a></div>
+                        </div>
+                    </div>
 
-                                    <div style="margin-top: 15px;">
-                                        <a href="https://www.google.com/maps/search/?api=1&query=Apostolov+Tuning&query_place_id=0xd9ab01742ca3824a" target="_blank" class="btn btn-review" style="font-size: 0.8rem; padding: 8px 15px;">
-                                            ⭐ Отзив от клиента
-                                        </a>
-                                    </div>
-                                </div>
-                                <button class="btn-collapse" onclick="this.closest('details').removeAttribute('open')">Свий ↑</button>
-                            </details>
-                        </div>
-                    </div>
+                    <!-- Honda CR-V -->
                     <div class="gallery-item project-card">
                         <div class="project-image-container">
-                            <img src="assets/audi-a6-30tdi-stage1-remap-burgas.webp" alt="Audi A6 3.0 TDI Stage 1 Remap P0234 Overboost Fix Diagnosis" class="active" loading="lazy">
-                        </div>
-                        <div class="project-info">
-                            <h3>🚗 Audi A6 3.0 TDI (224hp)</h3>
-                            <div class="project-date">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24"><path d="M20 20h-16v-11h16v11zm-3-12v-1h2v1h-2zm-4 0v-1h2v1h-2zm-4 0v-1h2v1h-2zm11-4v2h-1v-2h-10v2h-1v-2h-3v18h18v-18h-3zm-14 3h14v2h-14v-2z"/></svg>
-                                Февруари 2026
-                            </div>
-                            <p>🛠 <strong>Stage 1 + P0234 Fix</strong></p>
-                            
-                            <details class="project-details">
-                                <summary>Прочети всичко...</summary>
-                                <div class="details-content">
-                                    <p>🔍 <strong>Диагностика:</strong> Колата пристигна в авариен режим поради некачествен софтуер.</p>
-                                    <p>✅ <strong>Услуга:</strong> Пълна ревизия на софтуера + Stage 1 Remap.</p>
-                                    <p>🛠 <strong>Екстри:</strong> EGR Off, Swirl Flaps Off, Popcorn Limiter.</p>
-                                    <h4>🚀 Резултат:</h4>
-                                    <p>Коригирано пренадуване на турбината и агресивна динамика.
-                                    <br>💻 <strong>ECU:</strong> Bosch EDC16CP34</p>
-
-                                    <div style="margin-top: 15px;">
-                                        <a href="https://www.google.com/maps/search/?api=1&query=Apostolov+Tuning&query_place_id=0xd9ab01742ca3824a" target="_blank" class="btn btn-review" style="font-size: 0.8rem; padding: 8px 15px;">
-                                            ⭐ Отзив от клиента
-                                        </a>
-                                    </div>
-                                </div>
-                                <button class="btn-collapse" onclick="this.closest('details').removeAttribute('open')">Свий ↑</button>
-                            </details>
-                        </div>
-                    </div>
-                    <div class="gallery-item project-card">
-                        <div class="project-image-container">
-                            <img src="assets/skoda-octavia-immo-off-edc16.webp" alt="Skoda Octavia 2 1.9 TDI Immo Off EDC16U34 Bench Mode" class="active" loading="lazy">
-                        </div>
-                        <div class="project-info">
-                            <h3>🚗 Skoda Octavia 2 1.9 TDI</h3>
-                            <div class="project-date">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24"><path d="M20 20h-16v-11h16v11zm-3-12v-1h2v1h-2zm-4 0v-1h2v1h-2zm-4 0v-1h2v1h-2zm11-4v2h-1v-2h-10v2h-1v-2h-3v18h18v-18h-3zm-14 3h14v2h-14v-2z"/></svg>
-                                Февруари 2026
-                            </div>
-                            <p>🔑 <strong>Immo Off</strong></p>
-                            
-                            <details class="project-details">
-                                <summary>Прочети всичко...</summary>
-                                <div class="details-content">
-                                    <p>💻 <strong>Метод:</strong> Работа в <strong>Bench Mode</strong> (ECU EDC16U34).</p>
-                                    <h4>🛠 Проблем & Решение:</h4>
-                                    <p>Автомобилът не разпознаваше оригиналния ключ. Вместо скъп ремонт на таблото, приложихме софтуерен подход за трайно решение.</p>
-
-                                    <div style="margin-top: 15px;">
-                                        <a href="https://www.google.com/maps/search/?api=1&query=Apostolov+Tuning&query_place_id=0xd9ab01742ca3824a" target="_blank" class="btn btn-review" style="font-size: 0.8rem; padding: 8px 15px;">
-                                            ⭐ Отзив от клиента
-                                        </a>
-                                    </div>
-                                </div>
-                                <button class="btn-collapse" onclick="this.closest('details').removeAttribute('open')">Свий ↑</button>
-                            </details>
-                        </div>
-                    </div>
-                    <div class="gallery-item project-card">
-                        <div class="project-image-container">
-                            <img src="assets/chiptuning-bench-mode-laboratory.webp" alt="Лаборатория за чип тунинг Bench Mode EDC17 ремонт компютри" class="active" loading="lazy">
-                        </div>
-                        <div class="project-info">
-                            <h3>💻 Лаборатория & Електроника</h3>
-                            <div class="project-date">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24"><path d="M20 20h-16v-11h16v11zm-3-12v-1h2v1h-2zm-4 0v-1h2v1h-2zm-4 0v-1h2v1h-2zm11-4v2h-1v-2h-10v2h-1v-2h-3v18h18v-18h-3zm-14 3h14v2h-14v-2z"/></svg>
-                                Февруари 2026
-                            </div>
-                            <p>✅ <strong>Bench Mode Specialists</strong></p>
-                            
-                            <details class="project-details">
-                                <summary>Прочети всичко...</summary>
-                                <div class="details-content">
-                                    <p>✅ <strong>Bench Mode:</strong> Директна връзка с компютъра за 100% сигурност.</p>
-                                    <p>✅ <strong>Нови автомобили:</strong> Поддръжка на защитени компютри (EDC17, MED17, MD1).</p>
-                                    <h4>🚀 Специализирани услуги:</h4>
-                                    <p>⚙️ Ремап на TCU (DSG, DQ250...)<br>
-                                    💾 Клониране на ECU при повреда</p>
-                                </div>
-                                <button class="btn-collapse" onclick="this.closest('details').removeAttribute('open')">Свий ↑</button>
-                            </details>
-                        </div>
-                    </div>
-                    <div class="gallery-item project-card">
-                        <div class="project-image-container">
-                            <img src="assets/vw-polo-16tdi-stage1-remap-burgas.webp" alt="Чип тунинг VW Polo 1.6TDI Stage 1 EGR DPF Off" class="active" loading="lazy">
-                        </div>
-                        <div class="project-info">
-                            <h3>🚗 VW Polo 1.6TDI 2010г.</h3>
-                            <div class="project-date">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24"><path d="M20 20h-16v-11h16v11zm-3-12v-1h2v1h-2zm-4 0v-1h2v1h-2zm-4 0v-1h2v1h-2zm11-4v2h-1v-2h-10v2h-1v-2h-3v18h18v-18h-3zm-14 3h14v2h-14v-2z"/></svg>
-                                Февруари 2026
-                            </div>
-                            <p>🚀 <strong>Stage 1 Remap</strong></p>
-                            
-                            <details class="project-details">
-                                <summary>Прочети всичко...</summary>
-                                <div class="details-content">
-                                    <p>✅ Софтуерно изолиране на EGR и DPF.</p>
-                                    <h4>❌ История:</h4>
-                                    <p>След дълъг престой в бокса, проблемите бяха отстранени и колата е в движение с подобрена динамика.</p>
-                                    <div style="margin-top: 15px;">
-                                        <a href="https://www.google.com/maps/search/?api=1&query=Apostolov+Tuning&query_place_id=0xd9ab01742ca3824a" target="_blank" class="btn btn-review" style="font-size: 0.8rem; padding: 8px 15px;">
-                                            ⭐ Отзив от клиента
-                                        </a>
-                                    </div>
-                                </div>
-                                <button class="btn-collapse" onclick="this.closest('details').removeAttribute('open')">Свий ↑</button>
-                            </details>
-                        </div>
-                    </div>
-                    <div class="gallery-item project-card">
-                        <div class="project-image-container">
-                            <img src="assets/vw-passat-b6-20tdi-remap-burgas.webp" alt="Чип тунинг VW Passat B6 2.0TDI Stage 1 EGR DPF Off" class="active" loading="lazy">
-                        </div>
-                        <div class="project-info">
-                            <h3>🚗 VW Passat B6 2.0TDI</h3>
-                            <div class="project-date">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24"><path d="M20 20h-16v-11h16v11zm-3-12v-1h2v1h-2zm-4 0v-1h2v1h-2zm-4 0v-1h2v1h-2zm11-4v2h-1v-2h-10v2h-1v-2h-3v18h18v-18h-3zm-14 3h14v2h-14v-2z"/></svg>
-                                Януари 2026
-                            </div>
-                            <p>🚀 <strong>Stage 1 Remap</strong></p>
-                            
-                            <details class="project-details">
-                                <summary>Прочети всичко...</summary>
-                                <div class="details-content">
-                                    <p>🐢 140кс ↗️ 175кс ✈️<br>
-                                    🐢 320нм ↗️ 390нм ✈️<br>
-                                    ⛽️ По-нисък разход на гориво<br>
-                                    ♻️ Без дим и компромиси с надеждността</p>
-                                    <div style="margin-top: 15px;">
-                                        <a href="https://www.google.com/maps/search/?api=1&query=Apostolov+Tuning&query_place_id=0xd9ab01742ca3824a" target="_blank" class="btn btn-review" style="font-size: 0.8rem; padding: 8px 15px;">
-                                            ⭐ Отзив от клиента
-                                        </a>
-                                    </div>
-                                </div>
-                                <button class="btn-collapse" onclick="this.closest('details').removeAttribute('open')">Свий ↑</button>
-                            </details>
-                        </div>
-                    </div>
-                    <div class="gallery-item project-card">
-                        <div class="project-image-container">
-                            <img src="assets/audi-a3-20tdi-bkd-remap-burgas.webp" alt="Чип тунинг Audi A3 8P 2.0 TDI BKD Stage 1 VCDS VAGCOM" class="active" loading="lazy">
-                        </div>
-                        <div class="project-info">
-                            <h3>🚗 Audi A3 8P 2.0 TDI (BKD)</h3>
-                            <div class="project-date">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24"><path d="M20 20h-16v-11h16v11zm-3-12v-1h2v1h-2zm-4 0v-1h2v1h-2zm-4 0v-1h2v1h-2zm11-4v2h-1v-2h-10v2h-1v-2h-3v18h18v-18h-3zm-14 3h14v2h-14v-2z"/></svg>
-                                Декември 2025
-                            </div>
-                            <p>🚀 <strong>Stage 1 Remap</strong></p>
-                            
-                            <details class="project-details">
-                                <summary>Прочети всичко...</summary>
-                                <div class="details-content">
-                                    <p>🐢 140кс ↗️ 175кс ✈️<br>
-                                    🐢 320нм ↗️ 395нм ✈️<br>
-                                    ⚡️ По-директен педал на газта<br>
-                                    📉 Оптимизиран разход</p>
-                                    <div style="margin-top: 15px;">
-                                        <a href="https://www.google.com/maps/search/?api=1&query=Apostolov+Tuning&query_place_id=0xd9ab01742ca3824a" target="_blank" class="btn btn-review" style="font-size: 0.8rem; padding: 8px 15px;">
-                                            ⭐ Отзив от клиента
-                                        </a>
-                                    </div>
-                                </div>
-                                <button class="btn-collapse" onclick="this.closest('details').removeAttribute('open')">Свий ↑</button>
-                            </details>
-                        </div>
-                    </div>
-                    <div class="gallery-item project-card">
-                        <div class="project-image-container">
-                            <img src="assets/vw-bora-19tdi-ajm-popcorn-burgas.webp" alt="Чип тунинг VW Bora 1.9 TDI AJM PD Stage 1 Popcorn Launch Control" class="active" loading="lazy">
-                        </div>
-                        <div class="project-info">
-                            <h3>🚗 VW Bora 1.9 TDI (AJM)</h3>
-                            <div class="project-date">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24"><path d="M20 20h-16v-11h16v11zm-3-12v-1h2v1h-2zm-4 0v-1h2v1h-2zm-4 0v-1h2v1h-2zm11-4v2h-1v-2h-10v2h-1v-2h-3v18h18v-18h-3zm-14 3h14v2h-14v-2z"/></svg>
-                                Декември 2025
-                            </div>
-                            <p>🍿 <strong>Stage 1 Popcorn</strong></p>
-                            
-                            <details class="project-details">
-                                <summary>Прочети всичко...</summary>
-                                <div class="details-content">
-                                    <p>🐢 116кс ↗️ 145кс ✈️<br>
-                                    🐢 285нм ↗️ 360нм ✈️<br>
-                                    🚀 Launch Control & Popcorn</p>
-                                </div>
-                                <button class="btn-collapse" onclick="this.closest('details').removeAttribute('open')">Свий ↑</button>
-                            </details>
-                        </div>
-                    </div>
-                    <div class="gallery-item project-card">
-                        <div class="project-image-container">
-                            <img src="assets/bmw-e39-525d-m57-remap-burgas.webp" alt="Чип тунинг BMW E39 525d M57 Stage 1 EGR MAF Off Popcorn" class="active" loading="lazy">
-                        </div>
-                        <div class="project-info">
-                            <h3>🚗 BMW 525d E39 (M57)</h3>
-                            <div class="project-date">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24"><path d="M20 20h-16v-11h16v11zm-3-12v-1h2v1h-2zm-4 0v-1h2v1h-2zm-4 0v-1h2v1h-2zm11-4v2h-1v-2h-10v2h-1v-2h-3v18h18v-18h-3zm-14 3h14v2h-14v-2z"/></svg>
-                                Декември 2025
-                            </div>
-                            <p>🚀 <strong>Stage 1 Remap</strong></p>
-                            
-                            <details class="project-details">
-                                <summary>Прочети всичко...</summary>
-                                <div class="details-content">
-                                    <p>🐢 163кс ↗️ 195кс ✈️<br>
-                                    🐢 350нм ↗️ 430нм ✈️<br>
-                                    🍿 Hard Cut прекъсвач</p>
-                                </div>
-                                <button class="btn-collapse" onclick="this.closest('details').removeAttribute('open')">Свий ↑</button>
-                            </details>
-                        </div>
-                    </div>
-                    <div class="gallery-item project-card">
-                        <div class="project-image-container">
-                            <img src="assets/mercedes-w211-e200cdi-remap-burgas.webp" alt="Чип тунинг Mercedes W211 E200 CDI Stage 1 Xentry DAS Swirl Flaps" class="active" loading="lazy">
-                        </div>
-                        <div class="project-info">
-                            <h3>🚗 Mercedes W211 E200 CDI</h3>
-                            <div class="project-date">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24"><path d="M20 20h-16v-11h16v11zm-3-12v-1h2v1h-2zm-4 0v-1h2v1h-2zm-4 0v-1h2v1h-2zm11-4v2h-1v-2h-10v2h-1v-2h-3v18h18v-18h-3zm-14 3h14v2h-14v-2z"/></svg>
-                                Декември 2025
-                            </div>
-                            <p>💨 <strong>Swirl Flaps Off</strong></p>
-                            
-                            <details class="project-details">
-                                <summary>Прочети всичко...</summary>
-                                <div class="details-content">
-                                    <p>🐢 122кс ↗️ 175кс ✈️<br>
-                                    🐢 270нм ↗️ 380нм ✈️<br>
-                                    🔥 Отключен фабричен потенциал</p>
-                                </div>
-                                <button class="btn-collapse" onclick="this.closest('details').removeAttribute('open')">Свий ↑</button>
-                            </details>
-                        </div>
-                    </div>
-                    <div class="gallery-item project-card">
-                        <div class="project-image-container">
-                            <img src="assets/honda-crv-22ictdi-remap-burgas.webp" alt="Чип тунинг Honda CR-V 2.2 i-CTDI N22A Stage 1 EGR OFF HDS iHDS" class="active" loading="lazy">
+                            <img src="assets/honda-crv-22ictdi-remap-burgas.webp" alt="Honda CR-V 2.2 i-CTDI Remap" class="active" loading="lazy">
                         </div>
                         <div class="project-info">
                             <h3>🚗 Honda CR-V 2.2 i-CTDI</h3>
-                            <div class="project-date">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24"><path d="M20 20h-16v-11h16v11zm-3-12v-1h2v1h-2zm-4 0v-1h2v1h-2zm-4 0v-1h2v1h-2zm11-4v2h-1v-2h-10v2h-1v-2h-3v18h18v-18h-3zm-14 3h14v2h-14v-2z"/></svg>
-                                Декември 2025
-                            </div>
-                            <p>🚀 <strong>Stage 1 Upgrade</strong></p>
-                            
-                            <details class="project-details">
-                                <summary>Прочети всичко...</summary>
-                                <div class="details-content">
-                                    <p>🐢 140кс ↗️ 185кс ✈️<br>
-                                    🐢 340нм ↗️ 400нм ✈️<br>
-                                    ✅ Софтуерно премахване на EGR</p>
-                                </div>
-                                <button class="btn-collapse" onclick="this.closest('details').removeAttribute('open')">Свий ↑</button>
-                            </details>
+                            <p>🚀 <strong>Stage 1 Upgrade</strong> | ✅ <strong>EGR OFF</strong></p>
+                            <div style="margin-top: 15px;"><a href="chiptuning-asian.html" class="btn-review">Виж още проекти →</a></div>
                         </div>
                     </div>
 
-                    <div class="gallery-item"><img src="assets/bmw-e60-diagnosis-remap.webp" alt="Софтуерна диагностика BMW E60 и ремап" loading="lazy"></div>
-                    <div class="gallery-item"><img src="assets/dyno-results-stage1.webp" alt="Dyno резултати след чип тунинг Stage 1" loading="lazy"></div>
-                    <div class="gallery-item"><img src="assets/eco-tuning-19tdi.webp" alt="Еко тунинг и намаляване на разхода 1.9 TDI" loading="lazy"></div>
-
-                    <div class="gallery-item"><img src="assets/adblue-off-software-solution.webp" alt="Изключване на AdBlue система софтуерно" loading="lazy"></div>
-
-                    <div class="gallery-item"><img src="assets/dpf-clean-software-burgas.webp" alt="Почистване на DPF филтър и софтуер" loading="lazy"></div>
-
-                    <div class="gallery-item"><img src="assets/professional-chiptuning-apostolov-tuning.webp" alt="Професионален чип тунинг Apostolov Tuning" loading="lazy"></div>
+                    <!-- Лаборатория -->
+                    <div class="gallery-item project-card">
+                        <div class="project-image-container">
+                            <img src="assets/chiptuning-bench-mode-laboratory.webp" alt="Лаборатория за чип тунинг" class="active" loading="lazy">
+                        </div>
+                        <div class="project-info">
+                            <h3>💻 Лаборатория & Електроника</h3>
+                            <p>✅ <strong>Bench Mode Specialists</strong> (EDC17, MD1)</p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
-        <!-- Секция За Нас (About) -->
+
         <section id="about" class="section">
             <div class="container about-wrapper">
-                <div class="about-logo">
-                    <img src="assets/logo.webp" alt="Apostolov Tuning Official Logo" loading="lazy">
-                </div>
+                <div class="about-logo"><img src="assets/logo.webp" alt="Apostolov Tuning Official Logo" loading="lazy"></div>
                 <div class="about-text">
                     <h2 class="section-title left">За Apostolov Tuning</h2>
-                    <p>Ние сме специализирани в индивидуалната софтуерна оптимизация на автомобилни двигатели. Твърдо вярваме, че всяка кола изисква уникален подход, затова <strong>не използваме универсални или готови софтуерни решения</strong>.</p>
-                    <p>Нашият приоритет е качеството и сигурността. След нашата намеса автомобилите <strong>не създават проблеми, нямат записани грешки и работят без черен дим или излишен пушек</strong>. Търсим оптималния баланс, който отключва потенциала на колата, без да води до излишно износване на частите.</p>
+                    <p>Ние сме специализирани в индивидуалната софтуерна оптимизация на автомобилни двигатели. Твърдо вярваме, че всяка кола изисква уникален подход.</p>
                 </div>
             </div>
         </section>
 
-        <!-- Секция Услуги -->
         <section id="services" class="section">
             <div class="container">
                 <h2 class="section-title">Нашите Услуги</h2>
                 <div class="services-grid">
-                    <!-- Карта 1: Тунинг -->
                     <a href="chiptuning.html" class="service-card">
                         <div class="icon">🚀</div>
                         <h3>Performance Tuning</h3>
-                        <ul class="service-list">
-                            <li>✅ Remap - Stage 1, Stage 2, Stage 3</li>
-                            <li>✅ Remap на скоростна кутия</li>
-                            <li>✅ Индивидуална настройка</li>
-                            <li>🍿 Popcorn, Pops & Bangs</li>
-                        </ul>
+                        <ul class="service-list"><li>✅ Remap - Stage 1, 2, 3</li><li>✅ TCU Remap</li></ul>
                         <div class="card-cta">Виж повече <span class="arrow">→</span></div>
                     </a>
-                    
-                    <!-- Карта 2: Екология и Изолиране -->
                     <a href="eco-off.html" class="service-card">
                         <div class="icon">♻️</div>
                         <h3>Софтуерни Решения</h3>
-                        <ul class="service-list">
-                            <li>🚫 EGR (ЕГР), DPF, AdBlue OFF</li>
-                            <li>⚙️ Вихрови клапи (Swirl Flaps)</li>
-                            <li>🔌 Изолиране на дебитомер (MAF)</li>
-                            <li>🔑 Имобилайзер (Immo OFF)</li>
-                        </ul>
+                        <ul class="service-list"><li>🚫 EGR, DPF, AdBlue OFF</li><li>🔑 Immo OFF</li></ul>
                         <div class="card-cta">Виж повече <span class="arrow">→</span></div>
                     </a>
-
-                    <!-- Карта 3: Екстри -->
                     <a href="#contacts" class="service-card">
                         <div class="icon">💻</div>
-                        <h3>Диагностика и Екстри</h3>
-                        <ul class="service-list">
-                            <li>🆕 Активиране на екстри (VAG, BMW)</li>
-                            <li>💻 Професионална диагностика</li>
-                            <li>🔧 Vmax (Limit OFF)</li>
-                            <li>✅ Launch Control</li>
-                        </ul>
+                        <h3>Диагностика</h3>
+                        <ul class="service-list"><li>💻 Професионална диагностика</li><li>✅ Активиране на екстри</li></ul>
                         <div class="card-cta">Виж повече <span class="arrow">→</span></div>
                     </a>
                 </div>
             </div>
         </section>
 
-
-
-        <!-- Секция Защо да изберете нас (Trust Signals) -->
-        <section class="section dark-section">
-            <div class="container">
-                <h2 class="section-title">Защо Apostolov Tuning?</h2>
-                <div class="features-grid">
-                    <div class="feature">
-                        <h4>Модерна Апаратура</h4>
-                        <p>✅ Използваме професионални инструменти за стабилна комуникация с ECU. Пълна поддръжка на съвременни двигатели (EDC17, MED17 и др.) и най-новите софтуерни протоколи.</p>
-                    </div>
-                    <div class="feature">
-                        <h4>100% Сигурност и Архив</h4>
-                        <p>✅ Винаги правим пълен архив (Full Backup) на оригиналния софтуер преди всяка промяна. Вашият автомобил е защитен и може да бъде върнат към заводски настройки.</p>
-                    </div>
-                    <div class="feature">
-                        <h4>Индивидуален Подход</h4>
-                        <p>✅ Всеки софтуер се обработва индивидуално спрямо състоянието на колата. Попитайте ни за пакетни услуги.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Секция Често Задавани Въпроси (FAQ) -->
-        <section id="faq" class="section">
-            <div class="container">
-                <h2 class="section-title">Често Задавани Въпроси</h2>
-                <div class="faq-container">
-                    
-                    <div class="faq-item">
-                        <button class="faq-question">Вреден ли е чип тунингът за двигателя?</button>
-                        <div class="faq-answer">
-                            <p>При професионално направен ремап (Stage 1), двигателят не се претоварва. Ние оптимизираме параметрите в рамките на безопасните лимити, заложени от производителя. Това не скъсява живота на мотора, а често дори подобрява работата му чрез по-добра оптимизация на горивните процеси.</p>
-                        </div>
-                    </div>
-
-                    <div class="faq-item">
-                        <button class="faq-question">Как се променя разходът на гориво?</button>
-                        <div class="faq-answer">
-                            <p>При дизеловите двигатели разходът обикновено пада с 0.5 до 1.0 литър на 100 км при спокойно каране. Това се дължи на повишения въртящ момент, който позволява на автомобила да поддържа скорост на по-ниски обороти и по-висока предавка.</p>
-                        </div>
-                    </div>
-
-                    <div class="faq-item">
-                        <button class="faq-question">Ще пуши ли колата след ремап?</button>
-                        <div class="faq-answer">
-                            <p>Категорично не. Нашите софтуерни решения са разработени така, че да запазят перфектната смес от гориво и въздух. Автомобилът ще работи чисто, без черен дим или излишни емисии, стига механичното му състояние да е изправно.</p>
-                        </div>
-                    </div>
-
-                    <div class="faq-item">
-                        <button class="faq-question">Колко време отнема процедурата?</button>
-                        <div class="faq-answer">
-                            <p>Стандартната процедура за Stage 1 тунинг или софтуерно изключване на системи (DPF/EGR) отнема между 1.5 и 3 часа. Това включва диагностика, четене на оригиналния софтуер, модификация и финални тестове.</p>
-                        </div>
-                    </div>
-
-                    <div class="faq-item">
-                        <button class="faq-question">Може ли софтуерът да се върне към заводски настройки?</button>
-                        <div class="faq-answer">
-                            <p>Да. Винаги пазим архив на оригиналния софтуер на всеки автомобил, който сме обслужвали. Връщането към заводски настройки е напълно възможно и безопасно по всяко време.</p>
-                        </div>
-                    </div>
-
-                </div>
-            </div>
-        </section>
-
-
-
-        <!-- Контакти -->
-        <section id="contacts" class="section contact-section">
+        <section id="contacts" class="section">
             <div class="container">
                 <h2 class="section-title">Свържете се с нас</h2>
                 <div class="contact-wrapper">
                     <div class="contact-info">
-                        <p class="contact-item">
-                            <span class="icon">📞</span> 
-                            <strong>Телефон:</strong> 
-                            <a href="tel:+359896084735">089 608 4735</a>
-                        </p>
-                        
-                        <p class="contact-item">
-                            <span class="icon">📍</span> 
-                            <strong>Локация:</strong> 
-                            Карнобат<br>
-                            <span class="sub-text">(Мобилна услуга за Бургас, Айтос, Ямбол, Сливен и Шумен)</span>
-                        </p>
-                        
-                        <p class="contact-item">
-                            <span class="icon">⏰</span> 
-                            <strong>Работно време:</strong> 
-                            Всеки ден: 08:00 - 22:00
-                        </p>
-                        
+                        <p class="contact-item"><span class="icon">📞</span> <strong>Тел:</strong> <a href="tel:+359896084735">089 608 4735</a></p>
+                        <p class="contact-item"><span class="icon">📍</span> <strong>Локация:</strong> Карнобат / Бургас</p>
                         <div class="social-links">
-                            <a href="https://www.facebook.com/apostolovtuning" target="_blank" class="social-btn fb" aria-label="Facebook">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="white"><path d="M9 8h-3v4h3v12h5v-12h3.642l.358-4h-4v-1.667c0-.955.192-1.333 1.115-1.333h2.885v-5h-3.808c-3.596 0-5.192 1.583-5.192 4.615v3.385z"/></svg>
-                            </a>
-                            <a href="https://instagram.com/apostolovtuning" target="_blank" class="social-btn insta" aria-label="Instagram">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
-                            </a>
-                            <a href="https://t.me/+359896084735" target="_blank" class="social-btn tg" aria-label="Telegram">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="white"><path d="M20.665 3.717l-17.73 6.837c-1.21.486-1.203 1.161-.222 1.462l4.552 1.42 1.056 3.239c.127.352.064.492.446.492.296 0 .427-.135.592-.3l1.583-1.538 3.292 2.43c.606.334 1.043.16 1.194-.563l2.164-10.2c.221-.885-.336-1.284-1.116-.93l.001.001z"/></svg>
-                            </a>
-                            <a href="https://wa.me/359896084735" target="_blank" class="social-btn wa" aria-label="WhatsApp">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="white"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.588-5.946 0-6.556 5.332-11.891 11.891-11.891 3.181 0 6.167 1.24 8.413 3.488 2.246 2.248 3.484 5.232 3.484 8.403 0 6.556-5.332 11.89-11.891 11.89-2.015 0-3.991-.511-5.741-1.478l-6.255 1.697zm6.514-3.419c1.541.917 3.01 1.39 4.736 1.39 5.232 0 9.491-4.259 9.491-9.49 0-2.535-1-4.917-2.817-6.735s-4.201-2.817-6.735-2.817c-5.232 0-9.49 4.258-9.49 9.491 0 1.834.526 3.535 1.521 5.013l-.995 3.637 3.73-.999zm10.325-6.326c-.285-.143-1.688-.833-1.95-.928-.261-.095-.452-.143-.642.143-.19.285-.736.928-.903 1.118-.166.19-.332.214-.618.071-.285-.143-1.204-.443-2.293-1.415-.847-.756-1.419-1.689-1.586-1.974-.166-.285-.018-.439.124-.581.128-.127.285-.332.428-.499.143-.166.19-.285.285-.476.095-.19.047-.357-.024-.5-.071-.143-.642-1.546-.88-2.118-.231-.557-.465-.482-.642-.491-.166-.008-.356-.01-.547-.01s-.5.071-.761.357c-.261.285-1.001.977-1.001 2.381 0 1.404 1.022 2.76 1.165 2.951.143.19 2.012 3.073 4.874 4.311.68.294 1.212.469 1.625.6.683.218 1.305.187 1.797.114.549-.081 1.688-.69 1.926-1.356.238-.666.238-1.237.166-1.356-.071-.119-.261-.19-.547-.333z"/></svg>
-                            </a>
-                            <a href="mailto:stoyan93work@gmail.com" class="social-btn email" aria-label="Email">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
-                            </a>
+                            <a href="https://www.facebook.com/apostolovtuning" target="_blank" class="social-btn fb"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="white"><path d="M9 8h-3v4h3v12h5v-12h3.642l.358-4h-4v-1.667c0-.955.192-1.333 1.115-1.333h2.885v-5h-3.808c-3.596 0-5.192 1.583-5.192 4.615v3.385z"/></svg></a>
                         </div>
-
-                        <!-- Нова позиция на бутона за отзиви -->
-                        <div style="margin-top: 30px;">
-                            <a href="https://www.google.com/maps/search/?api=1&query=Apostolov+Tuning&query_place_id=0xd9ab01742ca3824a" target="_blank" class="btn btn-review">
-                                ⭐ Оцени ни в Google
-                            </a>
-                        </div>
+                        <div style="margin-top: 30px;"><a href="https://www.google.com/maps/search/?api=1&query=Apostolov+Tuning" target="_blank" class="btn btn-review">⭐ Оцени ни в Google</a></div>
                     </div>
-                    
                     <div class="map-container">
-                        <iframe 
-                            src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d188025.40692206722!2d26.902871!3d42.57870900000001!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4f3b3ead6bf477d%3A0xd9ab01742ca3824a!2sApostolov%20Tuning!5e0!3m2!1sbg!2sbg!4v1767537982553!5m2!1sbg!2sbg" 
-                            width="100%" 
-                            height="450" 
-                            style="border:0;" 
-                            allowfullscreen="" 
-                            loading="lazy" 
-                            referrerpolicy="no-referrer-when-downgrade">
-                        </iframe>
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d188025.40692206722!2d26.902871!3d42.57870900000001!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4f3b3ead6bf477d%3A0xd9ab01742ca3824a!2sApostolov%20Tuning!5e0!3m2!1sbg!2sbg!4v1767537982553!5m2!1sbg!2sbg" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
                     </div>
                 </div>
             </div>
@@ -957,42 +312,8 @@
     <footer>
         <div class="container">
             <p>&copy; 2026 Apostolov Tuning. Всички права запазени.</p>
-            <p style="font-size: 0.8rem; color: #444; margin-top: 5px;">
-                Professional Chip Tuning, Remap, DPF/EGR OFF & Diagnostics in Karnobat, Burgas, Aitos, Yambol, Sliven, Shumen.
-                <br>
-                <a href="privacy-policy.html" style="color: #666; text-decoration: underline;">Политика за поверителност</a>
-            </p>
         </div>
     </footer>
-
-    <a href="tel:+359896084735" class="floating-call">
-        <svg width="24" height="24" viewBox="0 0 24 24" fill="white"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
-        <span>Позвъни</span>
-    </a>
-
-    <a href="https://m.me/apostolovtuning" target="_blank" class="floating-chat">
-        <svg width="24" height="24" class="chat-icon" viewBox="0 0 24 24"><path d="M12 2C6.477 2 2 6.145 2 11.258c0 2.908 1.463 5.503 3.746 7.202V22l3.39-1.858c.882.245 1.803.38 2.864.38 5.523 0 10-4.145 10-9.258C22 6.145 17.523 2 12 2zm1.06 13.5l-2.58-2.75-5.04 2.75 5.54-5.88 2.62 2.75 4.96-2.75-5.5 5.88z" fill="white"/></svg>
-        <span>Чат</span>
-    </a>
-
-    <!-- Cookie Consent Banner -->
-    <div id="cookie-banner" class="cookie-banner">
-        <div class="cookie-content">
-            <p>🍪 Този сайт използва бисквитки (cookies), за да подобри вашето преживяване и да анализира трафика. <a href="privacy-policy.html">Научете повече</a>.</p>
-            <div class="cookie-buttons">
-                <button id="accept-cookies" class="btn btn-primary btn-sm">Приемам</button>
-                <button id="decline-cookies" class="btn btn-secondary btn-sm">Отказвам</button>
-            </div>
-        </div>
-    </div>
-
-    <!-- Lightbox Container (Скрит прозорец за снимки) -->
-    <div id="lightbox" class="lightbox">
-        <span class="lightbox-close">&times;</span>
-        <button class="lightbox-nav prev">&#10094;</button> <!-- Лява стрелка -->
-        <img id="lightbox-img" src="" alt="Full Screen Preview">
-        <button class="lightbox-nav next">&#10095;</button> <!-- Дясна стрелка -->
-    </div>
 
     <script src="script.js"></script>
 </body>
