@@ -132,6 +132,61 @@ header {
     color: var(--primary-color);
 }
 
+/* Toggle Arrow for Mobile */
+.dropdown-toggle {
+    display: none;
+    margin-left: 10px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+    padding: 10px;
+}
+
+/* Mobile Dropdown Logic */
+@media (max-width: 768px) {
+    .dropdown {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .dropdown-link-wrapper {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+    }
+
+    .dropdown-toggle {
+        display: inline-block;
+        font-size: 1.2rem;
+    }
+
+    .dropdown-content {
+        position: static;
+        display: none; /* Hidden by default on mobile */
+        background-color: rgba(255,255,255,0.03);
+        box-shadow: none;
+        border: none;
+        border-left: 2px solid var(--primary-color);
+        margin-left: 15px;
+        width: calc(100% - 15px);
+        padding: 0;
+    }
+
+    .dropdown.active .dropdown-content {
+        display: block;
+    }
+
+    .dropdown.active .dropdown-toggle {
+        transform: rotate(180deg);
+    }
+
+    .dropdown-content a {
+        padding: 15px 20px;
+        font-size: 0.85rem;
+    }
+}
+
 /* Show dropdown on hover (Desktop) */
 @media (min-width: 769px) {
     .dropdown:hover .dropdown-content {

@@ -32,6 +32,18 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     });
 
+    /* --- Mobile Dropdown Toggle --- */
+    const dropdownToggle = document.querySelector(".dropdown-toggle");
+    const dropdown = document.querySelector(".dropdown");
+
+    if (dropdownToggle && dropdown) {
+        dropdownToggle.addEventListener("click", (e) => {
+            e.preventDefault();
+            e.stopPropagation();
+            dropdown.classList.toggle("active");
+        });
+    }
+
     /* --- Lightbox Logic (Gallery) --- */
     const lightbox = document.getElementById('lightbox');
     const lightboxImg = document.getElementById('lightbox-img');
