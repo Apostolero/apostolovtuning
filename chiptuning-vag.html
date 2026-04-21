@@ -10,6 +10,21 @@
     <title>Чип Тунинг VAG (VW, Audi, Skoda, Seat) Бургас | Apostolov Tuning</title>
     <meta name="description" content="Специализиран чип тунинг и ремап за VAG групата в Бургас и Карнобат. Работа с ODIS, поддръжка на EDC17/MD1. Ремап на DSG кутии.">
     <link rel="stylesheet" href="style.css">
+    <style>
+        .gallery-grid { align-items: start !important; }
+        .project-card { height: auto !important; }
+        .project-image-container { 
+            height: 250px !important; 
+            width: 100% !important; 
+            object-fit: cover !important; 
+            border-bottom: 2px solid var(--primary-color);
+            position: relative;
+            background-color: #000;
+        }
+        .project-image-container img { opacity: 0; z-index: 1; position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; transition: opacity 0.3s ease; }
+        .project-image-container img.active { opacity: 1; z-index: 2; position: relative !important; display: block; }
+        .btn-collapse { background: none; border: none; color: var(--primary-color); cursor: pointer; font-weight: 600; font-size: 0.9rem; padding: 10px 0 0 0; display: block; width: 100%; text-align: left; }
+    </style>
 </head>
 <body>
     <header>
@@ -45,14 +60,13 @@
                 <h1 class="section-title">Чип Тунинг за VAG (VW, Audi, Skoda, Seat)</h1>
                 <p style="text-align:center; color:#ccc; max-width: 800px; margin: 0 auto 40px auto;">Ние сме специалисти в софтуерната оптимизация на автомобили от VAG групата. Използваме дилърско оборудване и предлагаме индивидуални решения за всеки модел.</p>
                 
-                <!-- Проекти VAG -->
                 <div class="gallery-grid">
-                    <!-- Проект: VW Golf Plus -->
+                    <!-- VW Golf Plus -->
                     <div class="gallery-item project-card">
                         <div class="project-image-container">
                             <button class="project-slider-btn prev" aria-label="Previous Image">&#10094;</button>
-                            <img src="assets/vw-golf-plus-19tdi-remap-burgas.webp" alt="VW Golf Plus 1.9 TDI Stage 1 Remap" class="active" loading="lazy">
-                            <img src="assets/vw-golf-plus-19tdi-edc16u34-diagnostics-burgas.webp" alt="VW Golf Plus 1.9 TDI Diagnostics" loading="lazy">
+                            <img src="assets/vw-golf-plus-19tdi-remap-burgas.webp" alt="VW Golf Plus 1.9 TDI Stage 1 Remap EGR Off Popcorn Burgas" class="active" loading="lazy">
+                            <img src="assets/vw-golf-plus-19tdi-edc16u34-diagnostics-burgas.webp" alt="VW Golf Plus 1.9 TDI EDC16U34 Diagnostics Launch X431" loading="lazy">
                             <button class="project-slider-btn next" aria-label="Next Image">&#10095;</button>
                         </div>
                         <div class="project-info">
@@ -60,130 +74,147 @@
                             <div class="project-date">Април 2026</div>
                             <p>✅ <strong>Stage 1 Remap</strong> | ✅ <strong>EGR Off</strong> | 🍿 <strong>Popcorn</strong></p>
                             <details class="project-details">
-                                <summary>Детайли...</summary>
+                                <summary>Прочети всичко...</summary>
                                 <div class="details-content">
-                                    <p>Оптимизация на Bosch EDC16U34. Подобрена динамика и премахнати фабрични ограничения.</p>
-                                    <p>💻 <strong>ECU:</strong> Bosch EDC16U34 | 📍 <strong>Бургас</strong></p>
+                                    <p>Оптимизирахме софтуера на <strong>VW Golf Plus 1.9 TDI (105hp)</strong>, оборудван с Bosch EDC16U34. Целта на проекта беше да подобрим работата на двигателя и да премахнем фабричните ограничения, без да компрометираме ресурса на мотора.</p>
+                                    <h4>🛠 Извършени услуги:</h4>
+                                    <ul class="details-list">
+                                        <li>🚀 <strong>Stage 1 Ремап:</strong> Увеличение на мощността и въртящия момент.</li>
+                                        <li>✅ <strong>Софтуерно премахване на ЕГР:</strong> Трайно решение срещу зацапване.</li>
+                                        <li>🍿 <strong>Popcorn Limiter:</strong> Ограничител на 4500rpm.</li>
+                                    </ul>
+                                    <h4>🚀 Резултатът:</h4>
+                                    <p>Задълбочена диагностика с Launch X431. Колата е в перфектно състояние и готова за път.</p>
+                                    <p>💻 <strong>ECU:</strong> Bosch EDC16U34 | 📍 <strong>Бургас / Карнобат</strong></p>
                                 </div>
+                                <button class="btn-collapse" onclick="this.closest('details').removeAttribute('open')">Свий ↑</button>
                             </details>
                         </div>
                     </div>
 
-                    <!-- Проект: VW Touareg -->
+                    <!-- VW Touareg -->
                     <div class="gallery-item project-card">
                         <div class="project-image-container">
                             <button class="project-slider-btn prev" aria-label="Previous Image">&#10094;</button>
-                            <img src="assets/vw-touareg-30tdi-remap-burgas.webp" alt="VW Touareg 3.0 TDI Remap" class="active" loading="lazy">
-                            <img src="assets/vw-touareg-dpf-removal.webp" alt="VW Touareg DPF Removal" loading="lazy">
+                            <img src="assets/vw-touareg-30tdi-remap-burgas.webp" alt="VW Touareg 3.0 TDI 2013 Remap Stage 1 DPF EGR Off" class="active" loading="lazy">
+                            <img src="assets/vw-touareg-dpf-removal.webp" alt="VW Touareg 3.0 TDI 2013 Механично премахване на DPF" loading="lazy">
                             <button class="project-slider-btn next" aria-label="Next Image">&#10095;</button>
                         </div>
                         <div class="project-info">
                             <h3>🚗 VW Touareg 3.0 TDI 2013г.</h3>
                             <div class="project-date">Март 2026</div>
-                            <p>✅ <strong>Stage 1</strong> | ✅ <strong>DPF / EGR OFF</strong></p>
+                            <p>✅ <strong>Remap Stage 1</strong> | ✅ <strong>DPF / EGR OFF</strong></p>
                             <details class="project-details">
-                                <summary>Детайли...</summary>
+                                <summary>Прочети всичко...</summary>
                                 <div class="details-content">
-                                    <p>Повишена мощност и въртящ момент за двигателя 3.0 TDI. Софтуерно и механично премахване на DPF.</p>
-                                    <p>💻 <strong>ECU:</strong> EDC17CP44 | 📍 <strong>Карнобат</strong></p>
+                                    <p>✅ <strong>Механично премахване на ДПФ</strong></p>
+                                    <h4>🚀 Резултат:</h4>
+                                    <p>Значително повишена мощност и въртящ момент, подобрена динамика. 💻 <strong>ECU:</strong> EDC17CP44</p>
+                                    <a href="https://www.google.com/maps/search/?api=1&query=Apostolov+Tuning&query_place_id=0xd9ab01742ca3824a" target="_blank" class="btn btn-review" style="font-size: 0.8rem; padding: 5px 10px; margin-top: 10px; display: inline-block; background: var(--primary-color); color: white; border-radius: 4px;">⭐ Отзив</a>
                                 </div>
+                                <button class="btn-collapse" onclick="this.closest('details').removeAttribute('open')">Свий ↑</button>
                             </details>
                         </div>
                     </div>
 
-                    <!-- Проект: Audi A6 -->
+                    <!-- Audi A6 -->
                     <div class="gallery-item project-card">
                         <div class="project-image-container">
-                            <img src="assets/audi-a6-30tdi-stage1-remap-burgas.webp" alt="Audi A6 3.0 TDI Stage 1 Remap" class="active" loading="lazy">
+                            <img src="assets/audi-a6-30tdi-stage1-remap-burgas.webp" alt="Audi A6 3.0 TDI Stage 1 Remap P0234 Overboost Fix Diagnosis" class="active" loading="lazy">
                         </div>
                         <div class="project-info">
                             <h3>🚗 Audi A6 3.0 TDI (224hp)</h3>
                             <div class="project-date">Февруари 2026</div>
                             <p>🛠 <strong>Stage 1 + P0234 Fix</strong></p>
                             <details class="project-details">
-                                <summary>Детайли...</summary>
+                                <summary>Прочети всичко...</summary>
                                 <div class="details-content">
-                                    <p>Пълна ревизия на софтуера след лош тунинг. Коригирано пренадуване на турбината.</p>
+                                    <p>🔍 <strong>Диагностика:</strong> Коригирано пренадуване на турбината след лош тунинг.</p>
+                                    <p>🛠 <strong>Екстри:</strong> EGR Off, Swirl Flaps Off, Popcorn Limiter.</p>
                                     <p>💻 <strong>ECU:</strong> Bosch EDC16CP34</p>
                                 </div>
+                                <button class="btn-collapse" onclick="this.closest('details').removeAttribute('open')">Свий ↑</button>
                             </details>
                         </div>
                     </div>
 
-                    <!-- Проект: Skoda Octavia -->
+                    <!-- Skoda Octavia -->
                     <div class="gallery-item project-card">
                         <div class="project-image-container">
-                            <img src="assets/skoda-octavia-immo-off-edc16.webp" alt="Skoda Octavia Immo Off" class="active" loading="lazy">
+                            <img src="assets/skoda-octavia-immo-off-edc16.webp" alt="Skoda Octavia 2 1.9 TDI Immo Off EDC16U34 Bench Mode" class="active" loading="lazy">
                         </div>
                         <div class="project-info">
                             <h3>🚗 Skoda Octavia 2 1.9 TDI</h3>
                             <div class="project-date">Февруари 2026</div>
-                            <p>🔑 <strong>Immo Off (Bench Mode)</strong></p>
+                            <p>🔑 <strong>Immo Off</strong></p>
                             <details class="project-details">
-                                <summary>Детайли...</summary>
+                                <summary>Прочети всичко...</summary>
                                 <div class="details-content">
-                                    <p>Софтуерно премахване на имобилайзер поради повреда в таблото. Работа в Bench режим.</p>
+                                    <p>💻 <strong>Метод:</strong> Работа в <strong>Bench Mode</strong> (ECU EDC16U34).</p>
+                                    <p>Трайно софтуерно решение вместо скъп ремонт на таблото.</p>
                                 </div>
+                                <button class="btn-collapse" onclick="this.closest('details').removeAttribute('open')">Свий ↑</button>
                             </details>
                         </div>
                     </div>
 
-                    <!-- Проект: VW Polo -->
+                    <!-- VW Polo -->
                     <div class="gallery-item project-card">
                         <div class="project-image-container">
-                            <img src="assets/vw-polo-16tdi-stage1-remap-burgas.webp" alt="VW Polo 1.6 TDI Remap" class="active" loading="lazy">
+                            <img src="assets/vw-polo-16tdi-stage1-remap-burgas.webp" alt="VW Polo 1.6TDI Stage 1 EGR DPF Off" class="active" loading="lazy">
                         </div>
                         <div class="project-info">
                             <h3>🚗 VW Polo 1.6TDI 2010г.</h3>
                             <div class="project-date">Февруари 2026</div>
-                            <p>🚀 <strong>Stage 1 Remap</strong> | ♻️ <strong>EGR/DPF Off</strong></p>
+                            <p>🚀 <strong>Stage 1 Remap</strong> | ✅ <strong>EGR/DPF Off</strong></p>
                         </div>
                     </div>
 
-                    <!-- Проект: VW Passat B6 -->
+                    <!-- VW Passat B6 -->
                     <div class="gallery-item project-card">
                         <div class="project-image-container">
-                            <img src="assets/vw-passat-b6-20tdi-remap-burgas.webp" alt="VW Passat B6 2.0 TDI Remap" class="active" loading="lazy">
+                            <img src="assets/vw-passat-b6-20tdi-remap-burgas.webp" alt="VW Passat B6 2.0TDI Stage 1 EGR DPF Off" class="active" loading="lazy">
                         </div>
                         <div class="project-info">
                             <h3>🚗 VW Passat B6 2.0TDI</h3>
                             <div class="project-date">Януари 2026</div>
-                            <p>🚀 <strong>Stage 1: 140кс ↗️ 175кс</strong></p>
+                            <p>🚀 140кс ↗️ 175кс | 320нм ↗️ 390нм</p>
                         </div>
                     </div>
 
-                    <!-- Проект: Audi A3 -->
+                    <!-- Audi A3 -->
                     <div class="gallery-item project-card">
                         <div class="project-image-container">
-                            <img src="assets/audi-a3-20tdi-bkd-remap-burgas.webp" alt="Audi A3 2.0 TDI BKD Remap" class="active" loading="lazy">
+                            <img src="assets/audi-a3-20tdi-bkd-remap-burgas.webp" alt="Audi A3 8P 2.0 TDI BKD Stage 1" class="active" loading="lazy">
                         </div>
                         <div class="project-info">
                             <h3>🚗 Audi A3 8P 2.0 TDI (BKD)</h3>
                             <div class="project-date">Декември 2025</div>
-                            <p>🚀 <strong>Stage 1: 140кс ↗️ 175кс</strong></p>
+                            <p>🚀 140кс ↗️ 175кс | 320нм ↗️ 395нм</p>
                         </div>
                     </div>
 
-                    <!-- Проект: VW Bora -->
+                    <!-- VW Bora -->
                     <div class="gallery-item project-card">
                         <div class="project-image-container">
-                            <img src="assets/vw-bora-19tdi-ajm-popcorn-burgas.webp" alt="VW Bora 1.9 TDI AJM Popcorn" class="active" loading="lazy">
+                            <img src="assets/vw-bora-19tdi-ajm-popcorn-burgas.webp" alt="VW Bora 1.9 TDI AJM Stage 1 Popcorn" class="active" loading="lazy">
                         </div>
                         <div class="project-info">
                             <h3>🚗 VW Bora 1.9 TDI (AJM)</h3>
                             <div class="project-date">Декември 2025</div>
-                            <p>🍿 <strong>Stage 1 + Popcorn + Launch Control</strong></p>
+                            <p>🍿 116кс ↗️ 145кс | Popcorn & Launch</p>
                         </div>
                     </div>
 
                     <!-- Лаборатория -->
                     <div class="gallery-item project-card">
                         <div class="project-image-container">
-                            <img src="assets/chiptuning-bench-mode-laboratory.webp" alt="Bench Mode Laboratory" class="active" loading="lazy">
+                            <img src="assets/chiptuning-bench-mode-laboratory.webp" alt="Лаборатория за чип тунинг Bench Mode specialists" class="active" loading="lazy">
                         </div>
                         <div class="project-info">
                             <h3>💻 Лаборатория & Електроника</h3>
-                            <p>✅ <strong>EDC17, MED17, MD1 Bench Mode Specialists</strong></p>
+                            <p>✅ <strong>Bench Mode Specialists</strong></p>
+                            <p>EDC17, MED17, MD1, TCU Ремап.</p>
                         </div>
                     </div>
                 </div>

@@ -10,6 +10,21 @@
     <title>Чип Тунинг Mercedes-Benz Бургас - Ремап и Софтуер | Apostolov Tuning</title>
     <meta name="description" content="Експертен чип тунинг за Mercedes-Benz в Бургас. Диагностика с Xentry, изключване на AdBlue, DPF и EGR за модели W211, W212, W204, W205 и др.">
     <link rel="stylesheet" href="style.css">
+    <style>
+        .gallery-grid { align-items: start !important; }
+        .project-card { height: auto !important; }
+        .project-image-container { 
+            height: 250px !important; 
+            width: 100% !important; 
+            object-fit: cover !important; 
+            border-bottom: 2px solid var(--primary-color);
+            position: relative;
+            background-color: #000;
+        }
+        .project-image-container img { opacity: 0; z-index: 1; position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; transition: opacity 0.3s ease; }
+        .project-image-container img.active { opacity: 1; z-index: 2; position: relative !important; display: block; }
+        .btn-collapse { background: none; border: none; color: var(--primary-color); cursor: pointer; font-weight: 600; font-size: 0.9rem; padding: 10px 0 0 0; display: block; width: 100%; text-align: left; }
+    </style>
 </head>
 <body>
     <header>
@@ -40,51 +55,61 @@
                 <h1 class="section-title">Чип Тунинг за Mercedes-Benz</h1>
                 <p style="text-align:center; color:#ccc; max-width: 800px; margin: 0 auto 40px auto;">Подобрете динамиката на вашия Mercedes. Индивидуални софтуерни решения с дилърска апаратура.</p>
 
-                <!-- Проекти Mercedes -->
                 <div class="gallery-grid">
-                    <!-- Проект: Mercedes C320 CDI -->
+                    <!-- Mercedes C320 CDI -->
                     <div class="gallery-item project-card">
                         <div class="project-image-container">
-                            <img src="assets/mercedes-c320cdi-egr-dpf-off-burgas.webp" alt="Mercedes C320 CDI EGR DPF Off" class="active" loading="lazy">
+                            <img src="assets/mercedes-c320cdi-egr-dpf-off-burgas.webp" alt="Mercedes W204 C320 CDI EGR DPF Off EDC17CP01 Tuning Burgas" class="active" loading="lazy">
                         </div>
                         <div class="project-info">
                             <h3>🚗 Mercedes-Benz C320 CDI (224hp)</h3>
                             <div class="project-date">Март 2026</div>
                             <p>✅ <strong>Софтуерно изолиране на DPF/EGR</strong></p>
                             <details class="project-details">
-                                <summary>Детайли...</summary>
+                                <summary>Прочети всичко...</summary>
                                 <div class="details-content">
-                                    <p>Трайно решение на проблемите с екологичните системи на двигателя OM642. Премахване на аварийния режим.</p>
+                                    <p>🔍 <strong>Диагностика:</strong> Пълна проверка със Star Diagnosis (Xentry) преди и след намесата.</p>
+                                    <h4>🚀 Резултат:</h4>
+                                    <p>Трайно решение на проблемите с екологичните системи, премахване на аварийния режим и по-добра динамика на двигателя OM642.</p>
                                     <p>💻 <strong>ECU:</strong> Bosch EDC17CP01 | 📍 <strong>Бургас</strong></p>
+                                    <a href="https://www.google.com/maps/search/?api=1&query=Apostolov+Tuning&query_place_id=0xd9ab01742ca3824a" target="_blank" class="btn btn-review" style="font-size: 0.8rem; padding: 5px 10px; margin-top: 10px; display: inline-block; background: var(--primary-color); color: white; border-radius: 4px;">⭐ Отзив</a>
                                 </div>
+                                <button class="btn-collapse" onclick="this.closest('details').removeAttribute('open')">Свий ↑</button>
                             </details>
                         </div>
                     </div>
 
-                    <!-- Проект: Mercedes W211 -->
+                    <!-- Mercedes W211 -->
                     <div class="gallery-item project-card">
                         <div class="project-image-container">
-                            <img src="assets/mercedes-w211-e200cdi-remap-burgas.webp" alt="Mercedes W211 E200 CDI Stage 1" class="active" loading="lazy">
+                            <img src="assets/mercedes-w211-e200cdi-remap-burgas.webp" alt="Чип тунинг Mercedes W211 E200 CDI Stage 1 Xentry DAS Swirl Flaps" class="active" loading="lazy">
                         </div>
                         <div class="project-info">
                             <h3>🚗 Mercedes W211 E200 CDI</h3>
                             <div class="project-date">Декември 2025</div>
-                            <p>🚀 <strong>Stage 1</strong> | 💨 <strong>Swirl Flaps Off</strong></p>
-                            <p>🐢 122кс ↗️ 175кс | 🐢 270нм ↗️ 380нм</p>
+                            <p>🚀 122кс ↗️ 175кс | 💨 <strong>Swirl Flaps Off</strong></p>
+                            <details class="project-details">
+                                <summary>Прочети всичко...</summary>
+                                <div class="details-content">
+                                    <p>🐢 122кс ↗️ 175кс ✈️<br>🐢 270нм ↗️ 380нм ✈️<br>🔥 Отключен фабричен потенциал за безопасна ежедневна употреба.</p>
+                                </div>
+                                <button class="btn-collapse" onclick="this.closest('details').removeAttribute('open')">Свий ↑</button>
+                            </details>
                         </div>
                     </div>
                 </div>
 
                 <div style="margin-top: 50px; background: #1e1e1e; padding: 30px; border-radius: 12px; border-left: 5px solid #ffc107;">
-                <h3 style="color:white; margin-bottom: 15px;">Вашият Mercedes заслужава най-доброто:</h3>
-                <ul style="color:#ccc; line-height: 1.8;">
-                    <li>✅ Диагностика и софтуерна поддръжка с <strong>Xentry / DAS</strong>.</li>
-                    <li>✅ Софтуерно премахване на <strong>AdBlue</strong> (BlueTEC) и <strong>DPF</strong>.</li>
-                    <li>✅ Изключване на <strong>Вихрови клапи</strong> на двигатели OM642 и OM651.</li>
-                    <li>✅ Ремап на 7G-Tronic и 9G-Tronic скоростни кутии.</li>
-                </ul>
+                    <h3 style="color:white; margin-bottom: 15px;">Вашият Mercedes заслужава най-доброто:</h3>
+                    <ul style="color:#ccc; line-height: 1.8;">
+                        <li>✅ Диагностика и софтуерна поддръжка с <strong>Xentry / DAS</strong>.</li>
+                        <li>✅ Софтуерно премахване на <strong>AdBlue</strong> (BlueTEC) и <strong>DPF</strong>.</li>
+                        <li>✅ Изключване на <strong>Вихрови клапи</strong> (OM642, OM651).</li>
+                        <li>✅ Ремап на 7G-Tronic и 9G-Tronic кутии.</li>
+                    </ul>
+                </div>
             </div>
-        </div></section>
+        </section>
     </main>
     <script src="script.js"></script>
 </body>

@@ -10,6 +10,21 @@
     <title>Чип Тунинг BMW Бургас - E, F, G серии | Apostolov Tuning</title>
     <meta name="description" content="Професионален ремап за BMW в Бургас. Поддръжка на всички серии (E, F, G), ремап на ZF 8HP кутии, софтуерни решения за AdBlue и DPF.">
     <link rel="stylesheet" href="style.css">
+    <style>
+        .gallery-grid { align-items: start !important; }
+        .project-card { height: auto !important; }
+        .project-image-container { 
+            height: 250px !important; 
+            width: 100% !important; 
+            object-fit: cover !important; 
+            border-bottom: 2px solid var(--primary-color);
+            position: relative;
+            background-color: #000;
+        }
+        .project-image-container img { opacity: 0; z-index: 1; position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; transition: opacity 0.3s ease; }
+        .project-image-container img.active { opacity: 1; z-index: 2; position: relative !important; display: block; }
+        .btn-collapse { background: none; border: none; color: var(--primary-color); cursor: pointer; font-weight: 600; font-size: 0.9rem; padding: 10px 0 0 0; display: block; width: 100%; text-align: left; }
+    </style>
 </head>
 <body>
     <header>
@@ -40,31 +55,42 @@
                 <h1 class="section-title">Чип Тунинг за BMW (E, F, G серии)</h1>
                 <p style="text-align:center; color:#ccc; max-width: 800px; margin: 0 auto 40px auto;">Отключете мощността на вашето BMW. Специализиран софтуерен тунинг за бензинови и дизелови двигатели.</p>
 
-                <!-- Проекти BMW -->
                 <div class="gallery-grid">
-                    <!-- Проект: BMW X3 G01 -->
+                    <!-- BMW X3 G01 -->
                     <div class="gallery-item project-card" style="grid-column: span 2;">
                         <div class="project-image-container">
                             <button class="project-slider-btn prev" aria-label="Previous Image">&#10094;</button>
-                            <img src="assets/bmw-x3-g01-md1-remap-back.webp" alt="BMW X3 G01 2.0d MD1 Stage 1" class="active" loading="lazy">
-                            <img src="assets/bmw-x3-g01-md1-remap-bench.webp" alt="Bosch MD1CS001 Bench Mode" loading="lazy">
+                            <img src="assets/bmw-x3-g01-md1-remap-back.webp" alt="BMW X3 G01 2.0d MD1 Stage 1 Remap AdBlue DPF EGR Swirl Flaps Off" class="active" loading="lazy">
+                            <img src="assets/bmw-x3-g01-md1-remap-front.webp" alt="BMW X3 G01 MD1 2018 Tuning Burgas" loading="lazy">
+                            <img src="assets/bmw-x3-g01-md1-remap-dash.webp" alt="BMW X3 G01 MD1 No DTC AdBlue Fix" loading="lazy">
+                            <img src="assets/bmw-x3-g01-md1-remap-bench.webp" alt="Bosch MD1CS001 Bench Mode Tuning" loading="lazy">
+                            <img src="assets/bmw-x3-g01-md1-remap-trunk.webp" alt="BMW X3 G01 Project Apostolov Tuning" loading="lazy">
+                            <img src="assets/bmw-x3-g01-md1-remap-under.webp" alt="BMW X3 DPF Removal Mechanical" loading="lazy">
                             <button class="project-slider-btn next" aria-label="Next Image">&#10095;</button>
                         </div>
                         <div class="project-info">
                             <h3>🚗 BMW X3 (G01) 2.0d 2018г.</h3>
                             <div class="project-date">Март 12, 2026</div>
-                            <p>✅ <strong>Remap Stage 1</strong> | ✅ <strong>AdBlue / DPF / EGR / Swirl Flaps OFF</strong></p>
+                            <p>✅ <strong>Remap Stage 1</strong> | ✅ <strong>AdBlue / DPF / EGR OFF</strong></p>
                             <details class="project-details">
-                                <summary>Детайли...</summary>
+                                <summary>Прочети всичко...</summary>
                                 <div class="details-content">
-                                    <p>Работа с най-новото поколение контролери <strong>Bosch MD1CS001</strong>. Решаване на критични проблеми с AdBlue системата.</p>
-                                    <p>💻 <strong>ECU:</strong> Bosch MD1 (Bench Mode) | 📍 <strong>Бургас</strong></p>
+                                    <p>Работа с най-новото поколение контролери <strong>Bosch MD1CS001</strong>. Решаване на критични проблеми с AdBlue системата и цялостна оптимизация.</p>
+                                    <h4>🛠 Извършени услуги:</h4>
+                                    <ul class="details-list">
+                                        <li>🚀 <strong>Ремап Stage 1:</strong> Значително повишаване на мощността.</li>
+                                        <li>✅ <strong>AdBlue (SCR) OFF:</strong> Край на аварийните режими.</li>
+                                        <li>✅ <strong>DPF / EGR / Swirl Flaps OFF:</strong> Пълна надеждност.</li>
+                                    </ul>
+                                    <p>💻 <strong>ECU:</strong> Bosch MD1CS001 | 📍 <strong>Бургас</strong></p>
+                                    <a href="https://www.google.com/maps/search/?api=1&query=Apostolov+Tuning&query_place_id=0xd9ab01742ca3824a" target="_blank" class="btn btn-review" style="font-size: 0.8rem; padding: 5px 10px; margin-top: 10px; display: inline-block; background: var(--primary-color); color: white; border-radius: 4px;">⭐ Отзив</a>
                                 </div>
+                                <button class="btn-collapse" onclick="this.closest('details').removeAttribute('open')">Свий ↑</button>
                             </details>
                         </div>
                     </div>
 
-                    <!-- Проект: BMW E46 -->
+                    <!-- BMW E46 -->
                     <div class="gallery-item project-card">
                         <div class="project-image-container">
                             <img src="assets/chiptuning-bmw-e46-compact-320d-burgas-stage1-egr-off.webp" alt="BMW E46 Compact Stage 1" class="active" loading="lazy">
@@ -76,7 +102,7 @@
                         </div>
                     </div>
 
-                    <!-- Проект: BMW E39 -->
+                    <!-- BMW E39 -->
                     <div class="gallery-item project-card">
                         <div class="project-image-container">
                             <img src="assets/bmw-e39-525d-m57-remap-burgas.webp" alt="BMW E39 525d Remap" class="active" loading="lazy">
@@ -84,21 +110,22 @@
                         <div class="project-info">
                             <h3>🚗 BMW 525d E39 (M57)</h3>
                             <div class="project-date">Декември 2025</div>
-                            <p>🚀 <strong>Stage 1: 163кс ↗️ 195кс</strong> | 🍿 <strong>Hard Cut</strong></p>
+                            <p>🚀 163кс ↗️ 195кс | 🍿 Hard Cut</p>
                         </div>
                     </div>
                 </div>
 
                 <div style="margin-top: 50px; background: #1e1e1e; padding: 30px; border-radius: 12px; border-left: 5px solid #28a745;">
-                <h3 style="color:white; margin-bottom: 15px;">Защо Apostolov Tuning за вашето BMW?</h3>
-                <ul style="color:#ccc; line-height: 1.8;">
-                    <li>✅ Ремап на най-новите <strong>Bosch MD1/MG1</strong> компютри.</li>
-                    <li>✅ Оптимизация на <strong>ZF 6HP / 8HP</strong> автоматични кутии.</li>
-                    <li>✅ Софтуерно изключване на AdBlue, DPF, EGR и Вихрови клапи.</li>
-                    <li>✅ <strong>Pops & Bangs</strong> и Hardcut прекъсвачи за бензинови и дизелови модели.</li>
-                </ul>
+                    <h3 style="color:white; margin-bottom: 15px;">Защо Apostolov Tuning за вашето BMW?</h3>
+                    <ul style="color:#ccc; line-height: 1.8;">
+                        <li>✅ Ремап на най-новите <strong>Bosch MD1/MG1</strong> компютри.</li>
+                        <li>✅ Оптимизация на <strong>ZF 6HP / 8HP</strong> автоматични кутии.</li>
+                        <li>✅ Софтуерно изключване на AdBlue, DPF, EGR и Вихрови клапи.</li>
+                        <li>✅ <strong>Pops & Bangs</strong> и Hardcut прекъсвачи.</li>
+                    </ul>
+                </div>
             </div>
-        </div></section>
+        </section>
     </main>
     <script src="script.js"></script>
 </body>

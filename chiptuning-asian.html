@@ -10,6 +10,21 @@
     <title>Чип Тунинг Honda, Toyota, Kia, Hyundai Бургас | Apostolov Tuning</title>
     <meta name="description" content="Чип тунинг и диагностика за японски и корейски автомобили в Бургас. Софтуерни решения за Honda, Toyota, Kia, Hyundai. Изключване на DPF и EGR.">
     <link rel="stylesheet" href="style.css">
+    <style>
+        .gallery-grid { align-items: start !important; }
+        .project-card { height: auto !important; }
+        .project-image-container { 
+            height: 250px !important; 
+            width: 100% !important; 
+            object-fit: cover !important; 
+            border-bottom: 2px solid var(--primary-color);
+            position: relative;
+            background-color: #000;
+        }
+        .project-image-container img { opacity: 0; z-index: 1; position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; transition: opacity 0.3s ease; }
+        .project-image-container img.active { opacity: 1; z-index: 2; position: relative !important; display: block; }
+        .btn-collapse { background: none; border: none; color: var(--primary-color); cursor: pointer; font-weight: 600; font-size: 0.9rem; padding: 10px 0 0 0; display: block; width: 100%; text-align: left; }
+    </style>
 </head>
 <body>
     <header>
@@ -40,33 +55,39 @@
                 <h1 class="section-title">Чип Тунинг за Японски и Корейски Автомобили</h1>
                 <p style="text-align:center; color:#ccc; max-width: 800px; margin: 0 auto 40px auto;">Надеждност и мощност за вашата Honda, Toyota, Kia или Hyundai. Професионален софтуерен тунинг.</p>
 
-                <!-- Проекти Asian -->
                 <div class="gallery-grid">
-                    <!-- Проект: Honda CR-V -->
+                    <!-- Honda CR-V -->
                     <div class="gallery-item project-card">
                         <div class="project-image-container">
-                            <img src="assets/honda-crv-22ictdi-remap-burgas.webp" alt="Honda CR-V 2.2 i-CTDI Remap" class="active" loading="lazy">
+                            <img src="assets/honda-crv-22ictdi-remap-burgas.webp" alt="Чип тунинг Honda CR-V 2.2 i-CTDI N22A Stage 1 EGR OFF HDS iHDS" class="active" loading="lazy">
                         </div>
                         <div class="project-info">
                             <h3>🚗 Honda CR-V 2.2 i-CTDI</h3>
                             <div class="project-date">Декември 2025</div>
                             <p>🚀 <strong>Stage 1 Upgrade</strong> | ✅ <strong>EGR OFF</strong></p>
-                            <p>🐢 140кс ↗️ 185кс | 🐢 340нм ↗️ 400нм</p>
-                            <p>📍 <strong>Локация:</strong> Бургас / Карнобат</p>
+                            <details class="project-details">
+                                <summary>Прочети всичко...</summary>
+                                <div class="details-content">
+                                    <p>🐢 140кс ↗️ 185кс ✈️<br>🐢 340нм ↗️ 400нм ✈️<br>✅ Софтуерно премахване на EGR за по-чиста работа и по-добра динамика в ниските обороти.</p>
+                                    <p>🔍 Използвана диагностика: <strong>iHDS (Honda Diagnostic System)</strong>.</p>
+                                </div>
+                                <button class="btn-collapse" onclick="this.closest('details').removeAttribute('open')">Свий ↑</button>
+                            </details>
                         </div>
                     </div>
                 </div>
 
                 <div style="margin-top: 50px; background: #1e1e1e; padding: 30px; border-radius: 12px; border-left: 5px solid #dc3545;">
-                <h3 style="color:white; margin-bottom: 15px;">Какво предлагаме за азиатските марки:</h3>
-                <ul style="color:#ccc; line-height: 1.8;">
-                    <li>✅ Специализиран софтуер за <strong>Honda</strong> (i-CTDI, i-DTEC) с диагностика <strong>iHDS</strong>.</li>
-                    <li>✅ Чип тунинг и DPF софтуерни решения за <strong>Toyota</strong> (D-4D, D-CAT).</li>
-                    <li>✅ Ремап и изключване на екологични системи за <strong>Kia</strong> и <strong>Hyundai</strong> (CRDi).</li>
-                    <li>✅ Оптимизация на <strong>Denso</strong> и <strong>Marelli</strong> компютри.</li>
-                </ul>
+                    <h3 style="color:white; margin-bottom: 15px;">Какво предлагаме за азиатските марки:</h3>
+                    <ul style="color:#ccc; line-height: 1.8;">
+                        <li>✅ Специализиран софтуер за <strong>Honda</strong> (i-CTDI, i-DTEC).</li>
+                        <li>✅ Чип тунинг и DPF решения за <strong>Toyota</strong> (D-4D, D-CAT).</li>
+                        <li>✅ Ремап за <strong>Kia</strong> и <strong>Hyundai</strong> (CRDi) двигатели.</li>
+                        <li>✅ Оптимизация на <strong>Denso</strong> и <strong>Marelli</strong> компютри.</li>
+                    </ul>
+                </div>
             </div>
-        </div></section>
+        </section>
     </main>
     <script src="script.js"></script>
 </body>
