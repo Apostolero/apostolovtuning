@@ -93,6 +93,53 @@ header {
     align-items: center;
 }
 
+/* --- Dropdown Styles --- */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: var(--bg-card);
+    min-width: 220px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.5);
+    z-index: 1001;
+    border-radius: 4px;
+    border: 1px solid var(--accent-gray);
+    top: 100%;
+    left: 0;
+    padding: 10px 0;
+}
+
+.dropdown-content a {
+    color: #fff;
+    padding: 12px 20px;
+    text-decoration: none;
+    display: block;
+    text-transform: none; /* Sub-items don't need all-caps */
+    font-size: 0.9rem;
+    border-bottom: 1px solid rgba(255,255,255,0.05);
+}
+
+.dropdown-content a:last-child {
+    border-bottom: none;
+}
+
+.dropdown-content a:hover {
+    background-color: var(--accent-gray);
+    color: var(--primary-color);
+}
+
+/* Show dropdown on hover (Desktop) */
+@media (min-width: 769px) {
+    .dropdown:hover .dropdown-content {
+        display: block;
+        animation: fadeIn 0.3s ease;
+    }
+}
+
 .nav-links a {
     font-weight: 500;
     color: #fff;
