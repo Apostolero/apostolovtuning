@@ -146,88 +146,89 @@ document.addEventListener("DOMContentLoaded", () => {
 
     /* --- REVIEWS SLIDER LOGIC --- */
     const track = document.querySelector('.reviews-track');
-    const slides = Array.from(track.children);
     const nextButton = document.querySelector('.slider-btn.next');
     const prevButton = document.querySelector('.slider-btn.prev');
     const dotsNav = document.querySelector('.slider-nav');
-    const dots = Array.from(dotsNav.children);
 
-    // Initial State
-    let currentSlideIndex = 0;
-    const slideIntervalTime = 6000; // 6 seconds
-    let slideInterval;
+    if (track && dotsNav) {
+        const slides = Array.from(track.children);
+        const dots = Array.from(dotsNav.children);
 
-    const updateSliderPosition = () => {
-        const slideWidth = slides[0].getBoundingClientRect().width;
-        track.style.transform = 'translateX(-' + (slideWidth * currentSlideIndex) + 'px)';
-        
-        // Update dots
-        dots.forEach(d => d.classList.remove('current-dot'));
-        dots[currentSlideIndex].classList.add('current-dot');
-    };
+        // Initial State
+        let currentSlideIndex = 0;
+        const slideIntervalTime = 6000; // 6 seconds
+        let slideInterval;
 
-    const moveToNextSlide = () => {
-        currentSlideIndex++;
-        if (currentSlideIndex >= slides.length) {
-            currentSlideIndex = 0;
-        }
-        updateSliderPosition();
-    };
+        const updateSliderPosition = () => {
+            const slideWidth = slides[0].getBoundingClientRect().width;
+            track.style.transform = 'translateX(-' + (slideWidth * currentSlideIndex) + 'px)';
+            
+            // Update dots
+            dots.forEach(d => d.classList.remove('current-dot'));
+            dots[currentSlideIndex].classList.add('current-dot');
+        };
 
-    const moveToPrevSlide = () => {
-        currentSlideIndex--;
-        if (currentSlideIndex < 0) {
-            currentSlideIndex = slides.length - 1;
-        }
-        updateSliderPosition();
-    };
-
-    const startAutoPlay = () => {
-        slideInterval = setInterval(moveToNextSlide, slideIntervalTime);
-    };
-
-    const stopAutoPlay = () => {
-        clearInterval(slideInterval);
-    };
-
-    // Event Listeners
-    if (nextButton) {
-        nextButton.addEventListener('click', () => {
-            moveToNextSlide();
-            stopAutoPlay(); // Restart timer on interaction
-            startAutoPlay();
-        });
-    }
-
-    if (prevButton) {
-        prevButton.addEventListener('click', () => {
-            moveToPrevSlide();
-            stopAutoPlay();
-            startAutoPlay();
-        });
-    }
-
-    dots.forEach((dot, index) => {
-        dot.addEventListener('click', () => {
-            currentSlideIndex = index;
+        const moveToNextSlide = () => {
+            currentSlideIndex++;
+            if (currentSlideIndex >= slides.length) {
+                currentSlideIndex = 0;
+            }
             updateSliderPosition();
-            stopAutoPlay();
-            startAutoPlay();
+        };
+
+        const moveToPrevSlide = () => {
+            currentSlideIndex--;
+            if (currentSlideIndex < 0) {
+                currentSlideIndex = slides.length - 1;
+            }
+            updateSliderPosition();
+        };
+
+        const startAutoPlay = () => {
+            slideInterval = setInterval(moveToNextSlide, slideIntervalTime);
+        };
+
+        const stopAutoPlay = () => {
+            clearInterval(slideInterval);
+        };
+
+        // Event Listeners
+        if (nextButton) {
+            nextButton.addEventListener('click', () => {
+                moveToNextSlide();
+                stopAutoPlay(); // Restart timer on interaction
+                startAutoPlay();
+            });
+        }
+
+        if (prevButton) {
+            prevButton.addEventListener('click', () => {
+                moveToPrevSlide();
+                stopAutoPlay();
+                startAutoPlay();
+            });
+        }
+
+        dots.forEach((dot, index) => {
+            dot.addEventListener('click', () => {
+                currentSlideIndex = index;
+                updateSliderPosition();
+                stopAutoPlay();
+                startAutoPlay();
+            });
         });
-    });
 
-    // Pause on Hover
-    const sliderContainer = document.querySelector('.reviews-slider-wrapper');
-    if (sliderContainer) {
-        sliderContainer.addEventListener('mouseenter', stopAutoPlay);
-        sliderContainer.addEventListener('mouseleave', startAutoPlay);
-    }
+        // Pause on Hover
+        const sliderContainer = document.querySelector('.reviews-slider-wrapper');
+        if (sliderContainer) {
+            sliderContainer.addEventListener('mouseenter', stopAutoPlay);
+            sliderContainer.addEventListener('mouseleave', startAutoPlay);
+        }
 
-    // Touch / Swipe Support for Mobile
-    let touchStartX = 0;
-    let touchEndX = 0;
+        // Touch / Swipe Support for Mobile
+        let touchStartX = 0;
+        let touchEndX = 0;
 
-    if (track) {
         track.addEventListener('touchstart', (e) => {
             touchStartX = e.changedTouches[0].screenX;
             stopAutoPlay();
@@ -238,23 +239,23 @@ document.addEventListener("DOMContentLoaded", () => {
             handleSwipe();
             startAutoPlay();
         });
-    }
 
-    function handleSwipe() {
-        const threshold = 50; // Minimum distance for swipe
-        if (touchEndX < touchStartX - threshold) {
-            moveToNextSlide();
+        function handleSwipe() {
+            const threshold = 50; // Minimum distance for swipe
+            if (touchEndX < touchStartX - threshold) {
+                moveToNextSlide();
+            }
+            if (touchEndX > touchStartX + threshold) {
+                moveToPrevSlide();
+            }
         }
-        if (touchEndX > touchStartX + threshold) {
-            moveToPrevSlide();
-        }
+
+        // Handle Window Resize (Recalculate Width)
+        window.addEventListener('resize', updateSliderPosition);
+
+        // Initialize
+        startAutoPlay();
     }
-
-    // Handle Window Resize (Recalculate Width)
-    window.addEventListener('resize', updateSliderPosition);
-
-    // Initialize
-    startAutoPlay();
 
     /* --- Cookie Consent Logic --- */
     const cookieBanner = document.getElementById('cookie-banner');
