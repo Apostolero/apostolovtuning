@@ -89,8 +89,49 @@ header {
 
 .nav-links {
     display: flex;
-    gap: 30px;
+    gap: 25px;
     align-items: center;
+}
+
+/* --- Social Icons in Nav (Desktop) --- */
+.nav-social-item {
+    display: flex;
+    align-items: center;
+}
+
+.nav-social-item:first-of-type {
+    margin-left: 10px;
+    padding-left: 15px;
+    border-left: 1px solid rgba(255,255,255,0.1);
+}
+
+.nav-social-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    transition: transform 0.2s, background-color 0.2s;
+    opacity: 0.8;
+}
+
+.nav-social-link:hover {
+    transform: translateY(-2px);
+    opacity: 1;
+}
+
+.nav-social-link.fb { background-color: #1877f2; }
+.nav-social-link.wa { background-color: #25D366; }
+.nav-social-link.tg { background-color: #0088cc; }
+
+@media (max-width: 768px) {
+    .nav-social-item {
+        display: none; /* Скриваме ги в мобилното меню, тъй като там има мобилни иконки */
+    }
+    .nav-links {
+        gap: 30px;
+    }
 }
 
 /* --- Dropdown Styles --- */
