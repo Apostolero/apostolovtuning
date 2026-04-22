@@ -794,8 +794,13 @@ header {
     background-color: #1877f2; /* Facebook Blue */
 }
 
-.social-btn.insta {
-    background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%); /* Instagram Gradient */
+.social-btn.ig {
+    background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%,#d6249f 60%,#285AEB 90%); /* Instagram Gradient */
+}
+
+.social-btn.tt {
+    background-color: #000000; /* TikTok Black */
+    border: 1px solid #fe2c55; /* Add a subtle TikTok brand border */
 }
 
 .social-btn.tg {
@@ -806,8 +811,8 @@ header {
     background-color: #25D366; /* WhatsApp Green */
 }
 
-.social-btn.email {
-    background-color: #D44638; /* Gmail Red */
+.social-btn.gm {
+    background-color: #EA4335; /* Gmail Red */
 }
 
 /* --- Header Socials --- */
