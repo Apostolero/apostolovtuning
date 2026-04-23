@@ -1203,12 +1203,22 @@ footer p {
 }
 
 .lightbox img {
-    max-width: 95%;
-    max-height: 90%;
+    max-width: 90vw;
+    max-height: 85vh;
+    width: auto;
+    height: auto;
+    min-width: 60%; /* Принуждаваме малките снимки да се разпънат */
+    object-fit: contain;
     border-radius: 4px;
     box-shadow: 0 0 20px rgba(0,0,0,0.5);
     transform: scale(0.9);
     transition: transform 0.3s ease;
+}
+
+@media (max-width: 768px) {
+    .lightbox img {
+        min-width: 90%; /* На мобилни искаме да запълват почти целия екран */
+    }
 }
 
 .lightbox.active img {
