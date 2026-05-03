@@ -124,6 +124,7 @@ header {
 .nav-social-link.fb { background-color: #1877f2; }
 .nav-social-link.wa { background-color: #25D366; }
 .nav-social-link.tg { background-color: #0088cc; }
+.nav-social-link.vi { background-color: #7360f2; } /* Viber Purple */
 
 @media (max-width: 768px) {
     .nav-social-item {
@@ -835,6 +836,10 @@ header {
     background-color: #1877f2; /* Facebook Blue */
 }
 
+.social-btn.vi {
+    background-color: #7360f2; /* Viber Purple */
+}
+
 .social-btn.ig {
     background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%,#d6249f 60%,#285AEB 90%); /* Instagram Gradient */
 }
@@ -886,6 +891,10 @@ header {
 
 .header-socials a.tg {
     background-color: #0088cc;
+}
+
+.header-socials a.vi {
+    background-color: #7360f2;
 }
 
 .header-socials a:hover {
@@ -1081,7 +1090,7 @@ header {
     cursor: pointer;
     color: var(--primary-color);
     font-weight: 600;
-    list-style: none; /* Махаме стрелката по подразбиране */
+    list-style: none;
     display: flex;
     align-items: center;
     gap: 5px;
@@ -1326,6 +1335,7 @@ footer p {
     .mobile-socials a.fb { background-color: #1877f2; }
     .mobile-socials a.wa { background-color: #25D366; }
     .mobile-socials a.tg { background-color: #0088cc; }
+    .mobile-socials a.vi { background-color: #7360f2; }
 
     /* Gallery Optimization for Mobile */
     .gallery-grid {
@@ -1377,7 +1387,7 @@ footer p {
 
     .hero-content {
         padding: 20px;
-        background-color: var(--bg-dark); /* Бутоните са на черен фон под снимката */
+        background-color: var(--bg-dark); /* Бутоните а на черен фон под снимката */
     }
 
     .hero-buttons {
