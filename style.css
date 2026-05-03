@@ -1473,6 +1473,13 @@ footer p {
 
     .social-links {
         justify-content: center;
+        flex-wrap: wrap; /* Позволява на бутоните да преминат на нов ред */
+        gap: 10px;
+    }
+
+    .map-container {
+        min-height: 350px;
+        margin-top: 20px;
     }
     
     .btn {
@@ -1520,12 +1527,6 @@ footer p {
         width: 18px;
         height: 18px;
     }
-
-    .map-container {
-        min-height: 300px;
-    }
-
-
 }
 
 @keyframes navLinkFade {
