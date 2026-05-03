@@ -1683,7 +1683,7 @@ body.cookie-banner-active .floating-chat {
 @media (max-width: 768px) {
     body.cookie-banner-active .floating-call,
     body.cookie-banner-active .floating-chat {
-        bottom: 140px; /* Още по-високо на мобилни, тъй като банера заема повече място */
+        bottom: 200px; /* Увеличено на 200px за по-добра видимост над банера */
     }
 }
 
