@@ -1674,7 +1674,20 @@ footer p {
     color: #ccc;
 }
 
-/* --- MOBILE FIXES --- */
+/* --- Dynamic Button Positioning for Cookie Banner --- */
+body.cookie-banner-active .floating-call,
+body.cookie-banner-active .floating-chat {
+    bottom: 120px; /* Позиция над банера за бисквитки */
+}
+
+@media (max-width: 768px) {
+    body.cookie-banner-active .floating-call,
+    body.cookie-banner-active .floating-chat {
+        bottom: 140px; /* Още по-високо на мобилни, тъй като банера заема повече място */
+    }
+}
+
+/* --- Mobile Fixes --- */
 @media (max-width: 768px) {
     /* Снимките без описание стават със същия размер като тези в картите */
     .gallery-item:not(.project-card) {

@@ -278,6 +278,7 @@ document.addEventListener("DOMContentLoaded", () => {
     function setConsent(status) {
         localStorage.setItem('cookieConsent', status);
         if(cookieBanner) cookieBanner.style.display = 'none';
+        document.body.classList.remove('cookie-banner-active');
         
         if (status === 'accepted') {
             // Enable Analytics
@@ -295,7 +296,10 @@ document.addEventListener("DOMContentLoaded", () => {
     if (!userConsent) {
         // Show banner after a short delay
         setTimeout(() => {
-            if(cookieBanner) cookieBanner.style.display = 'block';
+            if(cookieBanner) {
+                cookieBanner.style.display = 'block';
+                document.body.classList.add('cookie-banner-active');
+            }
         }, 1000);
     } else if (userConsent === 'accepted') {
         // Ensure analytics are granted if previously accepted
