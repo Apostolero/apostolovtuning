@@ -1,57 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-   <url>
-      <loc>https://apostolovtuning.com/</loc>
-      <lastmod>2026-05-05</lastmod>
-      <changefreq>weekly</changefreq>
-      <priority>1.0</priority>
-   </url>
-   <url>
-      <loc>https://apostolovtuning.com/chiptuning.html</loc>
-      <lastmod>2026-05-05</lastmod>
-      <changefreq>weekly</changefreq>
-      <priority>0.9</priority>
-   </url>
-   <url>
-      <loc>https://apostolovtuning.com/chiptuning-vag.html</loc>
-      <lastmod>2026-05-05</lastmod>
-      <changefreq>weekly</changefreq>
-      <priority>0.8</priority>
-   </url>
-   <url>
-      <loc>https://apostolovtuning.com/chiptuning-bmw.html</loc>
-      <lastmod>2026-05-05</lastmod>
-      <changefreq>weekly</changefreq>
-      <priority>0.8</priority>
-   </url>
-   <url>
-      <loc>https://apostolovtuning.com/chiptuning-mercedes.html</loc>
-      <lastmod>2026-05-05</lastmod>
-      <changefreq>weekly</changefreq>
-      <priority>0.8</priority>
-   </url>
-   <url>
-      <loc>https://apostolovtuning.com/chiptuning-psa.html</loc>
-      <lastmod>2026-05-05</lastmod>
-      <changefreq>weekly</changefreq>
-      <priority>0.8</priority>
-   </url>
-   <url>
-      <loc>https://apostolovtuning.com/chiptuning-asian.html</loc>
-      <lastmod>2026-05-05</lastmod>
-      <changefreq>weekly</changefreq>
-      <priority>0.8</priority>
-   </url>
-   <url>
-      <loc>https://apostolovtuning.com/eco-off.html</loc>
-      <lastmod>2026-05-05</lastmod>
-      <changefreq>weekly</changefreq>
-      <priority>0.9</priority>
-   </url>
-   <url>
-      <loc>https://apostolovtuning.com/privacy-policy.html</loc>
-      <lastmod>2026-05-05</lastmod>
-      <changefreq>monthly</changefreq>
-      <priority>0.3</priority>
-   </url>
+<url><loc>https://apostolovtuning.com/</loc><lastmod>2026-05-05</lastmod><changefreq>weekly</changefreq><priority>1.0</priority></url>
+<url><loc>https://apostolovtuning.com/chiptuning.html</loc><lastmod>2026-05-05</lastmod><changefreq>weekly</changefreq><priority>0.9</priority></url>
+<url><loc>https://apostolovtuning.com/chiptuning-vag.html</loc><lastmod>2026-05-05</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
+<url><loc>https://apostolovtuning.com/chiptuning-bmw.html</loc><lastmod>2026-05-05</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
+<url><loc>https://apostolovtuning.com/chiptuning-mercedes.html</loc><lastmod>2026-05-05</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
+<url><loc>https://apostolovtuning.com/chiptuning-psa.html</loc><lastmod>2026-05-05</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
+<url><loc>https://apostolovtuning.com/chiptuning-asian.html</loc><lastmod>2026-05-05</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
+<url><loc>https://apostolovtuning.com/eco-off.html</loc><lastmod>2026-05-05</lastmod><changefreq>weekly</changefreq><priority>0.9</priority></url>
+<url><loc>https://apostolovtuning.com/privacy-policy.html</loc><lastmod>2026-05-05</lastmod><changefreq>monthly</changefreq><priority>0.3</priority></url>
 </urlset>
