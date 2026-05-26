@@ -64,6 +64,55 @@
     }
     </script>
 
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Какво е DPF Off и пречи ли на ГТП?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "DPF Off е софтуерно изключване на филтъра за твърди частици от компютъра на колата (ECU). При правилно и качествено физическо и софтуерно премахване, колата не пуши и преминава нормално ГТП (Годишен технически преглед), стига двигателят и дюзите да са в изправност."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Защо се налага изключване на EGR клапана?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "EGR клапанът рециркулира изгорелите газове обратно в цилиндрите, което с времето води до сериозни натрупвания на сажди във всмукателния колектор. Софтуерното му изключване (EGR Off) осигурява чист въздух за мотора, по-добра работа, по-нисък разход на гориво и по-ниски температури."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Кога е необходимо изключване на AdBlue (SCR OFF)?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Системите AdBlue са известни с много чести дефекти – изгаряне на нагревателя на резервоара, блокиране на помпата или NOx сензора. Тъй като ремонтът на тези компоненти често струва над 1500-2000 лв, трайното софтуерно изключване е най-предпочитаното и евтино дългосрочно решение."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Може ли вихровите клапи да се изолират само софтуерно?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Да, при повреда в моторчето или механизма на вихровите клапи (Swirl Flaps), ние ги изключваме софтуерно в отворено положение. Това премахва аварийната лампа на таблото, спестява скъпи ремонти и предотвратява риска някоя от клапите да се счупи и да попадне в цилиндъра."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Вреди ли изключването на екологичните системи на двигателя?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Напротив, премахването на запушен DPF или блокирал EGR облекчава работата на двигателя, намалява противодавлението в изпускателния тракт (което щади турбината) и спира разреждането на моторното масло с нафта от неуспешни регенерации."
+          }
+        }
+      ]
+    }
+    </script>
+
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -122,7 +171,16 @@
     </header>
 
     <main>
-        <section class="section" style="padding-top: 120px;">
+        <!-- GEO: Answer-First параграф за AI цитируемост -->
+        <section class="section" style="padding: 120px 0 0 0;">
+            <div class="container">
+                <p style="color: #ccc; text-align: center; max-width: 900px; margin: 0 auto; font-size: 1.05rem; line-height: 1.7;">
+                    Търсите софтуерно изключване и <strong>премахване на DPF, EGR или AdBlue в Бургас и Карнобат</strong>? <strong>Apostolov Tuning</strong> осигурява надеждни решения за изолиране на филтри за твърди частици (DPF OFF от 200 лв), деактивиране на EGR клапани (EGR OFF), изключване на SCR (AdBlue OFF) и софтуерно изолиране на вихрови клапи и дебитомери (MAF OFF). Предлагаме дилърска диагностика и мобилна услуга на място в региона. Свържете се с нас на: <a href="tel:+359896084735" style="color: var(--primary-color);">0896 084 735</a>.
+                </p>
+            </div>
+        </section>
+
+        <section class="section" style="padding-top: 40px;">
             <div class="container">
                 
                 <h1 class="section-title">Софтуерно премахване на екологични системи</h1>
@@ -260,8 +318,51 @@
             </div>
         </section>
 
+        <!-- GEO: FAQ секция (видима, match-ва FAQPage schema) -->
+        <section id="faq" class="section">
+            <div class="container">
+                <h2 class="section-title">Често задавани въпроси</h2>
+                <div style="max-width: 800px; margin: 0 auto;">
+
+                    <details class="faq-item" style="margin-bottom: 15px; border: 1px solid #333; border-radius: 8px; overflow: hidden;">
+                        <summary style="padding: 18px 20px; cursor: pointer; font-weight: 600; color: #fff; background: #1a1a2e; font-size: 1.05rem;">Какво е DPF Off и пречи ли на ГТП?</summary>
+                        <div style="padding: 15px 20px; color: #ccc; line-height: 1.7; background: #111;">
+                            <p>DPF Off е софтуерно изключване на филтъра за твърди частици от компютъра на колата (ECU). При правилно и качествено физическо и софтуерно премахване, колата не пуши и преминава нормално ГТП (Годишен технически преглед), стига двигателят и дюзите да са в изправност.</p>
+                        </div>
+                    </details>
+
+                    <details class="faq-item" style="margin-bottom: 15px; border: 1px solid #333; border-radius: 8px; overflow: hidden;">
+                        <summary style="padding: 18px 20px; cursor: pointer; font-weight: 600; color: #fff; background: #1a1a2e; font-size: 1.05rem;">Защо се налага изключване на EGR клапана?</summary>
+                        <div style="padding: 15px 20px; color: #ccc; line-height: 1.7; background: #111;">
+                            <p>EGR клапанът рециркулира изгорелите газове обратно в цилиндрите, което с времето води до сериозни натрупвания на сажди във всмукателния колектор. Софтуерното му изключване (EGR Off) осигурява чист въздух за мотора, по-добра работа, по-нисък разход на гориво и по-ниски температури.</p>
+                        </div>
+                    </details>
+
+                    <details class="faq-item" style="margin-bottom: 15px; border: 1px solid #333; border-radius: 8px; overflow: hidden;">
+                        <summary style="padding: 18px 20px; cursor: pointer; font-weight: 600; color: #fff; background: #1a1a2e; font-size: 1.05rem;">Кога е необходимо изключване на AdBlue (SCR OFF)?</summary>
+                        <div style="padding: 15px 20px; color: #ccc; line-height: 1.7; background: #111;">
+                            <p>Системите AdBlue са известни с много чести дефекти – изгаряне на нагревателя на резервоара, блокиране на помпата или NOx сензора. Тъй като ремонтът на тези компоненти често струва над 1500-2000 лв, трайното софтуерно изключване е най-предпочитаното и евтино дългосрочно решение.</p>
+                        </div>
+                    </details>
+
+                    <details class="faq-item" style="margin-bottom: 15px; border: 1px solid #333; border-radius: 8px; overflow: hidden;">
+                        <summary style="padding: 18px 20px; cursor: pointer; font-weight: 600; color: #fff; background: #1a1a2e; font-size: 1.05rem;">Може ли вихровите клапи да се изолират само софтуерно?</summary>
+                        <div style="padding: 15px 20px; color: #ccc; line-height: 1.7; background: #111;">
+                            <p>Да, при повреда в моторчето или механизма на вихровите клапи (Swirl Flaps), ние ги изключваме софтуерно в отворено положение. Това премахва аварийната лампа на таблото, спестява скъпи ремонти и предотвратява риска някоя от клапите да се счупи и да попадне в цилиндъра.</p>
+                        </div>
+                    </details>
+
+                    <details class="faq-item" style="margin-bottom: 15px; border: 1px solid #333; border-radius: 8px; overflow: hidden;">
+                        <summary style="padding: 18px 20px; cursor: pointer; font-weight: 600; color: #fff; background: #1a1a2e; font-size: 1.05rem;">Вреди ли изключването на екологичните системи на двигателя?</summary>
+                        <div style="padding: 15px 20px; color: #ccc; line-height: 1.7; background: #111;">
+                            <p>Напротив, премахването на запушен DPF или блокирал EGR облекчава работата на двигателя, намалява противодавлението в изпускателния тракт (което щади турбината) и спира разреждането на моторното масло с нафта от неуспешни регенерации.</p>
+                        </div>
+                    </details>
+
+                </div>
             </div>
         </section>
+
     </main>
 
     <footer>
