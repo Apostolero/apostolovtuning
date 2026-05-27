@@ -322,41 +322,31 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     }
 
-    /* --- PROJECT CARD MINI-SLIDER LOGIC --- */
-    const projectCards = document.querySelectorAll('.project-card');
-
-    projectCards.forEach(card => {
-        const projectImages = Array.from(card.querySelectorAll('.project-image-container img'));
-        const nextBtn = card.querySelector('.project-slider-btn.next');
-        const prevBtn = card.querySelector('.project-slider-btn.prev');
+    /* --- PROJECT CARD MINI-SLIDER LOGIC (EVENT DELEGATION) --- */
+    document.addEventListener('click', (e) => {
+        const btn = e.target.closest('.project-slider-btn');
+        if (!btn) return;
         
-        if (projectImages.length <= 1) return; 
+        e.preventDefault();
+        e.stopPropagation();
 
-        let activeIndex = 0;
+        const card = btn.closest('.project-card');
+        if (!card) return;
 
-        // Reset to first image on load
-        const showImage = (index) => {
-            projectImages.forEach(img => img.classList.remove('active'));
-            projectImages[index].classList.add('active');
-        };
+        const projectImages = Array.from(card.querySelectorAll('.project-image-container img'));
+        if (projectImages.length <= 1) return;
 
-        if (nextBtn) {
-            nextBtn.addEventListener('click', (e) => {
-                e.preventDefault();
-                e.stopPropagation(); 
-                activeIndex = (activeIndex + 1) % projectImages.length;
-                showImage(activeIndex);
-            });
+        let activeIndex = projectImages.findIndex(img => img.classList.contains('active'));
+        if (activeIndex === -1) activeIndex = 0;
+
+        if (btn.classList.contains('next')) {
+            activeIndex = (activeIndex + 1) % projectImages.length;
+        } else if (btn.classList.contains('prev')) {
+            activeIndex = (activeIndex - 1 + projectImages.length) % projectImages.length;
         }
 
-        if (prevBtn) {
-            prevBtn.addEventListener('click', (e) => {
-                e.preventDefault();
-                e.stopPropagation(); 
-                activeIndex = (activeIndex - 1 + projectImages.length) % projectImages.length;
-                showImage(activeIndex);
-            });
-        }
+        projectImages.forEach(img => img.classList.remove('active'));
+        projectImages[activeIndex].classList.add('active');
     });
 
     /* --- Set Current Year in Footer --- */
