@@ -144,16 +144,13 @@ document.addEventListener("DOMContentLoaded", () => {
     const faqItems = document.querySelectorAll('.faq-item');
 
     faqItems.forEach(item => {
-        const question = item.querySelector('.faq-question');
-        question.addEventListener('click', () => {
-            // Close other open items (optional - accordion style)
-            // faqItems.forEach(otherItem => {
-            //     if (otherItem !== item) otherItem.classList.remove('active');
-            // });
-
-            // Toggle current
-            item.classList.toggle('active');
-        });
+        const question = item.querySelector('.faq-question') || item.querySelector('summary');
+        if (question) {
+            question.addEventListener('click', () => {
+                // Toggle current
+                item.classList.toggle('active');
+            });
+        }
     });
 
     /* --- REVIEWS SLIDER LOGIC --- */
