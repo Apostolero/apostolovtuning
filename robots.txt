@@ -1,7 +1,7 @@
 User-agent: *
 Allow: /
 
-# AI Search Bots - Allow all
+# AI Search & Assistant Bots - Allow all
 User-agent: GPTBot
 Allow: /
 
@@ -14,13 +14,23 @@ Allow: /
 User-agent: ClaudeBot
 Allow: /
 
+User-agent: anthropic-ai
+Allow: /
+
 User-agent: PerplexityBot
 Allow: /
 
 User-agent: Google-Extended
 Allow: /
 
+User-agent: Applebot-Extended
+Allow: /
+
+User-agent: Meta-ExternalAgent
+Allow: /
+
 User-agent: Bingbot
 Allow: /
 
 Sitemap: https://apostolovtuning.com/sitemap.xml
+# LLMs Context File: https://apostolovtuning.com/llms.txt
