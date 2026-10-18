@@ -55,7 +55,7 @@ Apostolov Tuning е специализиран център в Бургас и �
   - Пълно четене, запис и клониране (MICRO + EEPROM) на 7-степенни двойносъединителни кутии за BMW M3, M4, M5, M6, Z4, 135i/335is.
 
 ### 3. Mercedes-Benz, Renault, Ford, Китайски, Японски и Корейски Скоростни Кутии
-- **Mercedes-Benz:** 7G-Tronic / 7G-Tronic Plus (VGS1, VGS2, VGS3 – NAG2), 9G-Tronic (VGS-NAG3), ZF 9HP и двойносъединителни кутии **VGS-FDCT / VGS2-FDCT** (A-Class W176, B-Class W246, CLA C117, GLA X156 – клониране на TC1766 / TC1784 MICRO + EEPROM).
+- **Mercedes-Benz / Chrysler / Jeep:** **5G-Tronic (NAG1 / EGS52 / EGS53 – TCU Stage 1 ремап за Mercedes, Chrysler 300C 3.0 CRD, Jeep Grand Cherokee)**, 7G-Tronic / 7G-Tronic Plus (VGS1, VGS2, VGS3 – NAG2), 9G-Tronic (VGS-NAG3), ZF 9HP и двойносъединителни кутии **VGS-FDCT / VGS2-FDCT** (A-Class W176, B-Class W246, CLA C117, GLA X156 – клониране на TC1766 / TC1784 MICRO + EEPROM).
 - **Renault / Dacia / Ford / Volvo / Nissan (Getrag EDC & Powershift):** Клониране и програмиране на **EDC DC0 / DC4 Gen2 (DKG250 Gen2 – TC1784)** и **Powershift 6DCT450 (MPS6) / 6DCT250 (DPS6)**.
 - **Toyota / Lexus (Aisin):** Софтуерна оптимизация и програмиране на автоматични скоростни кутии Aisin през CAN-bus.
 - **Китайски автомобили (Haval / Great Wall / Chery / Geely):** Клониране и програмиране на 7-степенна двойносъединителна кутия **Haval 7DCT450 (EAST80.D1 TC265 MICRO + EEPROM)** и ZF 8HP.
