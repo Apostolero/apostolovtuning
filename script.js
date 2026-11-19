@@ -165,8 +165,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
         // Initial State
         let currentSlideIndex = 0;
-        const slideIntervalTime = 6000; // 6 seconds
-        let slideInterval;
+        const slideIntervalTime = 5000; // 5 seconds
+        let slideInterval = null;
 
         const updateSliderPosition = () => {
             const slideWidth = slides[0].getBoundingClientRect().width;
@@ -174,7 +174,9 @@ document.addEventListener("DOMContentLoaded", () => {
             
             // Update dots
             dots.forEach(d => d.classList.remove('current-dot'));
-            dots[currentSlideIndex].classList.add('current-dot');
+            if (dots[currentSlideIndex]) {
+                dots[currentSlideIndex].classList.add('current-dot');
+            }
         };
 
         const moveToNextSlide = () => {
@@ -193,12 +195,16 @@ document.addEventListener("DOMContentLoaded", () => {
             updateSliderPosition();
         };
 
-        const startAutoPlay = () => {
-            slideInterval = setInterval(moveToNextSlide, slideIntervalTime);
+        const stopAutoPlay = () => {
+            if (slideInterval) {
+                clearInterval(slideInterval);
+                slideInterval = null;
+            }
         };
 
-        const stopAutoPlay = () => {
-            clearInterval(slideInterval);
+        const startAutoPlay = () => {
+            stopAutoPlay();
+            slideInterval = setInterval(moveToNextSlide, slideIntervalTime);
         };
 
         // Event Listeners
