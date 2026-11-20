@@ -13,7 +13,7 @@
       gtag('js', new Date());
       gtag('config', 'G-2FNQPJVM4G');
     </script>
-    <link rel="icon" href="assets/logo.webp" type="image/jpeg">
+    <link rel="icon" href="assets/logo.webp" type="image/webp">
     <link rel="apple-touch-icon" href="assets/logo.webp">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -32,7 +32,34 @@
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
-      "@type": ["Service", "Product"],
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Начало",
+          "item": "https://apostolovtuning.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Чип Тунинг",
+          "item": "https://apostolovtuning.com/chiptuning.html"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Японски, Корейски и Китайски",
+          "item": "https://apostolovtuning.com/chiptuning-asian.html"
+        }
+      ]
+    }
+    </script>
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Service",
       "name": "Чип Тунинг и DPF/EGR/AdBlue Решения за Японски, Корейски и Китайски Автомобили Бургас",
       "serviceType": "Japanese, Korean & Chinese Car Chip Tuning & ECU Solutions",
       "image": "https://apostolovtuning.com/assets/logo.webp",
@@ -46,37 +73,51 @@
         "@id": "https://apostolovtuning.com/#organization",
         "name": "Apostolov Tuning",
         "url": "https://apostolovtuning.com",
-        "telephone": "+359896084735"
+        "telephone": "+359896084735",
+        "aggregateRating": {
+          "@type": "AggregateRating",
+          "ratingValue": "5.0",
+          "bestRating": "5",
+          "worstRating": "1",
+          "ratingCount": "40",
+          "reviewCount": "40"
+        },
+        "review": [
+          {
+            "@type": "Review",
+            "author": {
+              "@type": "Person",
+              "name": "Клиент на Apostolov Tuning"
+            },
+            "reviewRating": {
+              "@type": "Rating",
+              "ratingValue": "5",
+              "bestRating": "5"
+            },
+            "reviewBody": "Много сме доволни! Момчето е професионалист, бърза и коректна работа. Малко са свестните майстори..ценете ги, когато ги откриете. Благодарим Стоян!"
+          }
+        ]
       },
       "areaServed": [
-        { "@type": "City", "name": "Бургас" },
-        { "@type": "City", "name": "Карнобат" },
-        { "@type": "City", "name": "Айтос" },
-        { "@type": "City", "name": "Ямбол" },
-        { "@type": "City", "name": "Сливен" }
-      ],
-      "offers": {
-        "@type": "AggregateOffer",
-        "priceCurrency": "BGN",
-        "lowPrice": "200",
-        "highPrice": "1000",
-        "offerCount": "14",
-        "availability": "https://schema.org/InStock"
-      },
-      "aggregateRating": {
-        "@type": "AggregateRating",
-        "ratingValue": "5.0",
-        "bestRating": "5",
-        "worstRating": "1",
-        "ratingCount": "40",
-        "reviewCount": "40"
-      },
-      "review": [
         {
-          "@type": "Review",
-          "author": { "@type": "Person", "name": "Клиент на Apostolov Tuning" },
-          "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" },
-          "reviewBody": "Много сме доволни! Момчето е професионалист, бърза и коректна работа. Малко са свестните майстори..ценете ги, когато ги откриете. Благодарим Стоян!"
+          "@type": "City",
+          "name": "Бургас"
+        },
+        {
+          "@type": "City",
+          "name": "Карнобат"
+        },
+        {
+          "@type": "City",
+          "name": "Айтос"
+        },
+        {
+          "@type": "City",
+          "name": "Ямбол"
+        },
+        {
+          "@type": "City",
+          "name": "Сливен"
         }
       ]
     }
@@ -107,7 +148,7 @@
     }
     </script>
 
-    <link rel="stylesheet" href="style.css?v=4">
+    <link rel="stylesheet" href="style.css?v=5">
     <style>
         .gallery-grid { align-items: start !important; }
         .project-card { height: auto !important; }
@@ -123,13 +164,30 @@
         .project-image-container img.active { opacity: 1; z-index: 2; position: absolute !important; display: block; }
         .btn-collapse { background: none; border: none; color: var(--primary-color); cursor: pointer; font-weight: 600; font-size: 0.9rem; padding: 10px 0 0 0; display: block; width: 100%; text-align: left; }
     </style>
+    <!-- Meta Pixel Code -->
+    <script>
+    !function(f,b,e,v,n,t,s)
+    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+    n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];
+    s.parentNode.insertBefore(t,s)}(window, document,'script',
+    'https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', '2091649391769605');
+    fbq('track', 'PageView');
+    </script>
+    <noscript><img height="1" width="1" style="display:none"
+    src="https://www.facebook.com/tr?id=2091649391769605&ev=PageView&noscript=1"
+    /></noscript>
+    <!-- End Meta Pixel Code -->
 </head>
 <body>
     <header>
         <div class="container header-content">
             <div class="logo">
                 <a href="/" style="display:flex; gap:10px; align-items:center;">
-                    <img src="assets/logo.webp" alt="Apostolov Tuning Logo">
+                    <img src="assets/logo.webp" width="2048" height="2048" alt="Apostolov Tuning Logo">
                     <span class="brand-name">APOSTOLOV TUNING</span>
                 </a>
             </div>
@@ -179,10 +237,10 @@
                     <div class="gallery-item project-card">
                         <div class="project-image-container">
                             <button class="project-slider-btn prev" aria-label="Previous Image">&#10094;</button>
-                            <img src="assets/IX20/hyundai-ix20-14crdi-stage1-dpf-egr-burgas-front.webp" alt="Hyundai ix20 1.4 CRDi Stage 1 чип тунинг DPF EGR Off Бургас" class="active" loading="lazy">
-                            <img src="assets/IX20/hyundai-ix20-14crdi-stage1-dpf-egr-burgas-rear.webp" alt="Hyundai ix20 DPF Off EGR Off софтуерно премахване Карнобат" loading="lazy">
-                            <img src="assets/IX20/hyundai-ix20-delphi-dcm37-flex-remap-diagnostics.webp" alt="Magicmotorsport Flex ремап на Delphi DCM3.7 ECU Hyundai Kia" loading="lazy">
-                            <img src="assets/IX20/hyundai-ix20-crdi-remap-service-karnobat.webp" alt="Apostolov Tuning сервиз за японски и корейски автомобили" loading="lazy">
+                            <img src="assets/IX20/hyundai-ix20-14crdi-stage1-dpf-egr-burgas-front.webp" width="1050" height="1400" alt="Hyundai ix20 1.4 CRDi Stage 1 чип тунинг DPF EGR Off Бургас" class="active" loading="lazy">
+                            <img src="assets/IX20/hyundai-ix20-14crdi-stage1-dpf-egr-burgas-rear.webp" width="1050" height="1400" alt="Hyundai ix20 DPF Off EGR Off софтуерно премахване Карнобат" loading="lazy">
+                            <img src="assets/IX20/hyundai-ix20-delphi-dcm37-flex-remap-diagnostics.webp" width="1400" height="1050" alt="Magicmotorsport Flex ремап на Delphi DCM3.7 ECU Hyundai Kia" loading="lazy">
+                            <img src="assets/IX20/hyundai-ix20-crdi-remap-service-karnobat.webp" width="1050" height="1400" alt="Apostolov Tuning сервиз за японски и корейски автомобили" loading="lazy">
                             <button class="project-slider-btn next" aria-label="Next Image">&#10095;</button>
                         </div>
                         <div class="project-info">
@@ -210,10 +268,10 @@
                     <div class="gallery-item project-card">
                         <div class="project-image-container">
                             <button class="project-slider-btn prev" aria-label="Previous Image">&#10094;</button>
-                            <img src="assets/mitsubishiOutlander/mitsubishi-outlander-22-157hp-dpf-egr-off-burgas-1.webp" alt="Mitsubishi Outlander 2.2L 157hp DPF EGR Off Stage 1 Бургас" class="active" loading="lazy">
-                            <img src="assets/mitsubishiOutlander/mitsubishi-outlander-22-157hp-dpf-egr-off-burgas-2.webp" alt="Mitsubishi Outlander Stage 1 Чип тунинг" loading="lazy">
-                            <img src="assets/mitsubishiOutlander/mitsubishi-outlander-22-157hp-dpf-egr-off-burgas-3.webp" alt="Mitsubishi Outlander Премахване на DPF Карнобат" loading="lazy">
-                            <img src="assets/mitsubishiOutlander/mitsubishi-outlander-22-157hp-dpf-egr-off-burgas-4.webp" alt="Mitsubishi Outlander автодиагностика Apostolov Tuning" loading="lazy">
+                            <img src="assets/mitsubishiOutlander/mitsubishi-outlander-22-157hp-dpf-egr-off-burgas-1.webp" width="1200" height="1600" alt="Mitsubishi Outlander 2.2L 157hp DPF EGR Off Stage 1 Бургас" class="active" loading="lazy">
+                            <img src="assets/mitsubishiOutlander/mitsubishi-outlander-22-157hp-dpf-egr-off-burgas-2.webp" width="1200" height="900" alt="Mitsubishi Outlander Stage 1 Чип тунинг" loading="lazy">
+                            <img src="assets/mitsubishiOutlander/mitsubishi-outlander-22-157hp-dpf-egr-off-burgas-3.webp" width="1200" height="1600" alt="Mitsubishi Outlander Премахване на DPF Карнобат" loading="lazy">
+                            <img src="assets/mitsubishiOutlander/mitsubishi-outlander-22-157hp-dpf-egr-off-burgas-4.webp" width="1200" height="900" alt="Mitsubishi Outlander автодиагностика Apostolov Tuning" loading="lazy">
                             <button class="project-slider-btn next" aria-label="Next Image">&#10095;</button>
                         </div>
                         <div class="project-info">
@@ -238,11 +296,11 @@
                     <div class="gallery-item project-card">
                         <div class="project-image-container">
                             <button class="project-slider-btn prev" aria-label="Previous Image">&#10094;</button>
-                            <img src="assets/fordRanger/front-ford-ranger-2002-chip-tuning-apostolov-tuning.webp" alt="Ford Ranger 2.5 109hp Чип Тунинг Бургас" class="active" loading="lazy">
-                            <img src="assets/fordRanger/back-ford-ranger-25-109hp-egr-delete-tuning.webp" alt="Ford Ranger 2.5 EGR Delete Tuning" loading="lazy">
-                            <img src="assets/fordRanger/engine-ford-ranger-mitsubishi-e6t0-ecu-remap-burgas.webp" alt="Ford Ranger Mitsubishi E6T0 ECU Remap" loading="lazy">
-                            <img src="assets/fordRanger/ecu-location-ford-ranger-25tdi-stage1-diagnostics-karnobat.webp" alt="Ford Ranger 2.5 TDI Diagnostics Karnobat" loading="lazy">
-                            <img src="assets/fordRanger/PC-ford-ranger-25-109hp-2002-stage1-egr-off.webp" alt="Ford Ranger 2.5 Stage 1 EGR Off" loading="lazy">
+                            <img src="assets/fordRanger/front-ford-ranger-2002-chip-tuning-apostolov-tuning.webp" width="1200" height="1600" alt="Ford Ranger 2.5 109hp Чип Тунинг Бургас" class="active" loading="lazy">
+                            <img src="assets/fordRanger/back-ford-ranger-25-109hp-egr-delete-tuning.webp" width="1200" height="900" alt="Ford Ranger 2.5 EGR Delete Tuning" loading="lazy">
+                            <img src="assets/fordRanger/engine-ford-ranger-mitsubishi-e6t0-ecu-remap-burgas.webp" width="1024" height="768" alt="Ford Ranger Mitsubishi E6T0 ECU Remap" loading="lazy">
+                            <img src="assets/fordRanger/ecu-location-ford-ranger-25tdi-stage1-diagnostics-karnobat.webp" width="768" height="1024" alt="Ford Ranger 2.5 TDI Diagnostics Karnobat" loading="lazy">
+                            <img src="assets/fordRanger/PC-ford-ranger-25-109hp-2002-stage1-egr-off.webp" width="1024" height="768" alt="Ford Ranger 2.5 Stage 1 EGR Off" loading="lazy">
                             <button class="project-slider-btn next" aria-label="Next Image">&#10095;</button>
                         </div>
                         <div class="project-info">
@@ -281,9 +339,9 @@
                     <div class="gallery-item project-card">
                         <div class="project-image-container">
                             <button class="project-slider-btn prev" aria-label="Previous Image">&#10094;</button>
-                            <img src="assets/toyotaAurisEGR/toyota-auris-14d4d-90hp-egr-off-bench-burgas-front.webp" alt="Toyota Auris 1.4 D-4D EGR Off Burgas" class="active" loading="lazy">
-                            <img src="assets/toyotaAurisEGR/toyota-auris-14d4d-90hp-egr-off-bench-burgas-back.webp" alt="Toyota Auris чип тунинг Бургас" loading="lazy">
-                            <img src="assets/toyotaAurisEGR/toyota-auris-14d4d-90hp-egr-off-bench-burgas-bench.webp" alt="Bosch EDC16C10 Bench Mode Programming" loading="lazy">
+                            <img src="assets/toyotaAurisEGR/toyota-auris-14d4d-90hp-egr-off-bench-burgas-front.webp" width="1200" height="1600" alt="Toyota Auris 1.4 D-4D EGR Off Burgas" class="active" loading="lazy">
+                            <img src="assets/toyotaAurisEGR/toyota-auris-14d4d-90hp-egr-off-bench-burgas-back.webp" width="1200" height="1600" alt="Toyota Auris чип тунинг Бургас" loading="lazy">
+                            <img src="assets/toyotaAurisEGR/toyota-auris-14d4d-90hp-egr-off-bench-burgas-bench.webp" width="2048" height="1536" alt="Bosch EDC16C10 Bench Mode Programming" loading="lazy">
                             <button class="project-slider-btn next" aria-label="Next Image">&#10095;</button>
                         </div>
                         <div class="project-info">
@@ -321,10 +379,10 @@
                     <div class="gallery-item project-card">
                         <div class="project-image-container">
                             <button class="project-slider-btn prev">&#10094;</button>
-                            <img src="assets/volvo2019XC40/volvo-xc40-20-d3-diagnostic-dpf-adblue-burgas-front.webp" alt="Автодиагностика Volvo XC40 2.0 D3 DPF AdBlue Бургас" class="active" loading="lazy">
-                            <img src="assets/volvo2019XC40/volvo-xc40-20-d3-diagnostic-dpf-adblue-burgas-back.webp" alt="Volvo XC40 Диагностика Карнобат" loading="lazy">
-                            <img src="assets/volvo2019XC40/volvo-xc40-20-d3-diagnostic-dpf-adblue-burgas-ecu.webp" alt="Denso MB17 ECU Volvo XC40" loading="lazy">
-                            <img src="assets/volvo2019XC40/volvo-xc40-20-d3-diagnostic-dpf-adblue-burgas-launch.webp" alt="Launch X431 Диагностика DPF Volvo" loading="lazy">
+                            <img src="assets/volvo2019XC40/volvo-xc40-20-d3-diagnostic-dpf-adblue-burgas-front.webp" width="1200" height="1600" alt="Автодиагностика Volvo XC40 2.0 D3 DPF AdBlue Бургас" class="active" loading="lazy">
+                            <img src="assets/volvo2019XC40/volvo-xc40-20-d3-diagnostic-dpf-adblue-burgas-back.webp" width="1200" height="1600" alt="Volvo XC40 Диагностика Карнобат" loading="lazy">
+                            <img src="assets/volvo2019XC40/volvo-xc40-20-d3-diagnostic-dpf-adblue-burgas-ecu.webp" width="768" height="1024" alt="Denso MB17 ECU Volvo XC40" loading="lazy">
+                            <img src="assets/volvo2019XC40/volvo-xc40-20-d3-diagnostic-dpf-adblue-burgas-launch.webp" width="1024" height="768" alt="Launch X431 Диагностика DPF Volvo" loading="lazy">
                             <button class="project-slider-btn next">&#10095;</button>
                         </div>
                         <div class="project-info">
@@ -349,7 +407,7 @@
                     <!-- Honda CR-V -->
                     <div class="gallery-item project-card">
                         <div class="project-image-container">
-                            <img src="assets/honda-crv-22ictdi-remap-burgas.webp" alt="Чип тунинг Honda CR-V 2.2 i-CTDI N22A Stage 1 EGR OFF HDS iHDS" class="active" loading="lazy">
+                            <img src="assets/honda-crv-22ictdi-remap-burgas.webp" width="1200" height="900" alt="Чип тунинг Honda CR-V 2.2 i-CTDI N22A Stage 1 EGR OFF HDS iHDS" class="active" loading="lazy">
                         </div>
                         <div class="project-info">
                             <h3>🚗 Honda CR-V 2.2 i-CTDI</h3>
@@ -388,8 +446,44 @@
 
     <footer>
         <div class="container">
-            <p>&copy; 2026 Apostolov Tuning. Всички права запазени.</p>
-            <p style="font-size: 0.8rem; color: #444; margin-top: 5px;">Professional Chip Tuning, Remap, DPF/EGR OFF & Diagnostics in Karnobat, Burgas, Aitos, Yambol, Sliven, Shumen.</p>
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h3>APOSTOLOV TUNING</h3>
+                    <p>Индивидуален чип тунинг (Stage 1/2), ремап и 1:1 клониране на скоростни кутии (DSG / ZF), DPF, EGR, AdBlue (SCR), Вихрови клапи и дилърска диагностика.</p>
+                    <p>📍 <strong>База:</strong> гр. Карнобат (Индустриална зона) &amp; <strong>Мобилен сервиз:</strong> Бургас, Айтос, Поморие, Несебър, Ямбол, Сливен, Шумен</p>
+                    <p>🕒 <strong>Работно време:</strong> Пон – Нед: 08:00 – 22:00 ч.</p>
+                    <div class="footer-contact-links">
+                        <a href="tel:+359896084735">📞 0896 084 735</a>
+                        <a href="https://wa.me/359896084735" target="_blank">💬 WhatsApp</a>
+                        <a href="viber://chat?number=%2B359883309806">💜 Viber</a>
+                        <a href="https://www.google.com/maps/search/?api=1&query=Apostolov+Tuning&query_place_id=0xd9ab01742ca3824a" target="_blank">⭐ Google Maps</a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h3>Основни Услуги</h3>
+                    <ul class="footer-links">
+                        <li><a href="/">Начало и Топ Проекти</a></li>
+                        <li><a href="chiptuning.html">Чип Тунинг (Stage 1/2 &amp; DSG/ZF)</a></li>
+                        <li><a href="eco-off.html">DPF / EGR / AdBlue / Вихрови клапи</a></li>
+                        <li><a href="/#contacts">Контакти и Записване</a></li>
+                        <li><a href="privacy-policy.html">Политика за поверителност</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>Чип Тунинг по Марки</h3>
+                    <ul class="footer-links">
+                        <li><a href="chiptuning-vag.html">VAG (VW, Audi, Skoda, Seat)</a></li>
+                        <li><a href="chiptuning-bmw.html">BMW (E, F, G серии &amp; ZF 6HP/8HP)</a></li>
+                        <li><a href="chiptuning-mercedes.html">Mercedes-Benz (CDI / BlueTEC)</a></li>
+                        <li><a href="chiptuning-psa.html">PSA &amp; Френски (Peugeot, Citroen, Renault)</a></li>
+                        <li><a href="chiptuning-asian.html">Японски, Корейски и Китайски</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; <span id="current-year">2026</span> Apostolov Tuning. Всички права запазени.</p>
+                <a href="privacy-policy.html">Политика за поверителност</a>
+            </div>
         </div>
     </footer>
 
@@ -422,6 +516,6 @@
         <button class="lightbox-nav next">&#10095;</button>
     </div>
 
-    <script src="script.js?v=4"></script>
+    <script src="script.js?v=5"></script>
 </body>
 </html>

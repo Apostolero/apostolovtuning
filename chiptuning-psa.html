@@ -13,7 +13,7 @@
       gtag('js', new Date());
       gtag('config', 'G-2FNQPJVM4G');
     </script>
-    <link rel="icon" href="assets/logo.webp" type="image/jpeg">
+    <link rel="icon" href="assets/logo.webp" type="image/webp">
     <link rel="apple-touch-icon" href="assets/logo.webp">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -32,7 +32,34 @@
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
-      "@type": ["Service", "Product"],
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Начало",
+          "item": "https://apostolovtuning.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Чип Тунинг",
+          "item": "https://apostolovtuning.com/chiptuning.html"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "PSA & Френски (Peugeot, Citroen, Renault)",
+          "item": "https://apostolovtuning.com/chiptuning-psa.html"
+        }
+      ]
+    }
+    </script>
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Service",
       "name": "Чип Тунинг и Софтуерно Изключване на AdBlue, FAP/DPF и Eolys за Peugeot, Citroen и Renault Бургас",
       "serviceType": "PSA & Renault Chip Tuning, AdBlue/FAP/Eolys Software Solutions",
       "image": "https://apostolovtuning.com/assets/logo.webp",
@@ -46,43 +73,64 @@
         "@id": "https://apostolovtuning.com/#organization",
         "name": "Apostolov Tuning",
         "url": "https://apostolovtuning.com",
-        "telephone": "+359896084735"
+        "telephone": "+359896084735",
+        "aggregateRating": {
+          "@type": "AggregateRating",
+          "ratingValue": "5.0",
+          "bestRating": "5",
+          "worstRating": "1",
+          "ratingCount": "40",
+          "reviewCount": "40"
+        },
+        "review": [
+          {
+            "@type": "Review",
+            "author": {
+              "@type": "Person",
+              "name": "Клиент на Apostolov Tuning (Citroen C3)"
+            },
+            "reviewRating": {
+              "@type": "Rating",
+              "ratingValue": "5",
+              "bestRating": "5"
+            },
+            "reviewBody": "Доволна съм. Отлична работа. Много добро отношение. Стоян беше много внимателен и ми обясни подробно. Благодаря. Citroen C3 – безпроблемно изключване на AdBlue системата."
+          },
+          {
+            "@type": "Review",
+            "author": {
+              "@type": "Person",
+              "name": "Клиент на Apostolov Tuning (Citroen Berlingo)"
+            },
+            "reviewRating": {
+              "@type": "Rating",
+              "ratingValue": "5",
+              "bestRating": "5"
+            },
+            "reviewBody": "Безпроблемно изключване на AdBlue системата на Citroen Berlingo. Бърза и коректна работа, без грешки на таблото след процедурата. Препоръчвам Apostolov Tuning!"
+          }
+        ]
       },
       "areaServed": [
-        { "@type": "City", "name": "Бургас" },
-        { "@type": "City", "name": "Карнобат" },
-        { "@type": "City", "name": "Айтос" },
-        { "@type": "City", "name": "Ямбол" },
-        { "@type": "City", "name": "Сливен" }
-      ],
-      "offers": {
-        "@type": "AggregateOffer",
-        "priceCurrency": "BGN",
-        "lowPrice": "200",
-        "highPrice": "900",
-        "offerCount": "10",
-        "availability": "https://schema.org/InStock"
-      },
-      "aggregateRating": {
-        "@type": "AggregateRating",
-        "ratingValue": "5.0",
-        "bestRating": "5",
-        "worstRating": "1",
-        "ratingCount": "40",
-        "reviewCount": "40"
-      },
-      "review": [
         {
-          "@type": "Review",
-          "author": { "@type": "Person", "name": "Клиент на Apostolov Tuning (Citroen C3)" },
-          "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" },
-          "reviewBody": "Доволна съм. Отлична работа. Много добро отношение. Стоян беше много внимателен и ми обясни подробно. Благодаря. Citroen C3 – безпроблемно изключване на AdBlue системата."
+          "@type": "City",
+          "name": "Бургас"
         },
         {
-          "@type": "Review",
-          "author": { "@type": "Person", "name": "Клиент на Apostolov Tuning (Citroen Berlingo)" },
-          "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" },
-          "reviewBody": "Безпроблемно изключване на AdBlue системата на Citroen Berlingo. Бърза и коректна работа, без грешки на таблото след процедурата. Препоръчвам Apostolov Tuning!"
+          "@type": "City",
+          "name": "Карнобат"
+        },
+        {
+          "@type": "City",
+          "name": "Айтос"
+        },
+        {
+          "@type": "City",
+          "name": "Ямбол"
+        },
+        {
+          "@type": "City",
+          "name": "Сливен"
         }
       ]
     }
@@ -113,12 +161,29 @@
     }
     </script>
 
-    <link rel="stylesheet" href="style.css?v=4">
+    <link rel="stylesheet" href="style.css?v=5">
+    <!-- Meta Pixel Code -->
+    <script>
+    !function(f,b,e,v,n,t,s)
+    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+    n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];
+    s.parentNode.insertBefore(t,s)}(window, document,'script',
+    'https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', '2091649391769605');
+    fbq('track', 'PageView');
+    </script>
+    <noscript><img height="1" width="1" style="display:none"
+    src="https://www.facebook.com/tr?id=2091649391769605&ev=PageView&noscript=1"
+    /></noscript>
+    <!-- End Meta Pixel Code -->
 </head>
 <body>
     <header>
         <div class="container header-content">
-            <div class="logo"><a href="/" style="display:flex; gap:10px; align-items:center;"><img src="assets/logo.webp" alt="Apostolov Tuning Logo"><span class="brand-name">APOSTOLOV TUNING</span></a></div>
+            <div class="logo"><a href="/" style="display:flex; gap:10px; align-items:center;"><img src="assets/logo.webp" width="2048" height="2048" alt="Apostolov Tuning Logo"><span class="brand-name">APOSTOLOV TUNING</span></a></div>
             <div class="mobile-socials">
                 <a href="https://www.facebook.com/apostolovtuning" target="_blank" class="fb" aria-label="Facebook"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="white"><path d="M9 8h-3v4h3v12h5v-12h3.642l.358-4h-4v-1.667c0-.955.192-1.333 1.115-1.333h2.885v-5h-3.808c-3.596 0-5.192 1.583-5.192 4.615v3.385z"/></svg></a>
                 <a href="https://wa.me/359896084735" target="_blank" class="wa" aria-label="WhatsApp"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="white"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.588-5.946 0-6.556 5.332-11.891 11.891-11.891 3.181 0 6.167 1.24 8.413 3.488 2.246 2.248 3.484 5.232 3.484 8.403 0 6.556-5.332 11.89-11.891 11.89-2.015 0-3.991-.511-5.741-1.478l-6.255 1.697zm6.514-3.419c1.541.917 3.01 1.39 4.736 1.39 5.232 0 9.491-4.259 9.491-9.49 0-2.535-1-4.917-2.817-6.735s-4.201-2.817-6.735-2.817c-5.232 0-9.49 4.258-9.49 9.491 0 1.834.526 3.535 1.521 5.013l-.995 3.637 3.73-.999zm10.325-6.326c-.285-.143-1.688-.833-1.95-.928-.261-.095-.452-.143-.642.143-.19.285-.736.928-.903 1.118-.166.19-.332.214-.618.071-.285-.143-1.204-.443-2.293-1.415-.847-.756-1.419-1.689-1.586-1.974-.166-.285-.018-.439.124-.581.128-.127.285-.332.428-.499.143-.166.19-.285.285-.476.095-.19.047-.357-.024-.5-.071-.143-.642-1.546-.88-2.118-.231-.557-.465-.482-.642-.491-.166-.008-.356-.01-.547-.01s-.5.071-.761.357c-.261.285-1.001.977-1.001 2.381 0 1.404 1.022 2.76 1.165 2.951.143.19 2.012 3.073 4.874 4.311.68.294 1.212.469 1.625.6.683.218 1.305.187 1.797.114.549-.081 1.688-.69 1.926-1.356.238-.666.238-1.237.166-1.356-.071-.119-.261-.19-.547-.333z"/></svg></a>
@@ -166,10 +231,10 @@
                     <div class="gallery-item project-card">
                         <div class="project-image-container">
                             <button class="project-slider-btn prev" aria-label="Previous Image">&#10094;</button>
-                            <img src="assets/citroenC3/citroen-c3-15-bluehdi-100hp-adblue-off-burgas-3.webp" alt="Citroen C3 1.5 BlueHDi AdBlue Изключване" class="active" loading="lazy">
-                            <img src="assets/citroenC3/citroen-c3-15-bluehdi-100hp-adblue-off-burgas-1.webp" alt="Citroen C3 1.5 BlueHDi AdBlue Off Бургас" loading="lazy">
-                            <img src="assets/citroenC3/citroen-c3-15-bluehdi-100hp-adblue-off-burgas-2.webp" alt="Citroen C3 1.5 BlueHDi AdBlue Off MD1CS003" loading="lazy">
-                            <img src="assets/citroenC3/citroen-c3-15-bluehdi-100hp-adblue-off-burgas-4.webp" alt="Citroen C3 1.5 BlueHDi AdBlue Off Карнобат" loading="lazy">
+                            <img src="assets/citroenC3/citroen-c3-15-bluehdi-100hp-adblue-off-burgas-3.webp" width="1200" height="1600" alt="Citroen C3 1.5 BlueHDi AdBlue Изключване" class="active" loading="lazy">
+                            <img src="assets/citroenC3/citroen-c3-15-bluehdi-100hp-adblue-off-burgas-1.webp" width="1200" height="900" alt="Citroen C3 1.5 BlueHDi AdBlue Off Бургас" loading="lazy">
+                            <img src="assets/citroenC3/citroen-c3-15-bluehdi-100hp-adblue-off-burgas-2.webp" width="1200" height="900" alt="Citroen C3 1.5 BlueHDi AdBlue Off MD1CS003" loading="lazy">
+                            <img src="assets/citroenC3/citroen-c3-15-bluehdi-100hp-adblue-off-burgas-4.webp" width="1170" height="2076" alt="Citroen C3 1.5 BlueHDi AdBlue Off Карнобат" loading="lazy">
                             <button class="project-slider-btn next" aria-label="Next Image">&#10095;</button>
                         </div>
                         <div class="project-info">
@@ -192,10 +257,10 @@
                     <div class="gallery-item project-card">
                         <div class="project-image-container">
                             <button class="project-slider-btn prev" aria-label="Previous Image">&#10094;</button>
-                            <img src="assets/renaultKadjar/renault-kadjar-adblue-off-burgas-front.webp" alt="Renault Kadjar 1.5 DCI AdBlue Off Бургас" class="active" loading="lazy">
-                            <img src="assets/renaultKadjar/renault-kadjar-adblue-off-burgas-dash.webp" alt="Renault Kadjar 1.5 DCI AdBlue Off Dash" loading="lazy">
-                            <img src="assets/renaultKadjar/renault-kadjar-adblue-off-burgas-bench.webp" alt="Renault Kadjar 1.5 DCI AdBlue Off Bench Mode" loading="lazy">
-                            <img src="assets/renaultKadjar/renault-kadjar-adblue-off-burgas-back.webp" alt="Renault Kadjar 1.5 DCI AdBlue Off Карнобат" loading="lazy">
+                            <img src="assets/renaultKadjar/renault-kadjar-adblue-off-burgas-front.webp" width="1200" height="1600" alt="Renault Kadjar 1.5 DCI AdBlue Off Бургас" class="active" loading="lazy">
+                            <img src="assets/renaultKadjar/renault-kadjar-adblue-off-burgas-dash.webp" width="1170" height="1354" alt="Renault Kadjar 1.5 DCI AdBlue Off Dash" loading="lazy">
+                            <img src="assets/renaultKadjar/renault-kadjar-adblue-off-burgas-bench.webp" width="1200" height="900" alt="Renault Kadjar 1.5 DCI AdBlue Off Bench Mode" loading="lazy">
+                            <img src="assets/renaultKadjar/renault-kadjar-adblue-off-burgas-back.webp" width="1200" height="1600" alt="Renault Kadjar 1.5 DCI AdBlue Off Карнобат" loading="lazy">
                             <button class="project-slider-btn next" aria-label="Next Image">&#10095;</button>
                         </div>
                         <div class="project-info">
@@ -232,11 +297,11 @@
                     <div class="gallery-item project-card">
                         <div class="project-image-container">
                             <button class="project-slider-btn prev" aria-label="Previous Image">&#10094;</button>
-                            <img src="assets/citroenBerlingo/citroen-berlingo-15-hdi-130hp-adblue-off-burgas-front.webp" alt="Citroen Berlingo 2020 1.5 HDi AdBlue Off Бургас" class="active" loading="lazy">
-                            <img src="assets/citroenBerlingo/citroen-berlingo-15-hdi-130hp-adblue-off-interior-dash.webp" alt="Citroen Berlingo 1.5 HDi Табло след изключване на AdBlue" loading="lazy">
-                            <img src="assets/citroenBerlingo/citroen-berlingo-15-hdi-130hp-adblue-off-bench-tuning.webp" alt="Citroen Berlingo ECU Tuning Bench Mode Magic Motorsport" loading="lazy">
-                            <img src="assets/citroenBerlingo/citroen-berlingo-15-hdi-130hp-adblue-off-bench-success.webp" alt="Citroen Berlingo ECU Успешно програмиране" loading="lazy">
-                            <img src="assets/citroenBerlingo/citroen-berlingo-15-hdi-130hp-adblue-off-burgas-back.webp" alt="Citroen Berlingo AdBlue Off Карнобат" loading="lazy">
+                            <img src="assets/citroenBerlingo/citroen-berlingo-15-hdi-130hp-adblue-off-burgas-front.webp" width="1200" height="1600" alt="Citroen Berlingo 2020 1.5 HDi AdBlue Off Бургас" class="active" loading="lazy">
+                            <img src="assets/citroenBerlingo/citroen-berlingo-15-hdi-130hp-adblue-off-interior-dash.webp" width="1200" height="900" alt="Citroen Berlingo 1.5 HDi Табло след изключване на AdBlue" loading="lazy">
+                            <img src="assets/citroenBerlingo/citroen-berlingo-15-hdi-130hp-adblue-off-bench-tuning.webp" width="1200" height="1600" alt="Citroen Berlingo ECU Tuning Bench Mode Magic Motorsport" loading="lazy">
+                            <img src="assets/citroenBerlingo/citroen-berlingo-15-hdi-130hp-adblue-off-bench-success.webp" width="1200" height="900" alt="Citroen Berlingo ECU Успешно програмиране" loading="lazy">
+                            <img src="assets/citroenBerlingo/citroen-berlingo-15-hdi-130hp-adblue-off-burgas-back.webp" width="1200" height="1600" alt="Citroen Berlingo AdBlue Off Карнобат" loading="lazy">
                             <button class="project-slider-btn next" aria-label="Next Image">&#10095;</button>
                         </div>
                         <div class="project-info">
@@ -269,9 +334,9 @@
                     <div class="gallery-item project-card">
                         <div class="project-image-container">
                             <button class="project-slider-btn prev" aria-label="Previous Image">&#10094;</button>
-                            <img src="assets/daciaLodgy/dacia-lodgy-15-dci-2012-edc17c42-dpf-egr-off-burgas-1.webp" alt="Dacia Lodgy 1.5 dCi DPF EGR OFF Burgas Front" class="active" loading="lazy">
-                            <img src="assets/daciaLodgy/dacia-lodgy-15-dci-2012-edc17c42-dpf-egr-off-burgas-2.webp" alt="Dacia Lodgy EDC17C42 ECU Tuning" loading="lazy">
-                            <img src="assets/daciaLodgy/dacia-lodgy-15-dci-2012-edc17c42-dpf-egr-off-burgas-3.webp" alt="Dacia Lodgy Software Tuning Dashboard" loading="lazy">
+                            <img src="assets/daciaLodgy/dacia-lodgy-15-dci-2012-edc17c42-dpf-egr-off-burgas-1.webp" width="1200" height="900" alt="Dacia Lodgy 1.5 dCi DPF EGR OFF Burgas Front" class="active" loading="lazy">
+                            <img src="assets/daciaLodgy/dacia-lodgy-15-dci-2012-edc17c42-dpf-egr-off-burgas-2.webp" width="1170" height="1553" alt="Dacia Lodgy EDC17C42 ECU Tuning" loading="lazy">
+                            <img src="assets/daciaLodgy/dacia-lodgy-15-dci-2012-edc17c42-dpf-egr-off-burgas-3.webp" width="1200" height="900" alt="Dacia Lodgy Software Tuning Dashboard" loading="lazy">
                             <button class="project-slider-btn next" aria-label="Next Image">&#10095;</button>
                         </div>
                         <div class="project-info">
@@ -305,9 +370,9 @@
                     <div class="gallery-item project-card">
                         <div class="project-image-container">
                             <button class="project-slider-btn prev" aria-label="Previous Image">&#10094;</button>
-                            <img src="assets/peugeot-3008/peugeot-3008-15-bluehdi-131hp-stage1-adblue-dpf-egr-off-burgas-front.webp" alt="Peugeot 3008 1.5 BlueHDi 131hp 2018 AdBlue DPF EGR OFF Burgas Front" class="active" loading="lazy">
-                            <img src="assets/peugeot-3008/peugeot-3008-15-bluehdi-131hp-stage1-adblue-dpf-egr-off-burgas-back.webp" alt="Peugeot 3008 1.5 BlueHDi Chip Tuning Karnobat Back" loading="lazy">
-                            <img src="assets/peugeot-3008/peugeot-3008-15-bluehdi-131hp-stage1-adblue-dpf-egr-off-burgas-flex-bench.webp" alt="Peugeot 3008 MD1CS003 Flex Bench Mode Tuning" loading="lazy">
+                            <img src="assets/peugeot-3008/peugeot-3008-15-bluehdi-131hp-stage1-adblue-dpf-egr-off-burgas-front.webp" width="1200" height="1600" alt="Peugeot 3008 1.5 BlueHDi 131hp 2018 AdBlue DPF EGR OFF Burgas Front" class="active" loading="lazy">
+                            <img src="assets/peugeot-3008/peugeot-3008-15-bluehdi-131hp-stage1-adblue-dpf-egr-off-burgas-back.webp" width="1200" height="1600" alt="Peugeot 3008 1.5 BlueHDi Chip Tuning Karnobat Back" loading="lazy">
+                            <img src="assets/peugeot-3008/peugeot-3008-15-bluehdi-131hp-stage1-adblue-dpf-egr-off-burgas-flex-bench.webp" width="1200" height="900" alt="Peugeot 3008 MD1CS003 Flex Bench Mode Tuning" loading="lazy">
                             <button class="project-slider-btn next" aria-label="Next Image">&#10095;</button>
                         </div>
                         <div class="project-info">
@@ -343,7 +408,7 @@
                     <div class="gallery-item project-card">
                         <div class="project-image-container">
                             <button class="project-slider-btn prev" aria-label="Previous Image">&#10094;</button>
-                            <img src="assets/peugeot-208-bluehdi-eolys-system-reset-burgas.webp" alt="Peugeot 208 BlueHDi Eolys System Reset coding Burgas" class="active" loading="lazy">
+                            <img src="assets/peugeot-208-bluehdi-eolys-system-reset-burgas.webp" width="1024" height="768" alt="Peugeot 208 BlueHDi Eolys System Reset coding Burgas" class="active" loading="lazy">
                             <button class="project-slider-btn next" aria-label="Next Image">&#10095;</button>
                         </div>
                         <div class="project-info">
@@ -391,8 +456,44 @@
 
     <footer>
         <div class="container">
-            <p>&copy; 2026 Apostolov Tuning. Всички права запазени.</p>
-            <p style="font-size: 0.8rem; color: #444; margin-top: 5px;">Professional Chip Tuning, Remap, DPF/EGR OFF & Diagnostics in Karnobat, Burgas, Aitos, Yambol, Sliven, Shumen.</p>
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h3>APOSTOLOV TUNING</h3>
+                    <p>Индивидуален чип тунинг (Stage 1/2), ремап и 1:1 клониране на скоростни кутии (DSG / ZF), DPF, EGR, AdBlue (SCR), Вихрови клапи и дилърска диагностика.</p>
+                    <p>📍 <strong>База:</strong> гр. Карнобат (Индустриална зона) &amp; <strong>Мобилен сервиз:</strong> Бургас, Айтос, Поморие, Несебър, Ямбол, Сливен, Шумен</p>
+                    <p>🕒 <strong>Работно време:</strong> Пон – Нед: 08:00 – 22:00 ч.</p>
+                    <div class="footer-contact-links">
+                        <a href="tel:+359896084735">📞 0896 084 735</a>
+                        <a href="https://wa.me/359896084735" target="_blank">💬 WhatsApp</a>
+                        <a href="viber://chat?number=%2B359883309806">💜 Viber</a>
+                        <a href="https://www.google.com/maps/search/?api=1&query=Apostolov+Tuning&query_place_id=0xd9ab01742ca3824a" target="_blank">⭐ Google Maps</a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h3>Основни Услуги</h3>
+                    <ul class="footer-links">
+                        <li><a href="/">Начало и Топ Проекти</a></li>
+                        <li><a href="chiptuning.html">Чип Тунинг (Stage 1/2 &amp; DSG/ZF)</a></li>
+                        <li><a href="eco-off.html">DPF / EGR / AdBlue / Вихрови клапи</a></li>
+                        <li><a href="/#contacts">Контакти и Записване</a></li>
+                        <li><a href="privacy-policy.html">Политика за поверителност</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>Чип Тунинг по Марки</h3>
+                    <ul class="footer-links">
+                        <li><a href="chiptuning-vag.html">VAG (VW, Audi, Skoda, Seat)</a></li>
+                        <li><a href="chiptuning-bmw.html">BMW (E, F, G серии &amp; ZF 6HP/8HP)</a></li>
+                        <li><a href="chiptuning-mercedes.html">Mercedes-Benz (CDI / BlueTEC)</a></li>
+                        <li><a href="chiptuning-psa.html">PSA &amp; Френски (Peugeot, Citroen, Renault)</a></li>
+                        <li><a href="chiptuning-asian.html">Японски, Корейски и Китайски</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; <span id="current-year">2026</span> Apostolov Tuning. Всички права запазени.</p>
+                <a href="privacy-policy.html">Политика за поверителност</a>
+            </div>
         </div>
     </footer>
     <a href="tel:+359896084735" class="floating-call">
@@ -424,6 +525,6 @@
         <button class="lightbox-nav next">&#10095;</button>
     </div>
 
-    <script src="script.js?v=4"></script>
+    <script src="script.js?v=5"></script>
 </body>
 </html>

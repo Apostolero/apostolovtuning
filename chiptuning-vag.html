@@ -13,7 +13,7 @@
       gtag('js', new Date());
       gtag('config', 'G-2FNQPJVM4G');
     </script>
-    <link rel="icon" href="assets/logo.webp" type="image/jpeg">
+    <link rel="icon" href="assets/logo.webp" type="image/webp">
     <link rel="apple-touch-icon" href="assets/logo.webp">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -32,7 +32,34 @@
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
-      "@type": ["Service", "Product"],
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Начало",
+          "item": "https://apostolovtuning.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Чип Тунинг",
+          "item": "https://apostolovtuning.com/chiptuning.html"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "VAG (VW, Audi, Skoda, Seat)",
+          "item": "https://apostolovtuning.com/chiptuning-vag.html"
+        }
+      ]
+    }
+    </script>
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Service",
       "name": "Чип Тунинг и Ремап на DSG Скоростни Кутии за VAG (VW, Audi, Skoda, Seat) Бургас",
       "serviceType": "VAG Chip Tuning, DSG/S-Tronic TCU Remap & 1:1 Cloning",
       "image": "https://apostolovtuning.com/assets/logo.webp",
@@ -46,55 +73,90 @@
         "@id": "https://apostolovtuning.com/#organization",
         "name": "Apostolov Tuning",
         "url": "https://apostolovtuning.com",
-        "telephone": "+359896084735"
+        "telephone": "+359896084735",
+        "aggregateRating": {
+          "@type": "AggregateRating",
+          "ratingValue": "5.0",
+          "bestRating": "5",
+          "worstRating": "1",
+          "ratingCount": "40",
+          "reviewCount": "40"
+        },
+        "review": [
+          {
+            "@type": "Review",
+            "author": {
+              "@type": "Person",
+              "name": "Клиент на Apostolov Tuning (Audi Q7 3.0 TDI)"
+            },
+            "reviewRating": {
+              "@type": "Rating",
+              "ratingValue": "5",
+              "bestRating": "5"
+            },
+            "reviewBody": "Изключително доволен. Бързо лесно и надеждно.колата ми се събуди Ауди Q7 3.0TDI"
+          },
+          {
+            "@type": "Review",
+            "author": {
+              "@type": "Person",
+              "name": "Клиент на Apostolov Tuning (VW Passat B5.5)"
+            },
+            "reviewRating": {
+              "@type": "Rating",
+              "ratingValue": "5",
+              "bestRating": "5"
+            },
+            "reviewBody": "Много добра работа! Поправиха ми наполовина направен софтуер. След тяхната намеса колата стана направо различна и намали разхода си на 5.9/100. Става дума за Passat B5.5 1.9 TDI 131 hp."
+          },
+          {
+            "@type": "Review",
+            "author": {
+              "@type": "Person",
+              "name": "Клиент на Apostolov Tuning (VW Passat B6)"
+            },
+            "reviewRating": {
+              "@type": "Rating",
+              "ratingValue": "5",
+              "bestRating": "5"
+            },
+            "reviewBody": "Професионалист, препоръчвам с 2 ръце! На Passat B6 направи remap stage 1, софтуерно изолиране на EGR, DPF. Колата се прероди!"
+          },
+          {
+            "@type": "Review",
+            "author": {
+              "@type": "Person",
+              "name": "Клиент на Apostolov Tuning (Audi A6 C5)"
+            },
+            "reviewRating": {
+              "@type": "Rating",
+              "ratingValue": "5",
+              "bestRating": "5"
+            },
+            "reviewBody": "Перфектна работа! Audi A6 C5 2.5 TDI – Stage 1 ремап, изолиране на EGR и прекъсвач на 4600 оборота. Стоян обясни всичко подробно и резултатът надмина очакванията ми. Препоръчвам!"
+          }
+        ]
       },
       "areaServed": [
-        { "@type": "City", "name": "Бургас" },
-        { "@type": "City", "name": "Карнобат" },
-        { "@type": "City", "name": "Айтос" },
-        { "@type": "City", "name": "Ямбол" },
-        { "@type": "City", "name": "Сливен" }
-      ],
-      "offers": {
-        "@type": "AggregateOffer",
-        "priceCurrency": "BGN",
-        "lowPrice": "200",
-        "highPrice": "1200",
-        "offerCount": "15",
-        "availability": "https://schema.org/InStock"
-      },
-      "aggregateRating": {
-        "@type": "AggregateRating",
-        "ratingValue": "5.0",
-        "bestRating": "5",
-        "worstRating": "1",
-        "ratingCount": "40",
-        "reviewCount": "40"
-      },
-      "review": [
         {
-          "@type": "Review",
-          "author": { "@type": "Person", "name": "Клиент на Apostolov Tuning (Audi Q7 3.0 TDI)" },
-          "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" },
-          "reviewBody": "Изключително доволен. Бързо лесно и надеждно.колата ми се събуди Ауди Q7 3.0TDI"
+          "@type": "City",
+          "name": "Бургас"
         },
         {
-          "@type": "Review",
-          "author": { "@type": "Person", "name": "Клиент на Apostolov Tuning (VW Passat B5.5)" },
-          "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" },
-          "reviewBody": "Много добра работа! Поправиха ми наполовина направен софтуер. След тяхната намеса колата стана направо различна и намали разхода си на 5.9/100. Става дума за Passat B5.5 1.9 TDI 131 hp."
+          "@type": "City",
+          "name": "Карнобат"
         },
         {
-          "@type": "Review",
-          "author": { "@type": "Person", "name": "Клиент на Apostolov Tuning (VW Passat B6)" },
-          "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" },
-          "reviewBody": "Професионалист, препоръчвам с 2 ръце! На Passat B6 направи remap stage 1, софтуерно изолиране на EGR, DPF. Колата се прероди!"
+          "@type": "City",
+          "name": "Айтос"
         },
         {
-          "@type": "Review",
-          "author": { "@type": "Person", "name": "Клиент на Apostolov Tuning (Audi A6 C5)" },
-          "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" },
-          "reviewBody": "Перфектна работа! Audi A6 C5 2.5 TDI – Stage 1 ремап, изолиране на EGR и прекъсвач на 4600 оборота. Стоян обясни всичко подробно и резултатът надмина очакванията ми. Препоръчвам!"
+          "@type": "City",
+          "name": "Ямбол"
+        },
+        {
+          "@type": "City",
+          "name": "Сливен"
         }
       ]
     }
@@ -133,7 +195,7 @@
     }
     </script>
 
-    <link rel="stylesheet" href="style.css?v=4">
+    <link rel="stylesheet" href="style.css?v=5">
     <style>
         .gallery-grid { align-items: start !important; }
         .project-card { height: auto !important; }
@@ -149,13 +211,30 @@
         .project-image-container img.active { opacity: 1; z-index: 2; position: absolute !important; display: block; }
         .btn-collapse { background: none; border: none; color: var(--primary-color); cursor: pointer; font-weight: 600; font-size: 0.9rem; padding: 10px 0 0 0; display: block; width: 100%; text-align: left; }
     </style>
+    <!-- Meta Pixel Code -->
+    <script>
+    !function(f,b,e,v,n,t,s)
+    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+    n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];
+    s.parentNode.insertBefore(t,s)}(window, document,'script',
+    'https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', '2091649391769605');
+    fbq('track', 'PageView');
+    </script>
+    <noscript><img height="1" width="1" style="display:none"
+    src="https://www.facebook.com/tr?id=2091649391769605&ev=PageView&noscript=1"
+    /></noscript>
+    <!-- End Meta Pixel Code -->
 </head>
 <body>
     <header>
         <div class="container header-content">
             <div class="logo">
                 <a href="/" style="display:flex; gap:10px; align-items:center;">
-                    <img src="assets/logo.webp" alt="Apostolov Tuning Logo">
+                    <img src="assets/logo.webp" width="2048" height="2048" alt="Apostolov Tuning Logo">
                     <span class="brand-name">APOSTOLOV TUNING</span>
                 </a>
             </div>
@@ -205,8 +284,8 @@
                     <div class="gallery-item project-card">
                         <div class="project-image-container">
                             <button class="project-slider-btn prev" aria-label="Previous Image">&#10094;</button>
-                            <img src="assets/golf5ktt/vw-golf-5-19-tdi-105hp-stage1-egr-maf-off-3bar-map-burgas-front.webp" alt="VW Golf 5 1.9 TDI 105hp Stage 1 чип тунинг EGR MAF Off 3 bar MAP Бургас" class="active" loading="lazy">
-                            <img src="assets/golf5ktt/vw-golf-5-19-tdi-edc16u34-stage1-remap-popcorn-burgas-rear.webp" alt="VW Golf 5 1.9 TDI Bosch EDC16U34 ремап Popcorn 4500 оборота Карнобат" loading="lazy">
+                            <img src="assets/golf5ktt/vw-golf-5-19-tdi-105hp-stage1-egr-maf-off-3bar-map-burgas-front.webp" width="1200" height="900" alt="VW Golf 5 1.9 TDI 105hp Stage 1 чип тунинг EGR MAF Off 3 bar MAP Бургас" class="active" loading="lazy">
+                            <img src="assets/golf5ktt/vw-golf-5-19-tdi-edc16u34-stage1-remap-popcorn-burgas-rear.webp" width="1200" height="1600" alt="VW Golf 5 1.9 TDI Bosch EDC16U34 ремап Popcorn 4500 оборота Карнобат" loading="lazy">
                             <button class="project-slider-btn next" aria-label="Next Image">&#10095;</button>
                         </div>
                         <div class="project-info">
@@ -241,9 +320,9 @@
                     <div class="gallery-item project-card">
                         <div class="project-image-container">
                             <button class="project-slider-btn prev" aria-label="Previous Image">&#10094;</button>
-                            <img src="assets/audiQ7233hp/audi-q7-30-tdi-233hp-stage1-dpf-egr-swirl-off-burgas-front.webp" alt="Audi Q7 3.0 TDI 233hp Stage 1 чип тунинг DPF EGR Swirl Flaps Off Бургас" class="active" loading="lazy">
-                            <img src="assets/audiQ7233hp/audi-q7-30-tdi-edc16cp34-stage1-remap-burgas-rear.webp" alt="Audi Q7 4L 3.0 TDI 233 к.с. Bosch EDC16CP34 ремап Карнобат" loading="lazy">
-                            <img src="assets/audiQ7233hp/audi-q7-30-tdi-edc16cp34-stage1-remap-diagnostics-inside.webp" alt="Програмиране и автодиагностика на Bosch EDC16CP34 Audi Q7 3.0 TDI" loading="lazy">
+                            <img src="assets/audiQ7233hp/audi-q7-30-tdi-233hp-stage1-dpf-egr-swirl-off-burgas-front.webp" width="1200" height="1600" alt="Audi Q7 3.0 TDI 233hp Stage 1 чип тунинг DPF EGR Swirl Flaps Off Бургас" class="active" loading="lazy">
+                            <img src="assets/audiQ7233hp/audi-q7-30-tdi-edc16cp34-stage1-remap-burgas-rear.webp" width="1200" height="1600" alt="Audi Q7 4L 3.0 TDI 233 к.с. Bosch EDC16CP34 ремап Карнобат" loading="lazy">
+                            <img src="assets/audiQ7233hp/audi-q7-30-tdi-edc16cp34-stage1-remap-diagnostics-inside.webp" width="1200" height="900" alt="Програмиране и автодиагностика на Bosch EDC16CP34 Audi Q7 3.0 TDI" loading="lazy">
                             <button class="project-slider-btn next" aria-label="Next Image">&#10095;</button>
                         </div>
                         <div class="project-info">
@@ -286,8 +365,8 @@
                     <div class="gallery-item project-card">
                         <div class="project-image-container">
                             <button class="project-slider-btn prev" aria-label="Previous Image">&#10094;</button>
-                            <img src="assets/audiA41.9tdi131/audi-a4-b6-19-tdi-131hp-stage1-egr-off-popcorn-burgas-front.webp" alt="Audi A4 B6 1.9 TDI 131hp Stage 1 чип тунинг EGR Off и Popcorn прекъсвач Бургас" class="active" loading="lazy">
-                            <img src="assets/audiA41.9tdi131/audi-a4-b6-19-tdi-131hp-edc15p-remap-hardcut-karnobat-rear.webp" alt="Audi A4 B6 Avant 1.9 TDI 131 к.с. Помпа-Дюза Bosch EDC15P+ ремап Карнобат" loading="lazy">
+                            <img src="assets/audiA41.9tdi131/audi-a4-b6-19-tdi-131hp-stage1-egr-off-popcorn-burgas-front.webp" width="1200" height="1600" alt="Audi A4 B6 1.9 TDI 131hp Stage 1 чип тунинг EGR Off и Popcorn прекъсвач Бургас" class="active" loading="lazy">
+                            <img src="assets/audiA41.9tdi131/audi-a4-b6-19-tdi-131hp-edc15p-remap-hardcut-karnobat-rear.webp" width="1200" height="1600" alt="Audi A4 B6 Avant 1.9 TDI 131 к.с. Помпа-Дюза Bosch EDC15P+ ремап Карнобат" loading="lazy">
                             <button class="project-slider-btn next" aria-label="Next Image">&#10095;</button>
                         </div>
                         <div class="project-info">
@@ -318,10 +397,10 @@
                     <div class="gallery-item project-card">
                         <div class="project-image-container">
                             <button class="project-slider-btn prev" aria-label="Previous Image">&#10094;</button>
-                            <img src="assets/passatb6July/vw-passat-b6-19-tdi-105hp-stage1-egr-popcorn-burgas-front.webp" alt="VW Passat B6 1.9 TDI 105hp Stage 1 чип тунинг EGR Off Popcorn Бургас" class="active" loading="lazy">
-                            <img src="assets/passatb6July/vw-passat-b6-19-tdi-edc16u34-stage1-remap-burgas-rear.webp" alt="VW Passat B6 1.9 TDI Bosch EDC16U34 Stage 1 ремап Бургас" loading="lazy">
-                            <img src="assets/passatb6July/vw-passat-b6-19-tdi-egr-off-hardcut-limiter-karnobat.webp" alt="VW Passat B6 1.9 TDI EGR Off и прекъсвач Hardcut Карнобат" loading="lazy">
-                            <img src="assets/passatb6July/vw-passat-b6-19-tdi-edc16u34-diagnostics-remap-inside.webp" alt="Компютърна диагностика и ремап на Bosch EDC16U34 VW Passat B6" loading="lazy">
+                            <img src="assets/passatb6July/vw-passat-b6-19-tdi-105hp-stage1-egr-popcorn-burgas-front.webp" width="1200" height="1600" alt="VW Passat B6 1.9 TDI 105hp Stage 1 чип тунинг EGR Off Popcorn Бургас" class="active" loading="lazy">
+                            <img src="assets/passatb6July/vw-passat-b6-19-tdi-edc16u34-stage1-remap-burgas-rear.webp" width="1200" height="1600" alt="VW Passat B6 1.9 TDI Bosch EDC16U34 Stage 1 ремап Бургас" loading="lazy">
+                            <img src="assets/passatb6July/vw-passat-b6-19-tdi-egr-off-hardcut-limiter-karnobat.webp" width="1200" height="900" alt="VW Passat B6 1.9 TDI EGR Off и прекъсвач Hardcut Карнобат" loading="lazy">
+                            <img src="assets/passatb6July/vw-passat-b6-19-tdi-edc16u34-diagnostics-remap-inside.webp" width="1200" height="900" alt="Компютърна диагностика и ремап на Bosch EDC16U34 VW Passat B6" loading="lazy">
                             <button class="project-slider-btn next" aria-label="Next Image">&#10095;</button>
                         </div>
                         <div class="project-info">
@@ -352,8 +431,8 @@
                     <div class="gallery-item project-card">
                         <div class="project-image-container">
                             <button class="project-slider-btn prev" aria-label="Previous Image">&#10094;</button>
-                            <img src="assets/VWtouareg3.0/vw-touareg-2007-3-0tdi-225hp-stage1-remap-burgas.webp" alt="VW Touareg 2007 3.0 TDI Stage 1 Remap Бургас" class="active" loading="lazy">
-                            <img src="assets/VWtouareg3.0/chiptuning-vw-touareg-30tdi-apostolov-tuning.webp" alt="Чип тунинг VW Touareg 3.0 TDI Apostolov Tuning" loading="lazy">
+                            <img src="assets/VWtouareg3.0/vw-touareg-2007-3-0tdi-225hp-stage1-remap-burgas.webp" width="1200" height="900" alt="VW Touareg 2007 3.0 TDI Stage 1 Remap Бургас" class="active" loading="lazy">
+                            <img src="assets/VWtouareg3.0/chiptuning-vw-touareg-30tdi-apostolov-tuning.webp" width="1200" height="900" alt="Чип тунинг VW Touareg 3.0 TDI Apostolov Tuning" loading="lazy">
                             <button class="project-slider-btn next" aria-label="Next Image">&#10095;</button>
                         </div>
                         <div class="project-info">
@@ -384,11 +463,11 @@
                     <div class="gallery-item project-card">
                         <div class="project-image-container">
                             <button class="project-slider-btn prev" aria-label="Previous Image">&#10094;</button>
-                            <img src="assets/audiA6C7Latvia/audi-a6-c7-30-tdi-stage1-remap-fix-burgas-4.webp" alt="Audi A6 C7 3.0 TDI чип тунинг Бургас" class="active" loading="lazy">
-                            <img src="assets/audiA6C7Latvia/audi-a6-c7-30-tdi-stage1-remap-fix-burgas-5.webp" alt="Audi A6 C7 3.0 TDI автодиагностика" loading="lazy">
-                            <img src="assets/audiA6C7Latvia/audi-a6-c7-30-tdi-stage1-remap-fix-burgas-1.webp" alt="Корекция на лош ремап Audi A6" loading="lazy">
-                            <img src="assets/audiA6C7Latvia/audi-a6-c7-30-tdi-stage1-remap-fix-burgas-2.webp" alt="Индивидуален Stage 1 Audi A6" loading="lazy">
-                            <img src="assets/audiA6C7Latvia/audi-a6-c7-30-tdi-stage1-remap-fix-burgas-3.webp" alt="Apostolov Tuning Карнобат" loading="lazy">
+                            <img src="assets/audiA6C7Latvia/audi-a6-c7-30-tdi-stage1-remap-fix-burgas-4.webp" width="1200" height="1600" alt="Audi A6 C7 3.0 TDI чип тунинг Бургас" class="active" loading="lazy">
+                            <img src="assets/audiA6C7Latvia/audi-a6-c7-30-tdi-stage1-remap-fix-burgas-5.webp" width="1200" height="1600" alt="Audi A6 C7 3.0 TDI автодиагностика" loading="lazy">
+                            <img src="assets/audiA6C7Latvia/audi-a6-c7-30-tdi-stage1-remap-fix-burgas-1.webp" width="768" height="1024" alt="Корекция на лош ремап Audi A6" loading="lazy">
+                            <img src="assets/audiA6C7Latvia/audi-a6-c7-30-tdi-stage1-remap-fix-burgas-2.webp" width="768" height="1024" alt="Индивидуален Stage 1 Audi A6" loading="lazy">
+                            <img src="assets/audiA6C7Latvia/audi-a6-c7-30-tdi-stage1-remap-fix-burgas-3.webp" width="1024" height="768" alt="Apostolov Tuning Карнобат" loading="lazy">
                             <button class="project-slider-btn next" aria-label="Next Image">&#10095;</button>
                         </div>
                         <div class="project-info">
@@ -415,9 +494,9 @@
                     <div class="gallery-item project-card">
                         <div class="project-image-container">
                             <button class="project-slider-btn prev" aria-label="Previous Image">&#10094;</button>
-                            <img src="assets/vwCaddyEcuSwap/vw-caddy-2007-19-tdi-105hp-ecu-clone-swap-edc16u34-burgas-1.webp" alt="VW Caddy 1.9 TDI ECU Swap Бургас" class="active" loading="lazy">
-                            <img src="assets/vwCaddyEcuSwap/vw-caddy-2007-19-tdi-105hp-ecu-clone-swap-edc16u34-burgas-2.webp" alt="Клониране на компютър EDC16U34" loading="lazy">
-                            <img src="assets/vwCaddyEcuSwap/vw-caddy-2007-19-tdi-105hp-ecu-clone-swap-edc16u34-burgas-3.webp" alt="Адаптация и софтуерни настройки" loading="lazy">
+                            <img src="assets/vwCaddyEcuSwap/vw-caddy-2007-19-tdi-105hp-ecu-clone-swap-edc16u34-burgas-1.webp" width="1200" height="900" alt="VW Caddy 1.9 TDI ECU Swap Бургас" class="active" loading="lazy">
+                            <img src="assets/vwCaddyEcuSwap/vw-caddy-2007-19-tdi-105hp-ecu-clone-swap-edc16u34-burgas-2.webp" width="1200" height="900" alt="Клониране на компютър EDC16U34" loading="lazy">
+                            <img src="assets/vwCaddyEcuSwap/vw-caddy-2007-19-tdi-105hp-ecu-clone-swap-edc16u34-burgas-3.webp" width="1200" height="1600" alt="Адаптация и софтуерни настройки" loading="lazy">
                             <button class="project-slider-btn next" aria-label="Next Image">&#10095;</button>
                         </div>
                         <div class="project-info">
@@ -444,11 +523,11 @@
                     <div class="gallery-item project-card">
                         <div class="project-image-container">
                             <button class="project-slider-btn prev" aria-label="Previous Image">&#10094;</button>
-                            <img src="assets/AudiA5/audi-a5-sportback-2017-30-tdi-220hp-stage1-remap-burgas-2.webp" alt="Audi A5 3.0 TDI 300hp чип тунинг" class="active" loading="lazy">
-                            <img src="assets/AudiA5/audi-a5-sportback-2017-30-tdi-220hp-stage1-remap-burgas-1.webp" alt="Audi A5 Sportback 3.0 TDI Stage 1 Бургас" loading="lazy">
-                            <img src="assets/AudiA5/audi-a5-sportback-2017-30-tdi-220hp-stage1-remap-burgas-3.webp" alt="Audi A5 Sportback ремап автодиагностика" loading="lazy">
-                            <img src="assets/AudiA5/audi-a5-sportback-2017-30-tdi-220hp-stage1-remap-burgas-4.webp" alt="Audi A5 3.0 TDI Apostolov Tuning" loading="lazy">
-                            <img src="assets/AudiA5/audi-a5-sportback-2017-30-tdi-220hp-stage1-remap-burgas-5.webp" alt="Audi A5 300 конски сили" loading="lazy">
+                            <img src="assets/AudiA5/audi-a5-sportback-2017-30-tdi-220hp-stage1-remap-burgas-2.webp" width="1200" height="900" alt="Audi A5 3.0 TDI 300hp чип тунинг" class="active" loading="lazy">
+                            <img src="assets/AudiA5/audi-a5-sportback-2017-30-tdi-220hp-stage1-remap-burgas-1.webp" width="4032" height="3024" alt="Audi A5 Sportback 3.0 TDI Stage 1 Бургас" loading="lazy">
+                            <img src="assets/AudiA5/audi-a5-sportback-2017-30-tdi-220hp-stage1-remap-burgas-3.webp" width="1200" height="1600" alt="Audi A5 Sportback ремап автодиагностика" loading="lazy">
+                            <img src="assets/AudiA5/audi-a5-sportback-2017-30-tdi-220hp-stage1-remap-burgas-4.webp" width="1200" height="1600" alt="Audi A5 3.0 TDI Apostolov Tuning" loading="lazy">
+                            <img src="assets/AudiA5/audi-a5-sportback-2017-30-tdi-220hp-stage1-remap-burgas-5.webp" width="1200" height="1600" alt="Audi A5 300 конски сили" loading="lazy">
                             <button class="project-slider-btn next" aria-label="Next Image">&#10095;</button>
                         </div>
                         <div class="project-info">
@@ -475,9 +554,9 @@
                     <div class="gallery-item project-card">
                         <div class="project-image-container">
                             <button class="project-slider-btn prev" aria-label="Previous Image">&#10094;</button>
-                            <img src="assets/vwTransporter/vw-transporter-t5-19-tdi-85hp-stage1-egr-off-burgas-1.webp" alt="VW Transporter T5 1.9 TDI Stage 1 EGR Off Бургас" class="active" loading="lazy">
-                            <img src="assets/vwTransporter/vw-transporter-t5-19-tdi-85hp-stage1-egr-off-burgas-2.webp" alt="VW Transporter T5 Чип тунинг Карнобат" loading="lazy">
-                            <img src="assets/vwTransporter/vw-transporter-t5-19-tdi-85hp-stage1-egr-off-burgas-3.webp" alt="VW Transporter T5 EDC16U1 диагностика Apostolov Tuning" loading="lazy">
+                            <img src="assets/vwTransporter/vw-transporter-t5-19-tdi-85hp-stage1-egr-off-burgas-1.webp" width="1200" height="900" alt="VW Transporter T5 1.9 TDI Stage 1 EGR Off Бургас" class="active" loading="lazy">
+                            <img src="assets/vwTransporter/vw-transporter-t5-19-tdi-85hp-stage1-egr-off-burgas-2.webp" width="1200" height="1600" alt="VW Transporter T5 Чип тунинг Карнобат" loading="lazy">
+                            <img src="assets/vwTransporter/vw-transporter-t5-19-tdi-85hp-stage1-egr-off-burgas-3.webp" width="1200" height="900" alt="VW Transporter T5 EDC16U1 диагностика Apostolov Tuning" loading="lazy">
                             <button class="project-slider-btn next" aria-label="Next Image">&#10095;</button>
                         </div>
                         <div class="project-info">
@@ -504,9 +583,9 @@
                     <div class="gallery-item project-card">
                         <div class="project-image-container">
                             <button class="project-slider-btn prev" aria-label="Previous Image">&#10094;</button>
-                            <img src="assets/audiQ7/audi-q7-30-tdi-2008-stage-1-dpf-egr-swirl-off.webp" alt="Audi Q7 3.0 TDI Stage 1 DPF EGR Swirl Off Бургас" class="active" loading="lazy">
-                            <img src="assets/audiQ7/audi-q7-30-tdi-edc16cp34-chip-tuning-burgas.webp" alt="Audi Q7 3.0 TDI EDC16CP34 Chip Tuning" loading="lazy">
-                            <img src="assets/audiQ7/audi-q7-233hp-remap-diagnostics-apostolov-tuning.webp" alt="Audi Q7 233hp Remap Diagnostics Apostolov Tuning" loading="lazy">
+                            <img src="assets/audiQ7/audi-q7-30-tdi-2008-stage-1-dpf-egr-swirl-off.webp" width="1200" height="900" alt="Audi Q7 3.0 TDI Stage 1 DPF EGR Swirl Off Бургас" class="active" loading="lazy">
+                            <img src="assets/audiQ7/audi-q7-30-tdi-edc16cp34-chip-tuning-burgas.webp" width="1200" height="1600" alt="Audi Q7 3.0 TDI EDC16CP34 Chip Tuning" loading="lazy">
+                            <img src="assets/audiQ7/audi-q7-233hp-remap-diagnostics-apostolov-tuning.webp" width="1200" height="1600" alt="Audi Q7 233hp Remap Diagnostics Apostolov Tuning" loading="lazy">
                             <button class="project-slider-btn next" aria-label="Next Image">&#10095;</button>
                         </div>
                         <div class="project-info">
@@ -533,10 +612,10 @@
                     <div class="gallery-item project-card">
                         <div class="project-image-container">
                             <button class="project-slider-btn prev" aria-label="Previous Image">&#10094;</button>
-                            <img src="assets/audi2.5/audi-a6-c5-25-tdi-180hp-stage1-egr-off-burgas-front.webp" alt="Audi A6 C5 2.5 TDI 180hp Remap Бургас" class="active" loading="lazy">
-                            <img src="assets/audi2.5/audi-a6-c5-25-tdi-hardcut-rev-limiter-remap.webp" alt="Audi A6 C5 2.5 TDI Hardcut Rev Limiter" loading="lazy">
-                            <img src="assets/audi2.5/audi-a6-c5-edc15vm-remap-programming.webp" alt="Audi A6 C5 EDC15VM Remap Programming" loading="lazy">
-                            <img src="assets/audi2.5/audi-a6-c5-25-tdi-180hp-stage1-egr-off-karnobat-back.webp" alt="Audi A6 C5 2.5 TDI Remap Карнобат" loading="lazy">
+                            <img src="assets/audi2.5/audi-a6-c5-25-tdi-180hp-stage1-egr-off-burgas-front.webp" width="1200" height="1600" alt="Audi A6 C5 2.5 TDI 180hp Remap Бургас" class="active" loading="lazy">
+                            <img src="assets/audi2.5/audi-a6-c5-25-tdi-hardcut-rev-limiter-remap.webp" width="1200" height="900" alt="Audi A6 C5 2.5 TDI Hardcut Rev Limiter" loading="lazy">
+                            <img src="assets/audi2.5/audi-a6-c5-edc15vm-remap-programming.webp" width="1200" height="900" alt="Audi A6 C5 EDC15VM Remap Programming" loading="lazy">
+                            <img src="assets/audi2.5/audi-a6-c5-25-tdi-180hp-stage1-egr-off-karnobat-back.webp" width="1200" height="1600" alt="Audi A6 C5 2.5 TDI Remap Карнобат" loading="lazy">
                             <button class="project-slider-btn next" aria-label="Next Image">&#10095;</button>
                         </div>
                         <div class="project-info">
@@ -563,11 +642,11 @@
                     <div class="gallery-item project-card">
                         <div class="project-image-container">
                             <button class="project-slider-btn prev" aria-label="Previous Image">&#10094;</button>
-                            <img src="assets/vw Sharan/vw-sharan-20tdi-170hp-adblue-off-edc17c46-burgas-front.webp" alt="VW Sharan 2.0 TDI 170hp AdBlue Off Бургас" class="active" loading="lazy">
-                            <img src="assets/vw Sharan/vw-sharan-adblue-warning-light-countdown.webp" alt="VW Sharan AdBlue Countdown Обратно броене" loading="lazy">
-                            <img src="assets/vw Sharan/vw-sharan-edc17c46-bench-tuning-adblue-off.webp" alt="VW Sharan EDC17C46 Bench Tuning" loading="lazy">
-                            <img src="assets/vw Sharan/vw-sharan-adblue-off-success-dashboard-clean.webp" alt="VW Sharan AdBlue Изключване Табло" loading="lazy">
-                            <img src="assets/vw Sharan/vw-sharan-20tdi-170hp-adblue-off-karnobat-back.webp" alt="VW Sharan AdBlue Off Карнобат" loading="lazy">
+                            <img src="assets/vw Sharan/vw-sharan-20tdi-170hp-adblue-off-edc17c46-burgas-front.webp" width="1200" height="900" alt="VW Sharan 2.0 TDI 170hp AdBlue Off Бургас" class="active" loading="lazy">
+                            <img src="assets/vw Sharan/vw-sharan-adblue-warning-light-countdown.webp" width="1920" height="1080" alt="VW Sharan AdBlue Countdown Обратно броене" loading="lazy">
+                            <img src="assets/vw Sharan/vw-sharan-edc17c46-bench-tuning-adblue-off.webp" width="2048" height="1536" alt="VW Sharan EDC17C46 Bench Tuning" loading="lazy">
+                            <img src="assets/vw Sharan/vw-sharan-adblue-off-success-dashboard-clean.webp" width="1200" height="900" alt="VW Sharan AdBlue Изключване Табло" loading="lazy">
+                            <img src="assets/vw Sharan/vw-sharan-20tdi-170hp-adblue-off-karnobat-back.webp" width="1200" height="900" alt="VW Sharan AdBlue Off Карнобат" loading="lazy">
                             <button class="project-slider-btn next" aria-label="Next Image">&#10095;</button>
                         </div>
                         <div class="project-info">
@@ -593,8 +672,8 @@
                     <div class="gallery-item project-card">
                         <div class="project-image-container">
                             <button class="project-slider-btn prev" aria-label="Previous Image">&#10094;</button>
-                            <img src="assets/audiA6C7adblue2015/audi-a6-c7-30-tdi-272hp-adblue-off-burgas-1.webp" alt="Audi A6 C7 3.0 TDI 272hp AdBlue Off Бургас" class="active" loading="lazy">
-                            <img src="assets/audiA6C7adblue2015/audi-a6-c7-30-tdi-272hp-adblue-off-burgas-2.webp" alt="Audi A6 C7 3.0 TDI AdBlue Изключване Бургас" loading="lazy">
+                            <img src="assets/audiA6C7adblue2015/audi-a6-c7-30-tdi-272hp-adblue-off-burgas-1.webp" width="1200" height="900" alt="Audi A6 C7 3.0 TDI 272hp AdBlue Off Бургас" class="active" loading="lazy">
+                            <img src="assets/audiA6C7adblue2015/audi-a6-c7-30-tdi-272hp-adblue-off-burgas-2.webp" width="1200" height="1600" alt="Audi A6 C7 3.0 TDI AdBlue Изключване Бургас" loading="lazy">
                             <button class="project-slider-btn next" aria-label="Next Image">&#10095;</button>
                         </div>
                         <div class="project-info">
@@ -620,10 +699,10 @@
                     <div class="gallery-item project-card">
                         <div class="project-image-container">
                             <button class="project-slider-btn prev" aria-label="Previous Image">&#10094;</button>
-                            <img src="assets/audiA3pcr2.1/audi-a3-8v-16tdi-stage1-dpf-egr-off-burgas-front.webp" alt="Audi A3 8V 1.6 TDI 105hp DPF EGR Off Бургас" class="active" loading="lazy">
-                            <img src="assets/audiA3pcr2.1/audi-a3-8v-16tdi-pcr21-flex-magicmotorsport.webp" alt="Audi A3 8V 1.6 TDI PCR 2.1 Flex Magic Motorsport Diagnostics" loading="lazy">
-                            <img src="assets/audiA3pcr2.1/audi-a3-8v-16tdi-dpf-egr-off-dashboard-clean.webp" alt="Audi A3 8V 1.6 TDI DPF EGR Off Dashboard Clean" loading="lazy">
-                            <img src="assets/audiA3pcr2.1/audi-a3-8v-16tdi-launch-x431-diagnostics-burgas.webp" alt="Audi A3 8V 1.6 TDI Launch X431 Diagnostics" loading="lazy">
+                            <img src="assets/audiA3pcr2.1/audi-a3-8v-16tdi-stage1-dpf-egr-off-burgas-front.webp" width="1200" height="1600" alt="Audi A3 8V 1.6 TDI 105hp DPF EGR Off Бургас" class="active" loading="lazy">
+                            <img src="assets/audiA3pcr2.1/audi-a3-8v-16tdi-pcr21-flex-magicmotorsport.webp" width="1200" height="1600" alt="Audi A3 8V 1.6 TDI PCR 2.1 Flex Magic Motorsport Diagnostics" loading="lazy">
+                            <img src="assets/audiA3pcr2.1/audi-a3-8v-16tdi-dpf-egr-off-dashboard-clean.webp" width="1200" height="900" alt="Audi A3 8V 1.6 TDI DPF EGR Off Dashboard Clean" loading="lazy">
+                            <img src="assets/audiA3pcr2.1/audi-a3-8v-16tdi-launch-x431-diagnostics-burgas.webp" width="1200" height="1600" alt="Audi A3 8V 1.6 TDI Launch X431 Diagnostics" loading="lazy">
                             <button class="project-slider-btn next" aria-label="Next Image">&#10095;</button>
                         </div>
                         <div class="project-info">
@@ -660,11 +739,11 @@
                     <div class="gallery-item project-card">
                         <div class="project-image-container">
                             <button class="project-slider-btn prev" aria-label="Previous Image">&#10094;</button>
-                            <img src="assets/passatPLD/vw-passat-b7-dpf-egr-off-burgas-front.jpeg" alt="VW Passat B7 2.0 TDI 140hp DPF EGR Off Бургас" class="active" loading="lazy">
-                            <img src="assets/passatPLD/vw-passat-b7-dpf-egr-off-check-engine-dash.jpeg" alt="VW Passat B7 2.0 TDI Check Engine Light Diagnostics" loading="lazy">
-                            <img src="assets/passatPLD/vw-passat-b7-dpf-egr-off-dashboard-clean.jpeg" alt="VW Passat B7 2.0 TDI DPF EGR Off Dashboard Clean" loading="lazy">
-                            <img src="assets/passatPLD/vw-passat-b7-dpf-egr-off-karnobat-back.jpeg" alt="VW Passat B7 2.0 TDI DPF EGR Off Karnobat" loading="lazy">
-                            <img src="assets/passatPLD/vw-passat-b7-dpf-egr-off-chiptuning-interior.jpeg" alt="VW Passat B7 2.0 TDI Flex Launch X431 Chiptuning Interior" loading="lazy">
+                            <img src="assets/passatPLD/vw-passat-b7-dpf-egr-off-burgas-front.webp" width="1200" height="900" alt="VW Passat B7 2.0 TDI 140hp DPF EGR Off Бургас" class="active" loading="lazy">
+                            <img src="assets/passatPLD/vw-passat-b7-dpf-egr-off-check-engine-dash.webp" width="1200" height="900" alt="VW Passat B7 2.0 TDI Check Engine Light Diagnostics" loading="lazy">
+                            <img src="assets/passatPLD/vw-passat-b7-dpf-egr-off-dashboard-clean.webp" width="1200" height="900" alt="VW Passat B7 2.0 TDI DPF EGR Off Dashboard Clean" loading="lazy">
+                            <img src="assets/passatPLD/vw-passat-b7-dpf-egr-off-karnobat-back.webp" width="1200" height="1600" alt="VW Passat B7 2.0 TDI DPF EGR Off Karnobat" loading="lazy">
+                            <img src="assets/passatPLD/vw-passat-b7-dpf-egr-off-chiptuning-interior.webp" width="1200" height="1600" alt="VW Passat B7 2.0 TDI Flex Launch X431 Chiptuning Interior" loading="lazy">
                             <button class="project-slider-btn next" aria-label="Next Image">&#10095;</button>
                         </div>
                         <div class="project-info">
@@ -700,9 +779,9 @@
                     <div class="gallery-item project-card">
                         <div class="project-image-container">
                             <button class="project-slider-btn prev" aria-label="Previous Image">&#10094;</button>
-                            <img src="assets/audia4B8tdi143hpCAGA/audi-a4-b8-2.0tdi-143hp-caga-chiptuning-remap-front.webp" alt="Audi A4 B8 2.0 TDI 143hp CAGA Stage 1 Chiptuning Remap Front" class="active" loading="lazy">
-                            <img src="assets/audia4B8tdi143hpCAGA/audi-a4-b8-2.0tdi-143hp-caga-chiptuning-remap-back.webp" alt="Audi A4 B8 2.0 TDI 143hp CAGA Stage 1 Remap Back" loading="lazy">
-                            <img src="assets/audia4B8tdi143hpCAGA/audi-a4-b8-2.0tdi-143hp-caga-chiptuning-remap-inside.webp" alt="Audi A4 B8 2.0 TDI 143hp CAGA Interior Diagnostics" loading="lazy">
+                            <img src="assets/audia4B8tdi143hpCAGA/audi-a4-b8-2.0tdi-143hp-caga-chiptuning-remap-front.webp" width="1200" height="1600" alt="Audi A4 B8 2.0 TDI 143hp CAGA Stage 1 Chiptuning Remap Front" class="active" loading="lazy">
+                            <img src="assets/audia4B8tdi143hpCAGA/audi-a4-b8-2.0tdi-143hp-caga-chiptuning-remap-back.webp" width="1200" height="900" alt="Audi A4 B8 2.0 TDI 143hp CAGA Stage 1 Remap Back" loading="lazy">
+                            <img src="assets/audia4B8tdi143hpCAGA/audi-a4-b8-2.0tdi-143hp-caga-chiptuning-remap-inside.webp" width="1200" height="900" alt="Audi A4 B8 2.0 TDI 143hp CAGA Interior Diagnostics" loading="lazy">
                             <button class="project-slider-btn next" aria-label="Next Image">&#10095;</button>
                         </div>
                         <div class="project-info">
@@ -743,8 +822,8 @@
                     <div class="gallery-item project-card">
                         <div class="project-image-container">
                             <button class="project-slider-btn prev" aria-label="Previous Image">&#10094;</button>
-                            <img src="assets/audi-a4-2.0tdi-mit/audi-a4-b7-20tdi-stage1-egr-popcorn-dpf-adblue-off-burgas-1.webp" alt="Audi A4 B7 2.0 TDI 140hp Stage 1 EGR Popcorn DPF AdBlue Off Burgas" class="active" loading="lazy">
-                            <img src="assets/audi-a4-2.0tdi-mit/audi-a4-b7-20tdi-stage1-egr-popcorn-dpf-adblue-off-burgas-2.webp" alt="Audi A4 B7 2.0 TDI чип тунинг Бургас" loading="lazy">
+                            <img src="assets/audi-a4-2.0tdi-mit/audi-a4-b7-20tdi-stage1-egr-popcorn-dpf-adblue-off-burgas-1.webp" width="1200" height="1600" alt="Audi A4 B7 2.0 TDI 140hp Stage 1 EGR Popcorn DPF AdBlue Off Burgas" class="active" loading="lazy">
+                            <img src="assets/audi-a4-2.0tdi-mit/audi-a4-b7-20tdi-stage1-egr-popcorn-dpf-adblue-off-burgas-2.webp" width="1500" height="1125" alt="Audi A4 B7 2.0 TDI чип тунинг Бургас" loading="lazy">
                             <button class="project-slider-btn next" aria-label="Next Image">&#10095;</button>
                         </div>
                         <div class="project-info">
@@ -778,9 +857,9 @@
                     <div class="gallery-item project-card">
                         <div class="project-image-container">
                             <button class="project-slider-btn prev" aria-label="Previous Image">&#10094;</button>
-                            <img src="assets/vw-caddy/vw-caddy-19tdi-105hp-stage1-egr-off-burgas-front.webp" alt="VW Caddy 1.9 TDI 105hp Stage 1 EGR OFF Burgas Front" class="active" loading="lazy">
-                            <img src="assets/vw-caddy/vw-caddy-19tdi-105hp-stage1-egr-off-burgas-back.webp" alt="VW Caddy 1.9 TDI EDC16U31 Tuning Back" loading="lazy">
-                            <img src="assets/vw-caddy/vw-caddy-19tdi-105hp-stage1-egr-off-burgas-inside.webp" alt="VW Caddy DSG Interior Tuning Burgas" loading="lazy">
+                            <img src="assets/vw-caddy/vw-caddy-19tdi-105hp-stage1-egr-off-burgas-front.webp" width="768" height="1024" alt="VW Caddy 1.9 TDI 105hp Stage 1 EGR OFF Burgas Front" class="active" loading="lazy">
+                            <img src="assets/vw-caddy/vw-caddy-19tdi-105hp-stage1-egr-off-burgas-back.webp" width="768" height="1024" alt="VW Caddy 1.9 TDI EDC16U31 Tuning Back" loading="lazy">
+                            <img src="assets/vw-caddy/vw-caddy-19tdi-105hp-stage1-egr-off-burgas-inside.webp" width="1024" height="768" alt="VW Caddy DSG Interior Tuning Burgas" loading="lazy">
                             <button class="project-slider-btn next" aria-label="Next Image">&#10095;</button>
                         </div>
                         <div class="project-info">
@@ -816,9 +895,9 @@
                     <div class="gallery-item project-card">
                         <div class="project-image-container">
                             <button class="project-slider-btn prev" aria-label="Previous Image">&#10094;</button>
-                            <img src="assets/audi239hpA4B83.0tdi/audi-a4-b8-30tdi-stage1-dpf-egr-swirlflaps-off-burgas-front.webp" alt="Audi A4 B8 3.0 TDI 239hp Stage 1 DPF EGR Swirl Flaps Off Burgas" class="active" loading="lazy">
-                            <img src="assets/audi239hpA4B83.0tdi/audi-a4-b8-30tdi-stage1-dpf-egr-swirlflaps-off-burgas-back.webp" alt="Audi A4 B8 3.0 TDI 239hp чип тунинг Бургас" loading="lazy">
-                            <img src="assets/audi239hpA4B83.0tdi/audi-a4-b8-30tdi-stage1-dpf-egr-swirlflaps-off-burgas-inside.webp" alt="Audi A4 B8 Launch X431 Flex Magic Motorsport Diagnostics" loading="lazy">
+                            <img src="assets/audi239hpA4B83.0tdi/audi-a4-b8-30tdi-stage1-dpf-egr-swirlflaps-off-burgas-front.webp" width="768" height="1024" alt="Audi A4 B8 3.0 TDI 239hp Stage 1 DPF EGR Swirl Flaps Off Burgas" class="active" loading="lazy">
+                            <img src="assets/audi239hpA4B83.0tdi/audi-a4-b8-30tdi-stage1-dpf-egr-swirlflaps-off-burgas-back.webp" width="768" height="1024" alt="Audi A4 B8 3.0 TDI 239hp чип тунинг Бургас" loading="lazy">
+                            <img src="assets/audi239hpA4B83.0tdi/audi-a4-b8-30tdi-stage1-dpf-egr-swirlflaps-off-burgas-inside.webp" width="1024" height="768" alt="Audi A4 B8 Launch X431 Flex Magic Motorsport Diagnostics" loading="lazy">
                             <button class="project-slider-btn next" aria-label="Next Image">&#10095;</button>
                         </div>
                         <div class="project-info">
@@ -860,9 +939,9 @@
                     <div class="gallery-item project-card">
                         <div class="project-image-container">
                             <button class="project-slider-btn prev" aria-label="Previous Image">&#10094;</button>
-                            <img src="assets/vwTouaregKt/vw-touareg-30tdi-stage1-dpf-egr-swirlflaps-off-burgas-front.webp" alt="VW Touareg 3.0 TDI 239hp Stage 1 DPF EGR Swirl Flaps Off Burgas" class="active" loading="lazy">
-                            <img src="assets/vwTouaregKt/vw-touareg-30tdi-stage1-dpf-egr-swirlflaps-off-burgas-back.webp" alt="VW Touareg 3.0 TDI 239hp чип тунинг Бургас" loading="lazy">
-                            <img src="assets/vwTouaregKt/vw-touareg-30tdi-stage1-dpf-egr-swirlflaps-off-burgas-inside.webp" alt="VW Touareg Launch X431 Flex Magic Motorsport Diagnostics" loading="lazy">
+                            <img src="assets/vwTouaregKt/vw-touareg-30tdi-stage1-dpf-egr-swirlflaps-off-burgas-front.webp" width="768" height="1024" alt="VW Touareg 3.0 TDI 239hp Stage 1 DPF EGR Swirl Flaps Off Burgas" class="active" loading="lazy">
+                            <img src="assets/vwTouaregKt/vw-touareg-30tdi-stage1-dpf-egr-swirlflaps-off-burgas-back.webp" width="768" height="1024" alt="VW Touareg 3.0 TDI 239hp чип тунинг Бургас" loading="lazy">
+                            <img src="assets/vwTouaregKt/vw-touareg-30tdi-stage1-dpf-egr-swirlflaps-off-burgas-inside.webp" width="1024" height="768" alt="VW Touareg Launch X431 Flex Magic Motorsport Diagnostics" loading="lazy">
                             <button class="project-slider-btn next" aria-label="Next Image">&#10095;</button>
                         </div>
                         <div class="project-info">
@@ -904,8 +983,8 @@
                     <div class="gallery-item project-card">
                         <div class="project-image-container">
                             <button class="project-slider-btn prev" aria-label="Previous Image">&#10094;</button>
-                            <img src="assets/musaAudi/audi-a4-b9-20tdi-remap-flex-edc17c64.webp" alt="Audi A4 B9 2.0 TDI EDC17C64 Remap Magic Motorsport FLEX" class="active" loading="lazy">
-                            <img src="assets/musaAudi/audi-a4-b9-20tdi-stage1-remap-burgas.webp" alt="Audi A4 B9 2.0 TDI Stage 1 и AdBlue Off Бургас - Apostolov Tuning" loading="lazy">
+                            <img src="assets/musaAudi/audi-a4-b9-20tdi-remap-flex-edc17c64.webp" width="1200" height="1600" alt="Audi A4 B9 2.0 TDI EDC17C64 Remap Magic Motorsport FLEX" class="active" loading="lazy">
+                            <img src="assets/musaAudi/audi-a4-b9-20tdi-stage1-remap-burgas.webp" width="1024" height="768" alt="Audi A4 B9 2.0 TDI Stage 1 и AdBlue Off Бургас - Apostolov Tuning" loading="lazy">
                             <button class="project-slider-btn next" aria-label="Next Image">&#10095;</button>
                         </div>
                         <div class="project-info">
@@ -948,9 +1027,9 @@
                     <div class="gallery-item project-card">
                         <div class="project-image-container">
                             <button class="project-slider-btn prev" aria-label="Previous Image">&#10094;</button>
-                            <img src="assets/vw-golf-7-16-tdi-remap-burgas-front.webp" alt="VW Golf 7 1.6 TDI 105hp Stage 1 Remap Burgas" class="active" loading="lazy">
-                            <img src="assets/vw-golf-7-16-tdi-remap-burgas-engine-diagnostic.webp" alt="VW Golf 7 EDC17C64 Diagnostics Magic Motorsport FLEX" loading="lazy">
-                            <img src="assets/vw-golf-7-16-tdi-remap-burgas-side.webp" alt="VW Golf 7 1.6 TDI EGR DPF Off Popcorn Burgas" loading="lazy">
+                            <img src="assets/vw-golf-7-16-tdi-remap-burgas-front.webp" width="768" height="1024" alt="VW Golf 7 1.6 TDI 105hp Stage 1 Remap Burgas" class="active" loading="lazy">
+                            <img src="assets/vw-golf-7-16-tdi-remap-burgas-engine-diagnostic.webp" width="1024" height="768" alt="VW Golf 7 EDC17C64 Diagnostics Magic Motorsport FLEX" loading="lazy">
+                            <img src="assets/vw-golf-7-16-tdi-remap-burgas-side.webp" width="768" height="1024" alt="VW Golf 7 1.6 TDI EGR DPF Off Popcorn Burgas" loading="lazy">
                             <button class="project-slider-btn next" aria-label="Next Image">&#10095;</button>
                         </div>
                         <div class="project-info">
@@ -990,8 +1069,8 @@
                     <div class="gallery-item project-card">
                         <div class="project-image-container">
                             <button class="project-slider-btn prev" aria-label="Previous Image">&#10094;</button>
-                            <img src="assets/vw-golf-plus-19tdi-remap-burgas.webp" alt="VW Golf Plus 1.9 TDI Stage 1 Remap EGR Off Popcorn Burgas" class="active" loading="lazy">
-                            <img src="assets/vw-golf-plus-19tdi-edc16u34-diagnostics-burgas.webp" alt="VW Golf Plus 1.9 TDI EDC16U34 Diagnostics Launch X431" loading="lazy">
+                            <img src="assets/vw-golf-plus-19tdi-remap-burgas.webp" width="768" height="1024" alt="VW Golf Plus 1.9 TDI Stage 1 Remap EGR Off Popcorn Burgas" class="active" loading="lazy">
+                            <img src="assets/vw-golf-plus-19tdi-edc16u34-diagnostics-burgas.webp" width="1024" height="768" alt="VW Golf Plus 1.9 TDI EDC16U34 Diagnostics Launch X431" loading="lazy">
                             <button class="project-slider-btn next" aria-label="Next Image">&#10095;</button>
                         </div>
                         <div class="project-info">
@@ -1030,8 +1109,8 @@
                     <div class="gallery-item project-card">
                         <div class="project-image-container">
                             <button class="project-slider-btn prev" aria-label="Previous Image">&#10094;</button>
-                            <img src="assets/vw-touareg-30tdi-remap-burgas.webp" alt="VW Touareg 3.0 TDI 2013 Remap Stage 1 DPF EGR Off" class="active" loading="lazy">
-                            <img src="assets/vw-touareg-dpf-removal.webp" alt="VW Touareg 3.0 TDI 2013 Механично премахване на DPF" loading="lazy">
+                            <img src="assets/vw-touareg-30tdi-remap-burgas.webp" width="768" height="1024" alt="VW Touareg 3.0 TDI 2013 Remap Stage 1 DPF EGR Off" class="active" loading="lazy">
+                            <img src="assets/vw-touareg-dpf-removal.webp" width="666" height="1182" alt="VW Touareg 3.0 TDI 2013 Механично премахване на DPF" loading="lazy">
                             <button class="project-slider-btn next" aria-label="Next Image">&#10095;</button>
                         </div>
                         <div class="project-info">
@@ -1066,7 +1145,7 @@
                     <!-- Audi A6 -->
                     <div class="gallery-item project-card">
                         <div class="project-image-container">
-                            <img src="assets/audi-a6-30tdi-stage1-remap-burgas.webp" alt="Audi A6 3.0 TDI Stage 1 Remap P0234 Overboost Fix Diagnosis" class="active" loading="lazy">
+                            <img src="assets/audi-a6-30tdi-stage1-remap-burgas.webp" width="1718" height="1527" alt="Audi A6 3.0 TDI Stage 1 Remap P0234 Overboost Fix Diagnosis" class="active" loading="lazy">
                         </div>
                         <div class="project-info">
                             <h3>🚗 Audi A6 3.0 TDI (224hp)</h3>
@@ -1101,7 +1180,7 @@
                     <!-- Skoda Octavia -->
                     <div class="gallery-item project-card">
                         <div class="project-image-container">
-                            <img src="assets/skoda-octavia-immo-off-edc16.webp" alt="Skoda Octavia 2 1.9 TDI Immo Off EDC16U34 Bench Mode" class="active" loading="lazy">
+                            <img src="assets/skoda-octavia-immo-off-edc16.webp" width="1024" height="768" alt="Skoda Octavia 2 1.9 TDI Immo Off EDC16U34 Bench Mode" class="active" loading="lazy">
                         </div>
                         <div class="project-info">
                             <h3>🚗 Skoda Octavia 2 1.9 TDI</h3>
@@ -1133,7 +1212,7 @@
                     <!-- VW Polo -->
                     <div class="gallery-item project-card">
                         <div class="project-image-container">
-                            <img src="assets/vw-polo-16tdi-stage1-remap-burgas.webp" alt="Чип тунинг VW Polo 1.6TDI Stage 1 EGR DPF Off" class="active" loading="lazy">
+                            <img src="assets/vw-polo-16tdi-stage1-remap-burgas.webp" width="1045" height="901" alt="Чип тунинг VW Polo 1.6TDI Stage 1 EGR DPF Off" class="active" loading="lazy">
                         </div>
                         <div class="project-info">
                             <h3>🚗 VW Polo 1.6TDI 2010г.</h3>
@@ -1164,7 +1243,7 @@
                     <!-- VW Passat B6 -->
                     <div class="gallery-item project-card">
                         <div class="project-image-container">
-                            <img src="assets/vw-passat-b6-20tdi-remap-burgas.webp" alt="Чип тунинг VW Passat B6 2.0TDI Stage 1 EGR DPF Off" class="active" loading="lazy">
+                            <img src="assets/vw-passat-b6-20tdi-remap-burgas.webp" width="2048" height="1536" alt="Чип тунинг VW Passat B6 2.0TDI Stage 1 EGR DPF Off" class="active" loading="lazy">
                         </div>
                         <div class="project-info">
                             <h3>🚗 VW Passat B6 2.0TDI</h3>
@@ -1196,7 +1275,7 @@
                     <!-- Audi A3 -->
                     <div class="gallery-item project-card">
                         <div class="project-image-container">
-                            <img src="assets/audi-a3-20tdi-bkd-remap-burgas.webp" alt="Чип тунинг Audi A3 8P 2.0 TDI BKD Stage 1 VCDS VAGCOM" class="active" loading="lazy">
+                            <img src="assets/audi-a3-20tdi-bkd-remap-burgas.webp" width="768" height="1024" alt="Чип тунинг Audi A3 8P 2.0 TDI BKD Stage 1 VCDS VAGCOM" class="active" loading="lazy">
                         </div>
                         <div class="project-info">
                             <h3>🚗 Audi A3 8P 2.0 TDI (BKD)</h3>
@@ -1228,7 +1307,7 @@
                     <!-- VW Bora -->
                     <div class="gallery-item project-card">
                         <div class="project-image-container">
-                            <img src="assets/vw-bora-19tdi-ajm-popcorn-burgas.webp" alt="Чип тунинг VW Bora 1.9 TDI AJM PD Stage 1 Popcorn Launch Control" class="active" loading="lazy">
+                            <img src="assets/vw-bora-19tdi-ajm-popcorn-burgas.webp" width="1200" height="1600" alt="Чип тунинг VW Bora 1.9 TDI AJM PD Stage 1 Popcorn Launch Control" class="active" loading="lazy">
                         </div>
                         <div class="project-info">
                             <h3>🚗 VW Bora 1.9 TDI (AJM)</h3>
@@ -1254,7 +1333,7 @@
                     <!-- Лаборатория -->
                     <div class="gallery-item project-card">
                         <div class="project-image-container">
-                            <img src="assets/chiptuning-bench-mode-laboratory.webp" alt="Лаборатория за чип тунинг Bench Mode EDC17 ремонт компютри" class="active" loading="lazy">
+                            <img src="assets/chiptuning-bench-mode-laboratory.webp" width="1024" height="768" alt="Лаборатория за чип тунинг Bench Mode EDC17 ремонт компютри" class="active" loading="lazy">
                         </div>
                         <div class="project-info">
                             <h3>💻 Лаборатория & Електроника</h3>
@@ -1295,8 +1374,44 @@
 
     <footer>
         <div class="container">
-            <p>&copy; 2026 Apostolov Tuning. Всички права запазени.</p>
-            <p style="font-size: 0.8rem; color: #444; margin-top: 5px;">Professional Chip Tuning, Remap, DPF/EGR OFF & Diagnostics in Karnobat, Burgas, Aitos, Yambol, Sliven, Shumen.</p>
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h3>APOSTOLOV TUNING</h3>
+                    <p>Индивидуален чип тунинг (Stage 1/2), ремап и 1:1 клониране на скоростни кутии (DSG / ZF), DPF, EGR, AdBlue (SCR), Вихрови клапи и дилърска диагностика.</p>
+                    <p>📍 <strong>База:</strong> гр. Карнобат (Индустриална зона) &amp; <strong>Мобилен сервиз:</strong> Бургас, Айтос, Поморие, Несебър, Ямбол, Сливен, Шумен</p>
+                    <p>🕒 <strong>Работно време:</strong> Пон – Нед: 08:00 – 22:00 ч.</p>
+                    <div class="footer-contact-links">
+                        <a href="tel:+359896084735">📞 0896 084 735</a>
+                        <a href="https://wa.me/359896084735" target="_blank">💬 WhatsApp</a>
+                        <a href="viber://chat?number=%2B359883309806">💜 Viber</a>
+                        <a href="https://www.google.com/maps/search/?api=1&query=Apostolov+Tuning&query_place_id=0xd9ab01742ca3824a" target="_blank">⭐ Google Maps</a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h3>Основни Услуги</h3>
+                    <ul class="footer-links">
+                        <li><a href="/">Начало и Топ Проекти</a></li>
+                        <li><a href="chiptuning.html">Чип Тунинг (Stage 1/2 &amp; DSG/ZF)</a></li>
+                        <li><a href="eco-off.html">DPF / EGR / AdBlue / Вихрови клапи</a></li>
+                        <li><a href="/#contacts">Контакти и Записване</a></li>
+                        <li><a href="privacy-policy.html">Политика за поверителност</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>Чип Тунинг по Марки</h3>
+                    <ul class="footer-links">
+                        <li><a href="chiptuning-vag.html">VAG (VW, Audi, Skoda, Seat)</a></li>
+                        <li><a href="chiptuning-bmw.html">BMW (E, F, G серии &amp; ZF 6HP/8HP)</a></li>
+                        <li><a href="chiptuning-mercedes.html">Mercedes-Benz (CDI / BlueTEC)</a></li>
+                        <li><a href="chiptuning-psa.html">PSA &amp; Френски (Peugeot, Citroen, Renault)</a></li>
+                        <li><a href="chiptuning-asian.html">Японски, Корейски и Китайски</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; <span id="current-year">2026</span> Apostolov Tuning. Всички права запазени.</p>
+                <a href="privacy-policy.html">Политика за поверителност</a>
+            </div>
         </div>
     </footer>
     <a href="tel:+359896084735" class="floating-call">
@@ -1328,6 +1443,6 @@
         <button class="lightbox-nav next">&#10095;</button>
     </div>
 
-    <script src="script.js?v=4"></script>
+    <script src="script.js?v=5"></script>
 </body>
 </html>

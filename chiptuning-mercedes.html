@@ -13,7 +13,7 @@
       gtag('js', new Date());
       gtag('config', 'G-2FNQPJVM4G');
     </script>
-    <link rel="icon" href="assets/logo.webp" type="image/jpeg">
+    <link rel="icon" href="assets/logo.webp" type="image/webp">
     <link rel="apple-touch-icon" href="assets/logo.webp">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -32,7 +32,34 @@
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
-      "@type": ["Service", "Product"],
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Начало",
+          "item": "https://apostolovtuning.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Чип Тунинг",
+          "item": "https://apostolovtuning.com/chiptuning.html"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Mercedes-Benz",
+          "item": "https://apostolovtuning.com/chiptuning-mercedes.html"
+        }
+      ]
+    }
+    </script>
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Service",
       "name": "Чип Тунинг, AdBlue/DPF/EGR Решения и Скоростни Кутии за Mercedes-Benz Бургас",
       "serviceType": "Mercedes-Benz Chip Tuning, AdBlue/DPF/Swirl Flaps OFF & 7G/9G-Tronic TCU",
       "image": "https://apostolovtuning.com/assets/logo.webp",
@@ -46,37 +73,51 @@
         "@id": "https://apostolovtuning.com/#organization",
         "name": "Apostolov Tuning",
         "url": "https://apostolovtuning.com",
-        "telephone": "+359896084735"
+        "telephone": "+359896084735",
+        "aggregateRating": {
+          "@type": "AggregateRating",
+          "ratingValue": "5.0",
+          "bestRating": "5",
+          "worstRating": "1",
+          "ratingCount": "40",
+          "reviewCount": "40"
+        },
+        "review": [
+          {
+            "@type": "Review",
+            "author": {
+              "@type": "Person",
+              "name": "Клиент на Apostolov Tuning (Mercedes-Benz)"
+            },
+            "reviewRating": {
+              "@type": "Rating",
+              "ratingValue": "5",
+              "bestRating": "5"
+            },
+            "reviewBody": "Много сме доволни! Момчето е професионалист, бърза и коректна работа. Малко са свестните майстори..ценете ги, когато ги откриете. Благодарим Стоян!"
+          }
+        ]
       },
       "areaServed": [
-        { "@type": "City", "name": "Бургас" },
-        { "@type": "City", "name": "Карнобат" },
-        { "@type": "City", "name": "Айтос" },
-        { "@type": "City", "name": "Ямбол" },
-        { "@type": "City", "name": "Сливен" }
-      ],
-      "offers": {
-        "@type": "AggregateOffer",
-        "priceCurrency": "BGN",
-        "lowPrice": "200",
-        "highPrice": "1200",
-        "offerCount": "12",
-        "availability": "https://schema.org/InStock"
-      },
-      "aggregateRating": {
-        "@type": "AggregateRating",
-        "ratingValue": "5.0",
-        "bestRating": "5",
-        "worstRating": "1",
-        "ratingCount": "40",
-        "reviewCount": "40"
-      },
-      "review": [
         {
-          "@type": "Review",
-          "author": { "@type": "Person", "name": "Клиент на Apostolov Tuning (Mercedes-Benz)" },
-          "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" },
-          "reviewBody": "Много сме доволни! Момчето е професионалист, бърза и коректна работа. Малко са свестните майстори..ценете ги, когато ги откриете. Благодарим Стоян!"
+          "@type": "City",
+          "name": "Бургас"
+        },
+        {
+          "@type": "City",
+          "name": "Карнобат"
+        },
+        {
+          "@type": "City",
+          "name": "Айтос"
+        },
+        {
+          "@type": "City",
+          "name": "Ямбол"
+        },
+        {
+          "@type": "City",
+          "name": "Сливен"
         }
       ]
     }
@@ -107,7 +148,7 @@
     }
     </script>
 
-    <link rel="stylesheet" href="style.css?v=4">
+    <link rel="stylesheet" href="style.css?v=5">
     <style>
         .gallery-grid { align-items: start !important; }
         .project-card { height: auto !important; }
@@ -123,13 +164,30 @@
         .project-image-container img.active { opacity: 1; z-index: 2; position: absolute !important; display: block; }
         .btn-collapse { background: none; border: none; color: var(--primary-color); cursor: pointer; font-weight: 600; font-size: 0.9rem; padding: 10px 0 0 0; display: block; width: 100%; text-align: left; }
     </style>
+    <!-- Meta Pixel Code -->
+    <script>
+    !function(f,b,e,v,n,t,s)
+    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+    n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];
+    s.parentNode.insertBefore(t,s)}(window, document,'script',
+    'https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', '2091649391769605');
+    fbq('track', 'PageView');
+    </script>
+    <noscript><img height="1" width="1" style="display:none"
+    src="https://www.facebook.com/tr?id=2091649391769605&ev=PageView&noscript=1"
+    /></noscript>
+    <!-- End Meta Pixel Code -->
 </head>
 <body>
     <header>
         <div class="container header-content">
             <div class="logo">
                 <a href="/" style="display:flex; gap:10px; align-items:center;">
-                    <img src="assets/logo.webp" alt="Apostolov Tuning Logo">
+                    <img src="assets/logo.webp" width="2048" height="2048" alt="Apostolov Tuning Logo">
                     <span class="brand-name">APOSTOLOV TUNING</span>
                 </a>
             </div>
@@ -179,11 +237,11 @@
                     <div class="gallery-item project-card">
                         <div class="project-image-container">
                             <button class="project-slider-btn prev" aria-label="Previous Image">&#10094;</button>
-                            <img src="assets/glc2/mercedes-glc-250d-204hp-adblue-scr-off-burgas-front.webp" alt="Mercedes-Benz GLC 250d 204hp AdBlue SCR Off Бургас" class="active" loading="lazy">
-                            <img src="assets/glc2/mercedes-glc-250d-om651-edc17cp57-adblue-off-burgas-rear.webp" alt="Mercedes GLC 250d 4MATIC Bosch EDC17CP57 премахване на AdBlue Карнобат" loading="lazy">
-                            <img src="assets/glc2/mercedes-glc-250d-launch-x431-diagnostics-mms-flex-programming.webp" alt="Диагностика с Launch X431 и програмиране с Magicmotorsport Flex Mercedes GLC 250d" loading="lazy">
-                            <img src="assets/glc2/mercedes-glc-250d-edc17cp57-mms-flex-obd-programming-success.webp" alt="Magicmotorsport Flex успешно OBD програмиране на EDC17CP57" loading="lazy">
-                            <img src="assets/glc2/mercedes-glc-250d-adblue-scr-module-disconnect-trunk.webp" alt="Физическо изключване на AdBlue модула в багажника на Mercedes GLC" loading="lazy">
+                            <img src="assets/glc2/mercedes-glc-250d-204hp-adblue-scr-off-burgas-front.webp" width="1200" height="1600" alt="Mercedes-Benz GLC 250d 204hp AdBlue SCR Off Бургас" class="active" loading="lazy">
+                            <img src="assets/glc2/mercedes-glc-250d-om651-edc17cp57-adblue-off-burgas-rear.webp" width="1200" height="1600" alt="Mercedes GLC 250d 4MATIC Bosch EDC17CP57 премахване на AdBlue Карнобат" loading="lazy">
+                            <img src="assets/glc2/mercedes-glc-250d-launch-x431-diagnostics-mms-flex-programming.webp" width="1200" height="900" alt="Диагностика с Launch X431 и програмиране с Magicmotorsport Flex Mercedes GLC 250d" loading="lazy">
+                            <img src="assets/glc2/mercedes-glc-250d-edc17cp57-mms-flex-obd-programming-success.webp" width="1200" height="900" alt="Magicmotorsport Flex успешно OBD програмиране на EDC17CP57" loading="lazy">
+                            <img src="assets/glc2/mercedes-glc-250d-adblue-scr-module-disconnect-trunk.webp" width="1200" height="900" alt="Физическо изключване на AdBlue модула в багажника на Mercedes GLC" loading="lazy">
                             <button class="project-slider-btn next" aria-label="Next Image">&#10095;</button>
                         </div>
                         <div class="project-info">
@@ -218,10 +276,10 @@
                     <div class="gallery-item project-card">
                         <div class="project-image-container">
                             <button class="project-slider-btn prev" aria-label="Previous Image">&#10094;</button>
-                            <img src="assets/MBvito/mercedes-vito-w639-115-cdi-150hp-stage1-dpf-egr-swirl-off-burgas-front.webp" alt="Mercedes-Benz W639 Vito 115 CDI 150hp Stage 1 DPF EGR Swirl Flaps Off чип тунинг Бургас" class="active" loading="lazy">
-                            <img src="assets/MBvito/mercedes-vito-w639-115-cdi-edc16c2-stage1-remap-burgas-rear.webp" alt="Mercedes Vito W639 115 CDI 150hp Bosch EDC16C2 ремап Stage 1 Бургас" loading="lazy">
-                            <img src="assets/MBvito/mercedes-vito-w639-115-cdi-edc16c2-remap-diagnostics-inside.webp" alt="Програмиране на компютър Bosch EDC16C2 на Mercedes W639 Vito 115 CDI Apostolov Tuning" loading="lazy">
-                            <img src="assets/MBvito/mercedes-vito-w639-115-cdi-om646-engine-egr-swirl-flaps-off-karnobat.webp" alt="Двигател 2.2 CDI OM646 Mercedes Vito 115 CDI софтуерно изолиране на ДПФ ЕГР и вихрови клапи Карнобат" loading="lazy">
+                            <img src="assets/MBvito/mercedes-vito-w639-115-cdi-150hp-stage1-dpf-egr-swirl-off-burgas-front.webp" width="1200" height="1600" alt="Mercedes-Benz W639 Vito 115 CDI 150hp Stage 1 DPF EGR Swirl Flaps Off чип тунинг Бургас" class="active" loading="lazy">
+                            <img src="assets/MBvito/mercedes-vito-w639-115-cdi-edc16c2-stage1-remap-burgas-rear.webp" width="1200" height="900" alt="Mercedes Vito W639 115 CDI 150hp Bosch EDC16C2 ремап Stage 1 Бургас" loading="lazy">
+                            <img src="assets/MBvito/mercedes-vito-w639-115-cdi-edc16c2-remap-diagnostics-inside.webp" width="1200" height="900" alt="Програмиране на компютър Bosch EDC16C2 на Mercedes W639 Vito 115 CDI Apostolov Tuning" loading="lazy">
+                            <img src="assets/MBvito/mercedes-vito-w639-115-cdi-om646-engine-egr-swirl-flaps-off-karnobat.webp" width="1200" height="900" alt="Двигател 2.2 CDI OM646 Mercedes Vito 115 CDI софтуерно изолиране на ДПФ ЕГР и вихрови клапи Карнобат" loading="lazy">
                             <button class="project-slider-btn next" aria-label="Next Image">&#10095;</button>
                         </div>
                         <div class="project-info">
@@ -254,12 +312,12 @@
                     <div class="gallery-item project-card">
                         <div class="project-image-container">
                             <button class="project-slider-btn prev" aria-label="Previous Image">&#10094;</button>
-                            <img src="assets/chrysler300cStage2/chrysler-300c-30-crd-218hp-stage2-gt2060-burgas-front.webp" alt="Chrysler 300C 3.0 CRD OM642 218hp Stage 2 чип тунинг турбо GT2060 Бургас" class="active" loading="lazy">
-                            <img src="assets/chrysler300cStage2/chrysler-300c-30-crd-stage2-dpf-egr-swirl-off-burgas-rear.webp" alt="Chrysler 300C 3.0 CRD Stage 2 DPF EGR Swirl Flaps Off Бургас" loading="lazy">
-                            <img src="assets/chrysler300cStage2/chrysler-300c-30-crd-om642-gt2060-turbo-engine-remap.webp" alt="Двигател 3.0 CRD OM642 с турбо GT2060 на 1.8 bar Boost ремап" loading="lazy">
-                            <img src="assets/chrysler300cStage2/chrysler-300c-5g-tronic-tcu-stage1-remap-diagnostics.webp" alt="TCU Stage 1 ремап на скоростна кутия 5G-Tronic Chrysler 300C" loading="lazy">
-                            <img src="assets/chrysler300cStage2/chrysler-300c-edc16cp31-bench-programming-remap-burgas.webp" alt="Bosch EDC16CP31 Bench програмиране и софтуерна настройка Apostolov Tuning" loading="lazy">
-                            <img src="assets/chrysler300cStage2/chrysler-300c-30-crd-hardcut-4600rpm-chiptuning-karnobat.webp" alt="Chrysler 300C 3.0 CRD прекъсвач 4600 оборота чип тунинг Карнобат" loading="lazy">
+                            <img src="assets/chrysler300cStage2/chrysler-300c-30-crd-218hp-stage2-gt2060-burgas-front.webp" width="1200" height="1600" alt="Chrysler 300C 3.0 CRD OM642 218hp Stage 2 чип тунинг турбо GT2060 Бургас" class="active" loading="lazy">
+                            <img src="assets/chrysler300cStage2/chrysler-300c-30-crd-stage2-dpf-egr-swirl-off-burgas-rear.webp" width="1200" height="1600" alt="Chrysler 300C 3.0 CRD Stage 2 DPF EGR Swirl Flaps Off Бургас" loading="lazy">
+                            <img src="assets/chrysler300cStage2/chrysler-300c-30-crd-om642-gt2060-turbo-engine-remap.webp" width="1200" height="1600" alt="Двигател 3.0 CRD OM642 с турбо GT2060 на 1.8 bar Boost ремап" loading="lazy">
+                            <img src="assets/chrysler300cStage2/chrysler-300c-5g-tronic-tcu-stage1-remap-diagnostics.webp" width="1200" height="1600" alt="TCU Stage 1 ремап на скоростна кутия 5G-Tronic Chrysler 300C" loading="lazy">
+                            <img src="assets/chrysler300cStage2/chrysler-300c-edc16cp31-bench-programming-remap-burgas.webp" width="1200" height="2134" alt="Bosch EDC16CP31 Bench програмиране и софтуерна настройка Apostolov Tuning" loading="lazy">
+                            <img src="assets/chrysler300cStage2/chrysler-300c-30-crd-hardcut-4600rpm-chiptuning-karnobat.webp" width="1200" height="1600" alt="Chrysler 300C 3.0 CRD прекъсвач 4600 оборота чип тунинг Карнобат" loading="lazy">
                             <button class="project-slider-btn next" aria-label="Next Image">&#10095;</button>
                         </div>
                         <div class="project-info">
@@ -293,9 +351,9 @@
                     <div class="gallery-item project-card">
                         <div class="project-image-container">
                             <button class="project-slider-btn prev" aria-label="Previous Image">&#10094;</button>
-                            <img src="assets/mercedesML/mercedes-ml-320-cdi-224hp-stage1-dpf-egr-swirl-off-burgas-1.webp" alt="Mercedes ML 320 CDI чип тунинг Бургас" class="active" loading="lazy">
-                            <img src="assets/mercedesML/mercedes-ml-320-cdi-224hp-stage1-dpf-egr-swirl-off-burgas-2.webp" alt="DPF Off EGR Off Mercedes OM642" loading="lazy">
-                            <img src="assets/mercedesML/mercedes-ml-320-cdi-224hp-stage1-dpf-egr-swirl-off-burgas-3.webp" alt="Swirl Flaps Off ML 320 CDI Карнобат" loading="lazy">
+                            <img src="assets/mercedesML/mercedes-ml-320-cdi-224hp-stage1-dpf-egr-swirl-off-burgas-1.webp" width="1200" height="900" alt="Mercedes ML 320 CDI чип тунинг Бургас" class="active" loading="lazy">
+                            <img src="assets/mercedesML/mercedes-ml-320-cdi-224hp-stage1-dpf-egr-swirl-off-burgas-2.webp" width="1200" height="900" alt="DPF Off EGR Off Mercedes OM642" loading="lazy">
+                            <img src="assets/mercedesML/mercedes-ml-320-cdi-224hp-stage1-dpf-egr-swirl-off-burgas-3.webp" width="1200" height="900" alt="Swirl Flaps Off ML 320 CDI Карнобат" loading="lazy">
                             <button class="project-slider-btn next" aria-label="Next Image">&#10095;</button>
                         </div>
                         <div class="project-info">
@@ -321,9 +379,9 @@
     <div class="gallery-item project-card">
         <div class="project-image-container">
             <button class="project-slider-btn prev" aria-label="Previous Image">&#10094;</button>
-            <img src="assets/mercedes_clk270_w209/mercedes-clk-w209-270cdi-stage1-egr-swirlflaps-off-popcorn-burgas-front.webp" alt="Mercedes CLK W209 270 CDI Stage 1 Tuning Burgas" class="active" loading="lazy">
-            <img src="assets/mercedes_clk270_w209/mercedes-clk-w209-270cdi-stage1-egr-swirlflaps-off-popcorn-burgas-back.webp" alt="Mercedes CLK W209 270 CDI EGR Swirl Flaps OFF Popcorn" loading="lazy">
-            <img src="assets/mercedes_clk270_w209/mercedes-clk-w209-270cdi-stage1-egr-swirlflaps-off-popcorn-burgas-inside.webp" alt="Mercedes CLK W209 270 CDI EDC15C6 Tuning" loading="lazy">
+            <img src="assets/mercedes_clk270_w209/mercedes-clk-w209-270cdi-stage1-egr-swirlflaps-off-popcorn-burgas-front.webp" width="768" height="1024" alt="Mercedes CLK W209 270 CDI Stage 1 Tuning Burgas" class="active" loading="lazy">
+            <img src="assets/mercedes_clk270_w209/mercedes-clk-w209-270cdi-stage1-egr-swirlflaps-off-popcorn-burgas-back.webp" width="768" height="1024" alt="Mercedes CLK W209 270 CDI EGR Swirl Flaps OFF Popcorn" loading="lazy">
+            <img src="assets/mercedes_clk270_w209/mercedes-clk-w209-270cdi-stage1-egr-swirlflaps-off-popcorn-burgas-inside.webp" width="1024" height="768" alt="Mercedes CLK W209 270 CDI EDC15C6 Tuning" loading="lazy">
             <button class="project-slider-btn next" aria-label="Next Image">&#10095;</button>
         </div>
         <div class="project-info">
@@ -357,10 +415,10 @@
     <div class="gallery-item project-card">
         <div class="project-image-container">
             <button class="project-slider-btn prev" aria-label="Previous Image">&#10094;</button>
-            <img src="assets/mercedes-glc250-tuning-front-burgas.webp" alt="Mercedes GLC 250 2016 AdBlue EGR OFF Burgas - Apostolov Tuning" class="active" loading="lazy">
-            <img src="assets/mercedes-glc250-adblue-egr-off-burgas.webp" alt="Mercedes GLC 250 Flex Tuning Device" loading="lazy">
-            <img src="assets/mercedes-glc250-adblue-dash-burgas.webp" alt="Mercedes GLC 250 AdBlue Status No Errors" loading="lazy">
-            <img src="assets/mercedes-glc250-tuning-rear-burgas.webp" alt="Mercedes GLC 250 Stage 1 Remap Dynamic Upgrade" loading="lazy">
+            <img src="assets/mercedes-glc250-tuning-front-burgas.webp" width="768" height="1024" alt="Mercedes GLC 250 2016 AdBlue EGR OFF Burgas - Apostolov Tuning" class="active" loading="lazy">
+            <img src="assets/mercedes-glc250-adblue-egr-off-burgas.webp" width="1024" height="768" alt="Mercedes GLC 250 Flex Tuning Device" loading="lazy">
+            <img src="assets/mercedes-glc250-adblue-dash-burgas.webp" width="768" height="1024" alt="Mercedes GLC 250 AdBlue Status No Errors" loading="lazy">
+            <img src="assets/mercedes-glc250-tuning-rear-burgas.webp" width="1200" height="1600" alt="Mercedes GLC 250 Stage 1 Remap Dynamic Upgrade" loading="lazy">
             <button class="project-slider-btn next" aria-label="Next Image">&#10095;</button>
         </div>
         <div class="project-info">
@@ -405,7 +463,7 @@
                     <!-- Mercedes C320 CDI -->
                     <div class="gallery-item project-card">
                         <div class="project-image-container">
-                            <img src="assets/mercedes-c320cdi-egr-dpf-off-burgas.webp" alt="Mercedes W204 C320 CDI EGR DPF Off EDC17CP01 Tuning Burgas" class="active" loading="lazy">
+                            <img src="assets/mercedes-c320cdi-egr-dpf-off-burgas.webp" width="1200" height="1600" alt="Mercedes W204 C320 CDI EGR DPF Off EDC17CP01 Tuning Burgas" class="active" loading="lazy">
                         </div>
                         <div class="project-info">
                             <h3>🚗 Mercedes-Benz C320 CDI (224hp)</h3>
@@ -437,7 +495,7 @@
                     <!-- Mercedes W211 -->
                     <div class="gallery-item project-card">
                         <div class="project-image-container">
-                            <img src="assets/mercedes-w211-e200cdi-remap-burgas.webp" alt="Чип тунинг Mercedes W211 E200 CDI Stage 1 Xentry DAS Swirl Flaps" class="active" loading="lazy">
+                            <img src="assets/mercedes-w211-e200cdi-remap-burgas.webp" width="1080" height="1920" alt="Чип тунинг Mercedes W211 E200 CDI Stage 1 Xentry DAS Swirl Flaps" class="active" loading="lazy">
                         </div>
                         <div class="project-info">
                             <h3>🚗 Mercedes W211 E200 CDI</h3>
@@ -475,8 +533,44 @@
 
     <footer>
         <div class="container">
-            <p>&copy; 2026 Apostolov Tuning. Всички права запазени.</p>
-            <p style="font-size: 0.8rem; color: #444; margin-top: 5px;">Professional Chip Tuning, Remap, DPF/EGR OFF & Diagnostics in Karnobat, Burgas, Aitos, Yambol, Sliven, Shumen.</p>
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h3>APOSTOLOV TUNING</h3>
+                    <p>Индивидуален чип тунинг (Stage 1/2), ремап и 1:1 клониране на скоростни кутии (DSG / ZF), DPF, EGR, AdBlue (SCR), Вихрови клапи и дилърска диагностика.</p>
+                    <p>📍 <strong>База:</strong> гр. Карнобат (Индустриална зона) &amp; <strong>Мобилен сервиз:</strong> Бургас, Айтос, Поморие, Несебър, Ямбол, Сливен, Шумен</p>
+                    <p>🕒 <strong>Работно време:</strong> Пон – Нед: 08:00 – 22:00 ч.</p>
+                    <div class="footer-contact-links">
+                        <a href="tel:+359896084735">📞 0896 084 735</a>
+                        <a href="https://wa.me/359896084735" target="_blank">💬 WhatsApp</a>
+                        <a href="viber://chat?number=%2B359883309806">💜 Viber</a>
+                        <a href="https://www.google.com/maps/search/?api=1&query=Apostolov+Tuning&query_place_id=0xd9ab01742ca3824a" target="_blank">⭐ Google Maps</a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h3>Основни Услуги</h3>
+                    <ul class="footer-links">
+                        <li><a href="/">Начало и Топ Проекти</a></li>
+                        <li><a href="chiptuning.html">Чип Тунинг (Stage 1/2 &amp; DSG/ZF)</a></li>
+                        <li><a href="eco-off.html">DPF / EGR / AdBlue / Вихрови клапи</a></li>
+                        <li><a href="/#contacts">Контакти и Записване</a></li>
+                        <li><a href="privacy-policy.html">Политика за поверителност</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>Чип Тунинг по Марки</h3>
+                    <ul class="footer-links">
+                        <li><a href="chiptuning-vag.html">VAG (VW, Audi, Skoda, Seat)</a></li>
+                        <li><a href="chiptuning-bmw.html">BMW (E, F, G серии &amp; ZF 6HP/8HP)</a></li>
+                        <li><a href="chiptuning-mercedes.html">Mercedes-Benz (CDI / BlueTEC)</a></li>
+                        <li><a href="chiptuning-psa.html">PSA &amp; Френски (Peugeot, Citroen, Renault)</a></li>
+                        <li><a href="chiptuning-asian.html">Японски, Корейски и Китайски</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; <span id="current-year">2026</span> Apostolov Tuning. Всички права запазени.</p>
+                <a href="privacy-policy.html">Политика за поверителност</a>
+            </div>
         </div>
     </footer>
     <a href="tel:+359896084735" class="floating-call">
@@ -508,6 +602,6 @@
         <button class="lightbox-nav next">&#10095;</button>
     </div>
 
-    <script src="script.js?v=4"></script>
+    <script src="script.js?v=5"></script>
 </body>
 </html>

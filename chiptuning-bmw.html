@@ -13,7 +13,7 @@
       gtag('js', new Date());
       gtag('config', 'G-2FNQPJVM4G');
     </script>
-    <link rel="icon" href="assets/logo.webp" type="image/jpeg">
+    <link rel="icon" href="assets/logo.webp" type="image/webp">
     <link rel="apple-touch-icon" href="assets/logo.webp">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -32,7 +32,34 @@
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
-      "@type": ["Service", "Product"],
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Начало",
+          "item": "https://apostolovtuning.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Чип Тунинг",
+          "item": "https://apostolovtuning.com/chiptuning.html"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "BMW (E, F, G серии & ZF)",
+          "item": "https://apostolovtuning.com/chiptuning-bmw.html"
+        }
+      ]
+    }
+    </script>
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Service",
       "name": "Чип Тунинг и Ремап на ZF 6HP/8HP Скоростни Кутии за BMW (E, F, G серии) Бургас",
       "serviceType": "BMW Chip Tuning, ZF 6HP/8HP TCU Remap & Cloning",
       "image": "https://apostolovtuning.com/assets/logo.webp",
@@ -46,43 +73,64 @@
         "@id": "https://apostolovtuning.com/#organization",
         "name": "Apostolov Tuning",
         "url": "https://apostolovtuning.com",
-        "telephone": "+359896084735"
+        "telephone": "+359896084735",
+        "aggregateRating": {
+          "@type": "AggregateRating",
+          "ratingValue": "5.0",
+          "bestRating": "5",
+          "worstRating": "1",
+          "ratingCount": "41",
+          "reviewCount": "41"
+        },
+        "review": [
+          {
+            "@type": "Review",
+            "author": {
+              "@type": "Person",
+              "name": "Клиент на Apostolov Tuning (BMW E91 330d)"
+            },
+            "reviewRating": {
+              "@type": "Rating",
+              "ratingValue": "5",
+              "bestRating": "5"
+            },
+            "reviewBody": "Колата ми е91 330d беше с лошо направен ремап, който водеше до рязък педал и бутене в задното окачване при смачкване на газта както и черен дим, но след неговата намеса колата стана с плавен педал за газта и усетливо по бърза и това бутене изчезна, както и саждите видимо намаляха. Препоръчвам с две ръце!"
+          },
+          {
+            "@type": "Review",
+            "author": {
+              "@type": "Person",
+              "name": "Клиент на Apostolov Tuning (BMW X3 G01)"
+            },
+            "reviewRating": {
+              "@type": "Rating",
+              "ratingValue": "5",
+              "bestRating": "5"
+            },
+            "reviewBody": "Bmw X3 G01 Много съм доволен от извършения чип тунинг! Работата беше свършена бързо, професионално и с внимание към детайла. Още при първото каране се усеща разликата – автомобилът реагира много по-добре, ускорението е по-плавно и мощността е осезаемо подобрена"
+          }
+        ]
       },
       "areaServed": [
-        { "@type": "City", "name": "Бургас" },
-        { "@type": "City", "name": "Карнобат" },
-        { "@type": "City", "name": "Айтос" },
-        { "@type": "City", "name": "Ямбол" },
-        { "@type": "City", "name": "Сливен" }
-      ],
-      "offers": {
-        "@type": "AggregateOffer",
-        "priceCurrency": "BGN",
-        "lowPrice": "200",
-        "highPrice": "1200",
-        "offerCount": "12",
-        "availability": "https://schema.org/InStock"
-      },
-      "aggregateRating": {
-        "@type": "AggregateRating",
-        "ratingValue": "5.0",
-        "bestRating": "5",
-        "worstRating": "1",
-        "ratingCount": "41",
-        "reviewCount": "41"
-      },
-      "review": [
         {
-          "@type": "Review",
-          "author": { "@type": "Person", "name": "Клиент на Apostolov Tuning (BMW E91 330d)" },
-          "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" },
-          "reviewBody": "Колата ми е91 330d беше с лошо направен ремап, който водеше до рязък педал и бутене в задното окачване при смачкване на газта както и черен дим, но след неговата намеса колата стана с плавен педал за газта и усетливо по бърза и това бутене изчезна, както и саждите видимо намаляха. Препоръчвам с две ръце!"
+          "@type": "City",
+          "name": "Бургас"
         },
         {
-          "@type": "Review",
-          "author": { "@type": "Person", "name": "Клиент на Apostolov Tuning (BMW X3 G01)" },
-          "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" },
-          "reviewBody": "Bmw X3 G01 Много съм доволен от извършения чип тунинг! Работата беше свършена бързо, професионално и с внимание към детайла. Още при първото каране се усеща разликата – автомобилът реагира много по-добре, ускорението е по-плавно и мощността е осезаемо подобрена"
+          "@type": "City",
+          "name": "Карнобат"
+        },
+        {
+          "@type": "City",
+          "name": "Айтос"
+        },
+        {
+          "@type": "City",
+          "name": "Ямбол"
+        },
+        {
+          "@type": "City",
+          "name": "Сливен"
         }
       ]
     }
@@ -121,7 +169,7 @@
     }
     </script>
 
-    <link rel="stylesheet" href="style.css?v=4">
+    <link rel="stylesheet" href="style.css?v=5">
     <style>
         .gallery-grid { align-items: start !important; }
         .project-card { height: auto !important; }
@@ -137,13 +185,30 @@
         .project-image-container img.active { opacity: 1; z-index: 2; position: absolute !important; display: block; }
         .btn-collapse { background: none; border: none; color: var(--primary-color); cursor: pointer; font-weight: 600; font-size: 0.9rem; padding: 10px 0 0 0; display: block; width: 100%; text-align: left; }
     </style>
+    <!-- Meta Pixel Code -->
+    <script>
+    !function(f,b,e,v,n,t,s)
+    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+    n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];
+    s.parentNode.insertBefore(t,s)}(window, document,'script',
+    'https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', '2091649391769605');
+    fbq('track', 'PageView');
+    </script>
+    <noscript><img height="1" width="1" style="display:none"
+    src="https://www.facebook.com/tr?id=2091649391769605&ev=PageView&noscript=1"
+    /></noscript>
+    <!-- End Meta Pixel Code -->
 </head>
 <body>
     <header>
         <div class="container header-content">
             <div class="logo">
                 <a href="/" style="display:flex; gap:10px; align-items:center;">
-                    <img src="assets/logo.webp" alt="Apostolov Tuning Logo">
+                    <img src="assets/logo.webp" width="2048" height="2048" alt="Apostolov Tuning Logo">
                     <span class="brand-name">APOSTOLOV TUNING</span>
                 </a>
             </div>
@@ -195,10 +260,10 @@
                     <div class="gallery-item project-card">
                         <div class="project-image-container">
                             <button class="project-slider-btn prev" aria-label="Previous Image">&#10094;</button>
-                            <img src="assets/bmwf10/bmw-520d-f10-184hp-stage1-egr-swirl-off-burgas-front.webp" alt="Чип тунинг BMW F10 520d 184hp Stage 1 ремап EGR Off и вихрови клапи Бургас" class="active" loading="lazy">
-                            <img src="assets/bmwf10/bmw-520d-f10-edc17c50-stage1-remap-dpf-active-burgas-rear.webp" alt="BMW F10 520d 184 к.с. Bosch EDC17C50 Stage 1 ремап със запазен работещ DPF филтър Бургас" loading="lazy">
-                            <img src="assets/bmwf10/bmw-520d-f10-n47-engine-bay-egr-swirl-flaps-off.webp" alt="Двигател BMW F10 520d N47 184hp софтуерно изолиране на ЕГР клапан и вихрови клапи" loading="lazy">
-                            <img src="assets/bmwf10/bmw-520d-f10-edc17c50-mms-flex-bench-programming-success.webp" alt="Bench програмиране на компютър Bosch EDC17C50 за BMW F10 520d с Magicmotorsport Flex в Apostolov Tuning" loading="lazy">
+                            <img src="assets/bmwf10/bmw-520d-f10-184hp-stage1-egr-swirl-off-burgas-front.webp" width="1200" height="1600" alt="Чип тунинг BMW F10 520d 184hp Stage 1 ремап EGR Off и вихрови клапи Бургас" class="active" loading="lazy">
+                            <img src="assets/bmwf10/bmw-520d-f10-edc17c50-stage1-remap-dpf-active-burgas-rear.webp" width="1200" height="1600" alt="BMW F10 520d 184 к.с. Bosch EDC17C50 Stage 1 ремап със запазен работещ DPF филтър Бургас" loading="lazy">
+                            <img src="assets/bmwf10/bmw-520d-f10-n47-engine-bay-egr-swirl-flaps-off.webp" width="1200" height="900" alt="Двигател BMW F10 520d N47 184hp софтуерно изолиране на ЕГР клапан и вихрови клапи" loading="lazy">
+                            <img src="assets/bmwf10/bmw-520d-f10-edc17c50-mms-flex-bench-programming-success.webp" width="1200" height="900" alt="Bench програмиране на компютър Bosch EDC17C50 за BMW F10 520d с Magicmotorsport Flex в Apostolov Tuning" loading="lazy">
                             <button class="project-slider-btn next" aria-label="Next Image">&#10095;</button>
                         </div>
                         <div class="project-info">
@@ -240,10 +305,10 @@
                     <div class="gallery-item project-card">
                         <div class="project-image-container">
                             <button class="project-slider-btn prev" aria-label="Previous Image">&#10094;</button>
-                            <img src="assets/bmwe913.0/bmw-e91-330d-231hp-stage1-dpf-egr-swirl-off-burgas-front.webp" alt="Чип тунинг BMW E91 330d 231hp MT Stage 1 DPF EGR Swirl Flaps Off Бургас" class="active" loading="lazy">
-                            <img src="assets/bmwe913.0/bmw-e91-330d-m57-231hp-remap-hardcut-4700rpm-burgas-side.webp" alt="BMW E91 330d Touring M57 231 к.с. ремап и прекъсвач на 4700 оборота Бургас" loading="lazy">
-                            <img src="assets/bmwe913.0/bmw-e91-330d-edc16c35-stage1-dpf-egr-off-karnobat-rear.webp" alt="BMW E91 330d Bosch EDC16C35 софтуерно изолиране на ДПФ ЕГР и вихрови клапи Карнобат" loading="lazy">
-                            <img src="assets/bmwe913.0/bmw-e91-330d-m57-edc16c35-remap-diagnostics-inside.webp" alt="Програмиране на компютър Bosch EDC16C35 на BMW E91 330d 231hp MT в Apostolov Tuning" loading="lazy">
+                            <img src="assets/bmwe913.0/bmw-e91-330d-231hp-stage1-dpf-egr-swirl-off-burgas-front.webp" width="1200" height="1600" alt="Чип тунинг BMW E91 330d 231hp MT Stage 1 DPF EGR Swirl Flaps Off Бургас" class="active" loading="lazy">
+                            <img src="assets/bmwe913.0/bmw-e91-330d-m57-231hp-remap-hardcut-4700rpm-burgas-side.webp" width="1200" height="1600" alt="BMW E91 330d Touring M57 231 к.с. ремап и прекъсвач на 4700 оборота Бургас" loading="lazy">
+                            <img src="assets/bmwe913.0/bmw-e91-330d-edc16c35-stage1-dpf-egr-off-karnobat-rear.webp" width="1200" height="1600" alt="BMW E91 330d Bosch EDC16C35 софтуерно изолиране на ДПФ ЕГР и вихрови клапи Карнобат" loading="lazy">
+                            <img src="assets/bmwe913.0/bmw-e91-330d-m57-edc16c35-remap-diagnostics-inside.webp" width="1200" height="1600" alt="Програмиране на компютър Bosch EDC16C35 на BMW E91 330d 231hp MT в Apostolov Tuning" loading="lazy">
                             <button class="project-slider-btn next" aria-label="Next Image">&#10095;</button>
                         </div>
                         <div class="project-info">
@@ -287,10 +352,10 @@
                     <div class="gallery-item project-card">
                         <div class="project-image-container">
                             <button class="project-slider-btn prev" aria-label="Previous Image">&#10094;</button>
-                            <img src="assets/bmwE602004/bmw-e60-530d-218hp-stage1-dpf-egr-hardcut-burgas-front.webp" alt="BMW E60 530d 218hp Stage 1 DPF EGR Off Hardcut Бургас" class="active" loading="lazy">
-                            <img src="assets/bmwE602004/bmw-e60-530d-218hp-stage1-dpf-egr-hardcut-burgas-rear.webp" alt="Чип тунинг BMW E60 530d 3.0d M57 ремап Бургас" loading="lazy">
-                            <img src="assets/bmwE602004/bmw-e60-530d-m57-edc16c31-remap-diagnostics-inside.webp" alt="BMW E60 530d Bosch EDC16C31 диагностика и софтуер" loading="lazy">
-                            <img src="assets/bmwE602004/bmw-e60-530d-popcorn-rev-limiter-chiptuning-karnobat.webp" alt="BMW E60 530d прекъсвач Hardcut Popcorn Limiter Карнобат" loading="lazy">
+                            <img src="assets/bmwE602004/bmw-e60-530d-218hp-stage1-dpf-egr-hardcut-burgas-front.webp" width="1050" height="1400" alt="BMW E60 530d 218hp Stage 1 DPF EGR Off Hardcut Бургас" class="active" loading="lazy">
+                            <img src="assets/bmwE602004/bmw-e60-530d-218hp-stage1-dpf-egr-hardcut-burgas-rear.webp" width="1400" height="1050" alt="Чип тунинг BMW E60 530d 3.0d M57 ремап Бургас" loading="lazy">
+                            <img src="assets/bmwE602004/bmw-e60-530d-m57-edc16c31-remap-diagnostics-inside.webp" width="1400" height="1050" alt="BMW E60 530d Bosch EDC16C31 диагностика и софтуер" loading="lazy">
+                            <img src="assets/bmwE602004/bmw-e60-530d-popcorn-rev-limiter-chiptuning-karnobat.webp" width="1050" height="1400" alt="BMW E60 530d прекъсвач Hardcut Popcorn Limiter Карнобат" loading="lazy">
                             <button class="project-slider-btn next" aria-label="Next Image">&#10095;</button>
                         </div>
                         <div class="project-info">
@@ -324,10 +389,10 @@
                     <div class="gallery-item project-card">
                         <div class="project-image-container">
                             <button class="project-slider-btn prev" aria-label="Previous Image">&#10094;</button>
-                            <img src="assets/bmwe91/bmw-e91-320d-n47-dpf-egr-swirl-throttle-off-burgas-front.webp" alt="BMW E91 320d N47 177hp EGR DPF Swirl Throttle Off Burgas" class="active" loading="lazy">
-                            <img src="assets/bmwe91/bmw-e91-320d-n47-dpf-egr-swirl-throttle-off-burgas-back.webp" alt="BMW E91 320d DPF Off Burgas" loading="lazy">
-                            <img src="assets/bmwe91/bmw-e91-320d-n47-dpf-egr-swirl-throttle-off-burgas-engine.webp" alt="BMW N47 Swirl Flaps EGR Off" loading="lazy">
-                            <img src="assets/bmwe91/bmw-e91-320d-n47-dpf-egr-swirl-throttle-off-burgas-inside.webp" alt="BMW E91 EDC17CP02 Tuning" loading="lazy">
+                            <img src="assets/bmwe91/bmw-e91-320d-n47-dpf-egr-swirl-throttle-off-burgas-front.webp" width="1200" height="1600" alt="BMW E91 320d N47 177hp EGR DPF Swirl Throttle Off Burgas" class="active" loading="lazy">
+                            <img src="assets/bmwe91/bmw-e91-320d-n47-dpf-egr-swirl-throttle-off-burgas-back.webp" width="1200" height="900" alt="BMW E91 320d DPF Off Burgas" loading="lazy">
+                            <img src="assets/bmwe91/bmw-e91-320d-n47-dpf-egr-swirl-throttle-off-burgas-engine.webp" width="1200" height="900" alt="BMW N47 Swirl Flaps EGR Off" loading="lazy">
+                            <img src="assets/bmwe91/bmw-e91-320d-n47-dpf-egr-swirl-throttle-off-burgas-inside.webp" width="1200" height="900" alt="BMW E91 EDC17CP02 Tuning" loading="lazy">
                             <button class="project-slider-btn next" aria-label="Next Image">&#10095;</button>
                         </div>
                         <div class="project-info">
@@ -361,12 +426,12 @@
                     <div class="gallery-item project-card">
                         <div class="project-image-container">
                             <button class="project-slider-btn prev" aria-label="Previous Image">&#10094;</button>
-                            <img src="assets/bmw-x3-g01-md1-remap-back.webp" alt="BMW X3 G01 2.0d MD1 Stage 1 Remap AdBlue DPF EGR Swirl Flaps Off" class="active" loading="lazy">
-                            <img src="assets/bmw-x3-g01-md1-remap-front.webp" alt="BMW X3 G01 MD1 2018 Tuning Burgas" loading="lazy">
-                            <img src="assets/bmw-x3-g01-md1-remap-dash.webp" alt="BMW X3 G01 MD1 No DTC AdBlue Fix" loading="lazy">
-                            <img src="assets/bmw-x3-g01-md1-remap-bench.webp" alt="Bosch MD1CS001 Bench Mode Tuning" loading="lazy">
-                            <img src="assets/bmw-x3-g01-md1-remap-trunk.webp" alt="BMW X3 G01 Project Apostolov Tuning" loading="lazy">
-                            <img src="assets/bmw-x3-g01-md1-remap-under.webp" alt="BMW X3 DPF Removal Mechanical" loading="lazy">
+                            <img src="assets/bmw-x3-g01-md1-remap-back.webp" width="768" height="1024" alt="BMW X3 G01 2.0d MD1 Stage 1 Remap AdBlue DPF EGR Swirl Flaps Off" class="active" loading="lazy">
+                            <img src="assets/bmw-x3-g01-md1-remap-front.webp" width="665" height="1182" alt="BMW X3 G01 MD1 2018 Tuning Burgas" loading="lazy">
+                            <img src="assets/bmw-x3-g01-md1-remap-dash.webp" width="1024" height="768" alt="BMW X3 G01 MD1 No DTC AdBlue Fix" loading="lazy">
+                            <img src="assets/bmw-x3-g01-md1-remap-bench.webp" width="699" height="1126" alt="Bosch MD1CS001 Bench Mode Tuning" loading="lazy">
+                            <img src="assets/bmw-x3-g01-md1-remap-trunk.webp" width="1024" height="768" alt="BMW X3 G01 Project Apostolov Tuning" loading="lazy">
+                            <img src="assets/bmw-x3-g01-md1-remap-under.webp" width="1024" height="768" alt="BMW X3 DPF Removal Mechanical" loading="lazy">
                             <button class="project-slider-btn next" aria-label="Next Image">&#10095;</button>
                         </div>
                         <div class="project-info">
@@ -403,9 +468,9 @@
                     <div class="gallery-item project-card">
                         <div class="project-image-container">
                             <button class="project-slider-btn prev" aria-label="Previous Image">&#10094;</button>
-                            <img src="assets/bmw177hp/bmw-e90-320d-177hp-stage1-dpf-egr-off-burgas-inside.webp" alt="BMW E90 320d N47 Hardcut Limiter Sport Cooling" class="active" loading="lazy">
-                            <img src="assets/bmw177hp/bmw-e90-320d-177hp-stage1-dpf-egr-off-burgas-front.webp" alt="BMW E90 320d 177hp N47 Stage 1 Burgas" loading="lazy">
-                            <img src="assets/bmw177hp/bmw-e90-320d-177hp-stage1-dpf-egr-off-burgas-back.webp" alt="BMW E90 320d DPF EGR Swirl Flaps Off" loading="lazy">
+                            <img src="assets/bmw177hp/bmw-e90-320d-177hp-stage1-dpf-egr-off-burgas-inside.webp" width="768" height="1024" alt="BMW E90 320d N47 Hardcut Limiter Sport Cooling" class="active" loading="lazy">
+                            <img src="assets/bmw177hp/bmw-e90-320d-177hp-stage1-dpf-egr-off-burgas-front.webp" width="1024" height="768" alt="BMW E90 320d 177hp N47 Stage 1 Burgas" loading="lazy">
+                            <img src="assets/bmw177hp/bmw-e90-320d-177hp-stage1-dpf-egr-off-burgas-back.webp" width="768" height="1024" alt="BMW E90 320d DPF EGR Swirl Flaps Off" loading="lazy">
                             <button class="project-slider-btn next" aria-label="Next Image">&#10095;</button>
                         </div>
                         <div class="project-info">
@@ -443,9 +508,9 @@
                     <div class="gallery-item project-card">
                         <div class="project-image-container">
                             <button class="project-slider-btn prev" aria-label="Previous Image">&#10094;</button>
-                            <img src="assets/bmw_vn/bmw-e39-525d-stage1-egr-maf-off-burgas-front.webp" alt="BMW E39 525d M57 Stage 1 Remap Burgas" class="active" loading="lazy">
-                            <img src="assets/bmw_vn/bmw-e39-525d-stage1-egr-maf-off-burgas-back.webp" alt="BMW E39 525d EGR MAF Off Popcorn Limiter" loading="lazy">
-                            <img src="assets/bmw_vn/bmw-e39-525d-stage1-egr-maf-off-burgas-inside.webp" alt="BMW E39 525d Interior" loading="lazy">
+                            <img src="assets/bmw_vn/bmw-e39-525d-stage1-egr-maf-off-burgas-front.webp" width="1024" height="768" alt="BMW E39 525d M57 Stage 1 Remap Burgas" class="active" loading="lazy">
+                            <img src="assets/bmw_vn/bmw-e39-525d-stage1-egr-maf-off-burgas-back.webp" width="1024" height="768" alt="BMW E39 525d EGR MAF Off Popcorn Limiter" loading="lazy">
+                            <img src="assets/bmw_vn/bmw-e39-525d-stage1-egr-maf-off-burgas-inside.webp" width="1024" height="768" alt="BMW E39 525d Interior" loading="lazy">
                             <button class="project-slider-btn next" aria-label="Next Image">&#10095;</button>
                         </div>
                         <div class="project-info">
@@ -486,8 +551,44 @@
 
     <footer>
         <div class="container">
-            <p>&copy; 2026 Apostolov Tuning. Всички права запазени.</p>
-            <p style="font-size: 0.8rem; color: #444; margin-top: 5px;">Professional Chip Tuning, Remap, DPF/EGR OFF & Diagnostics in Karnobat, Burgas, Aitos, Yambol, Sliven, Shumen.</p>
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h3>APOSTOLOV TUNING</h3>
+                    <p>Индивидуален чип тунинг (Stage 1/2), ремап и 1:1 клониране на скоростни кутии (DSG / ZF), DPF, EGR, AdBlue (SCR), Вихрови клапи и дилърска диагностика.</p>
+                    <p>📍 <strong>База:</strong> гр. Карнобат (Индустриална зона) &amp; <strong>Мобилен сервиз:</strong> Бургас, Айтос, Поморие, Несебър, Ямбол, Сливен, Шумен</p>
+                    <p>🕒 <strong>Работно време:</strong> Пон – Нед: 08:00 – 22:00 ч.</p>
+                    <div class="footer-contact-links">
+                        <a href="tel:+359896084735">📞 0896 084 735</a>
+                        <a href="https://wa.me/359896084735" target="_blank">💬 WhatsApp</a>
+                        <a href="viber://chat?number=%2B359883309806">💜 Viber</a>
+                        <a href="https://www.google.com/maps/search/?api=1&query=Apostolov+Tuning&query_place_id=0xd9ab01742ca3824a" target="_blank">⭐ Google Maps</a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h3>Основни Услуги</h3>
+                    <ul class="footer-links">
+                        <li><a href="/">Начало и Топ Проекти</a></li>
+                        <li><a href="chiptuning.html">Чип Тунинг (Stage 1/2 &amp; DSG/ZF)</a></li>
+                        <li><a href="eco-off.html">DPF / EGR / AdBlue / Вихрови клапи</a></li>
+                        <li><a href="/#contacts">Контакти и Записване</a></li>
+                        <li><a href="privacy-policy.html">Политика за поверителност</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>Чип Тунинг по Марки</h3>
+                    <ul class="footer-links">
+                        <li><a href="chiptuning-vag.html">VAG (VW, Audi, Skoda, Seat)</a></li>
+                        <li><a href="chiptuning-bmw.html">BMW (E, F, G серии &amp; ZF 6HP/8HP)</a></li>
+                        <li><a href="chiptuning-mercedes.html">Mercedes-Benz (CDI / BlueTEC)</a></li>
+                        <li><a href="chiptuning-psa.html">PSA &amp; Френски (Peugeot, Citroen, Renault)</a></li>
+                        <li><a href="chiptuning-asian.html">Японски, Корейски и Китайски</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; <span id="current-year">2026</span> Apostolov Tuning. Всички права запазени.</p>
+                <a href="privacy-policy.html">Политика за поверителност</a>
+            </div>
         </div>
     </footer>
 
@@ -520,6 +621,6 @@
         <button class="lightbox-nav next">&#10095;</button>
     </div>
 
-    <script src="script.js?v=4"></script>
+    <script src="script.js?v=5"></script>
 </body>
 </html>
